@@ -1,0 +1,44 @@
+.ui.header
+  h2
+    .content
+      .sub.header Taks in the joinity
+      | taskJoinity
+.tasks
+
+  //Tareas donde no soy el administrador
+  .item
+    img(src="images/joinity-temp/avatar.jpeg",alt="").ui.avatar.image
+    .content
+      p.author
+        a(href="/user/userName") Borja de gregorio
+        |  have assigned you a task
+      p.metadata
+        span.date On taskDateMonth, taskDateDay,
+        span.place  in taskPlace
+      .ui.checkbox
+        input#unique-id(type="checkbox")
+        label.box(for="unique-id")
+      label(for="unique-id") Tasktitle
+
+  //Tareas que administro
+  .item
+    img(src="images/joinity-temp/avatar.jpeg",alt="").ui.avatar.image
+    .content
+      p.author
+        |  You created this task
+      p.metadata
+        span.date On taskDateMonth, taskDateDay,
+        span.place  in taskPlace
+      p.text
+        | Tasktitle
+      p.metadata
+        span.date Assigned to
+      .item
+        i.check.icon
+        a(href="/user/userName") Fernando Guirao (you)
+      .item
+        i.ban.circle.icon
+        a(href="/user/userName") Antoni Espinosa
+      .item
+        i.time.icon
+        a(href="/user/userName") Borja de Gregorio

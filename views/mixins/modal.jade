@@ -1,0 +1,14 @@
+mixin modal(modalId, modalTextLauncher, modalContents)
+  div(class= modalId + 'btn ui button')
+    | #{modalTextLauncher}
+  div(class= modalId+ ' ui modal')
+    i.close.icon.blue
+    .header
+      | #{modalTextLauncher}
+    .content
+      | !{modalContents}
+  script
+    $('.#{modalId}.ui.modal').modal();
+    $('.#{modalId}btn').click(function(){
+      $('.#{modalId}.ui.modal').modal('show')
+    })

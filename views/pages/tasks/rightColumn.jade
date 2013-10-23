@@ -1,0 +1,17 @@
+extends ../../layouts/layout-2-columns-right
+
+block breadcrumb
+  a(href="").section My tasks 
+  i.right.arrow.icon.divider
+  .active.section Tasks by joinity
+
+block listItemContent
+  // Loop de lista de items
+  a(href="").jActive.ui.item.top.aligned.three.column.grid
+    .right.floated.tiny.teal.ui.button 2
+    //Foto del joinity al que pertenece la tarea
+    img.column(src="images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      .header taskJoinity
+      .metadata lastTaskCompletionDate
+      .text lastTaskTitle

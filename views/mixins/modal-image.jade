@@ -1,0 +1,15 @@
+mixin modal-image(classModal, imageSrcModal, classThumb)
+  img(class= classModal + 'btn ' + classThumb, src= imageSrcModal )
+  div(class= classModal+ ' ui basic modal')
+    i.close.icon
+    .header
+    .content
+      .ui.center.aligned.header
+        .ui.images
+          img(src= imageSrcModal).ui.image
+    .actions
+  script
+    $('.#{classModal}.ui.modal').modal();
+    $('.#{classModal}btn').click(function(){
+      $('.#{classModal}.ui.modal').modal('show')
+    })

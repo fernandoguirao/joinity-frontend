@@ -1,0 +1,20 @@
+.item
+  //Input para escribir comentarios
+  .ui.massive.action.left.icon.input
+    input(type="text",placeholder="Write something...")
+    i.icon
+      img.ui.rounded.mini.image(src="images/joinity-temp/avatar.jpeg",alt="")
+    .ui.button Send
+.item
+  //Lista de comentarios
+  .ui.comments
+    //Un comentario
+    .comment
+      a.avatar
+        img(src="images/joinity-temp/avatar.jpeg",alt="")
+      .content
+        a.author Dog Doggington
+        p.metadata
+          span.date 2 days ago
+        p.text
+        | I think this is a great idea and I am voting on it

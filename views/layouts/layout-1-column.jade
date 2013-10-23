@@ -1,0 +1,23 @@
+extends layout-html
+
+block head
+
+block content
+
+  //Variable nombrePagina -> Ej: #home
+  #nombrePagina.ui.center.aligned.one.column.grid
+    .jHeader.column
+      include ../includes/header
+      block headerContent
+    
+    .jMainContent.column
+      //Aquí extendemos la plantilla a su contenido específico
+      block mainContent
+      
+      block footerContent
+        .jFooter.column
+          include ../includes/footer
+    
+    //Modales
+    include ../includes/searchModal
+    block modalContent

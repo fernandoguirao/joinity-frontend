@@ -1,0 +1,77 @@
+include ../mixins/select
+
+.item
+  h3 Plans right for you
+
+mixin select ('no label', 'filter-hobbies' , ['Near from you','Your hobbies'] )
+
+.ui.one.items
+  a(href="/joinitys/hobbies/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+  a(href="/joinitys/familyAndFriends/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+
+.item
+  h3 Starred products
+  
+.ui.one.items
+  a(href="/joinitys/shoppings/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+      p.jPrice
+        | joinityPrice
+      p.jBrand
+        | joinityBrand
+  a(href="/joinitys/shoppings/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+      p.jPrice
+        | joinityPrice
+      p.jBrand
+        | joinityBrand
+  a(href="/joinitys/shoppings/joinityName").item.jStarred
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+      p.jPrice
+        | joinityPrice
+      p.jBrand
+        | joinityBrand
+  a(href="/joinitys/shoppings/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+      p.jPrice
+        | joinityPrice
+      p.jBrand
+        | joinityBrand
+  a(href="/joinitys/shoppings/joinityName").item
+    .image
+      img.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+    .content
+      p.jTitle
+        | joinityTitle
+      p.jPrice
+        | joinityPrice
+      p.jBrand
+        | joinityBrand
+  a(href="/joinitys").item
+    +

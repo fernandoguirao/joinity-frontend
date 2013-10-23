@@ -1,0 +1,18 @@
+include ../headerProfile
+
+h3.ui.header Settings
+.ui.horizontal.section.divider
+
+.ui.form.grid
+  .row
+    .wide.five.column
+      p Profile visibility
+    .wide.eleven.column
+      .ui.toggle.checkbox
+        input#settings-profileVisible-checkbox(type="checkbox",name="profileVisible")
+        label(for="settings-profileVisible-checkbox")
+      label(for="settings-profileVisible-checkbox") Do you want your profile to be publicly visible?
+  .row
+    .wide.five.column
+    .wide.eleven.column
+      .ui.button.green Save your settings

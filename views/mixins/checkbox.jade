@@ -1,0 +1,17 @@
+mixin checkbox(checkboxType,checkboxId,checkboxArray)
+  i = 0
+  - var checkboxId = { checkType:checkboxType,'checkId':checkboxId,'checkLabels':checkboxArray };
+  - each check in checkboxId.checkLabels
+    .field
+      -if(checkboxId.checkType=='checkbox'){
+      .ui.checkbox
+        input(id=checkboxId.checkId+i, type="checkbox")
+        label(for=checkboxId.checkId+i)
+      -} else if(checkboxId.checkType=='radio') {
+      .ui.radio.checkbox
+        input(id=checkboxId.checkId+i, type="radio", name=checkboxId.checkId)
+        label(for=checkboxId.checkId+i)
+      -}
+        label(for=checkboxId.checkId+i) 
+        = checkboxId.checkLabels[i]
+        - i++

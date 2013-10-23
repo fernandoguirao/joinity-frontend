@@ -1,0 +1,45 @@
+include ../headerProfile
+
+h3.ui.header Contacts
+.ui.horizontal.section.divider
+
+.ui.one.items
+  .ui.form.grid.item
+    .row
+      .wide.five.column
+        p Filter your contacts
+      .wide.eleven.column
+        .field
+          input(placeholder="Search by name or email or location",type="text")
+    .row
+      .wide.five.column
+        p Search for new contacts
+      .wide.eleven.column
+        .inline.fields
+          .field
+            input(placeholder="Search by name or email or location",type="text")
+          .field
+            .ui.button Search
+
+.ui.grid
+  .wide.three.column
+    img(src='/images/joinity-temp/avatar.jpeg').ui.image
+  .wide.thirteen.column
+    .ui.header
+      .content contactName
+      .sub.header
+        .ui.grid.three.column
+          .row
+            .wide.column
+              | contactEmail
+            .wide.column
+              | contactLocation
+          .row
+            .wide.eight.column
+              .ui.labelled.icon.inline.green.small.button
+                i.ui.user.icon
+                | View profile
+            .wide.eight.column
+              .ui.labelled.icon.inline.red.small.button
+                i.ui.remove.icon
+                | Remove

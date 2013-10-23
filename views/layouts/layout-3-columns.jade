@@ -1,0 +1,28 @@
+extends layout-html
+
+block head
+
+block content
+
+  //Variable nombrePagina -> Ej: #home
+  #nombrePagina.ui.grid
+    .jHeader.sixteen.wide.column
+      include ../includes/header
+      
+    .jLeftBar.four.wide.column.ui.vertical.menu
+      include ../includes/leftBar
+    
+    .jMainContent.nine.wide.column
+      //Aquí extendemos la plantilla a su contenido específico
+      block mainContent
+      
+      block footerContent
+        .jFooter
+          include ../includes/footer
+    
+    .jRightBar.three.wide.column
+      include ../includes/rightBar
+    
+    //Modales
+    include ../includes/searchModal
+    block modalContent

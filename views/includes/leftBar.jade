@@ -1,0 +1,102 @@
+.item
+  h1.ui.header
+    // Al hacer click nos debe llevar a la home de Joinity
+    a(href="/").
+      Joinity
+    // Si hay notificaciones añadimos el número y la clase hasNotifications | Nota para Fernando: eliminar clase .red 
+    .ui.teal.buttons
+      .ui.dropdown.pointing.left.label.button.red 3
+        .menu.ui
+          .item
+            h4 Notifications
+          // A continuación los diferentes tipos de notificación. Atención a sus variables y a los enlaces a sus páginas. Si la notificación no ha sido leida, marcar con .unread.
+          .item
+            a.jUnread(href="") nombreUsuario apellidoUsuario sent you a message
+          .item
+            a(href="") nombreUsuario apellidoUsuario has assign you a task
+          .item
+            a(href="") nombreUsuario apellidoUsuario has invite you to the event 'eventName'
+          .item
+            a(href="") nombreUsuario apellidoUsuario has invited you to the joinity 'joinityName'
+          .item
+            a(href="") Today is the deadline for the task 'taskName'
+          // Plural: pendent payings; singular: a pendent payment
+          .item
+            a(href="") You have pendent payments. Go to your shopping cart now.
+
+.item.ui.two.column.grid
+  .column
+    img.rounded.ui.image(src="/images/joinity-temp/avatar.jpeg",alt="")
+  .column
+    // Añadir enlaces páginas
+    .item
+      a(href="/user") My profile
+    .item
+      a(href="/user/contacts") Contacts
+    .item
+      a(href="") Bills
+    .item
+      a(href="/user/settings") Settings
+    .item
+      a(href="/unloged") Logout
+
+.item
+  //Enlace a página
+  a.fluid.ui.button(href="/joinitys/create") Create a joinity
+
+.item
+  //Dispara acción buscar
+  .jSearchBtn.fluid.ui.button
+    i.search.icon
+
+.item
+  a.ui.label(href="/joinitys") All
+  a(href="") My joinitys
+
+.item.ui.accordion
+  //Asignamos una imagen específica para cada tipo de joinity (hobbies, compras y aficiones)
+  .active.title
+    img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg")
+    | Hobbies
+  .content
+    // Lista de categorías de tipo de joinity del usuario (ejemplo: ajedrez, surf, etc.)
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory01
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory02
+  .active.title
+    img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg")
+    | Shoppings
+  .content
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory01
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory02
+  .active.title
+    img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg")
+    | Family & friends
+  .content
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory01
+    .item
+      a(href="/joinitys/hobbies/hobbyName") myHobbyCathegory02
+.item
+  // Si hay notificaciones
+  .ui.label 1
+  a(href="/tasks") my Tasks
+.item
+  // Si hay notificaciones
+  .ui.label 3
+  a(href="/events/eventName") my Events
+.item
+  // Si hay notificaciones
+  .ui.label 2
+  a(href="/shoppings") my Shoppings
+a(href="/messages").item
+  // Si hay notificaciones
+  .ui.label 4
+  | Messages
+a(href="/reservations").item
+  // Si hay notificaciones
+  .ui.label 4
+  | Reservations
