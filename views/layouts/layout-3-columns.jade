@@ -4,25 +4,26 @@ block head
 
 block content
 
-  //Variable nombrePagina -> Ej: #home
-  #nombrePagina.ui.grid
-    .jHeader.sixteen.wide.column
+  //- Variable nombrePagina -> Ej: #home
+  //- Variable tipoPagina -> Ej: 3columns
+  #nombrePagina.tipoPagina.app
+    header
       include ../includes/header
       
-    .jLeftBar.four.wide.column.ui.vertical.menu
+    nav.left-bar
       include ../includes/leftBar
     
-    .jMainContent.nine.wide.column
-      //Aquí extendemos la plantilla a su contenido específico
+    .main-content
+      //- Aquí extendemos la plantilla a su contenido específico
       block mainContent
       
-      block footerContent
-        .jFooter
-          include ../includes/footer
+      //block footerContent
+        //.jFooter
+          //include ../includes/footer
     
-    .jRightBar.three.wide.column
+    nav.right-bar
       include ../includes/rightBar
     
-    //Modales
-    include ../includes/searchModal
-    block modalContent
+    //- Modales
+    //include ../includes/searchModal
+    //block modalContent
