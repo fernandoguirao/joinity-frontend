@@ -1,2 +1,2 @@
-joinityFontend
+joinityFrontend
 ==============
