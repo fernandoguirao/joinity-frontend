@@ -1,0 +1,57 @@
+/*
+Tipos de botones
+
+*Variedad colores
+*Texto en mayúsculas o minúsculas
+*Bordes redondeados o no (¿hay alguno?)
+*Tamaños: muy pequeño, pequeño, mediano, grande, muy grande
+*Con icono a la izquierda
+*Sólo con icono
+Con relieve
+Más oscuro/más claro
+*/
+
+.btn {
+  /* General */
+  cursor: pointer;
+  /* Colores */
+  &.azul {
+    .button-variant(@claro,@azul,@azul);
+  }
+  &.verde {
+    .button-variant(@claro,@verde,@verde);
+  }
+  &.amarillo {
+    .button-variant(@oscuro,@amarillo,@amarillo);
+  }
+  &.rojo {
+    .button-variant(@claro,@rojo,@rojo);
+  }
+  &.oscuro {
+    .button-variant(@claro,@oscuro,@oscuro);
+  }
+  &.claro {
+    .button-variant(@oscuro,@claro,@claro);
+  }
+  &.gris {
+    .button-variant(@claro,@gris,@gris);
+  }
+  /* Tamaños */
+  &.giant {
+    .button-size(24px; 24px; 17px; auto; 8px);
+    &.embossed {
+      .box-shadow(0px 10px 0px @azul-oscuro);
+    }
+  }
+  
+  /* Texto mayúsculas-minúsculas */
+  &.change-text {
+    .giant {
+      text-transform:uppercase;
+      font-size:14px;
+    }
+  }
+  
+/*   .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) { */
+
+}
