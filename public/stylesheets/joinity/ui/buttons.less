@@ -11,44 +11,134 @@ Con relieve
 Más oscuro/más claro
 */
 
+/* Mixin de tamaños-box-shadow-colores */
+.color-box-shadow(@ecolor) {
+  &.giant {
+    .box-shadow(0px 10px 0px @ecolor);
+  }
+  &.big {
+    .box-shadow(0px 5px 0px @ecolor);
+  }
+  &.normal {
+    .box-shadow(0px 3px 0px @ecolor);
+  }
+  &.small {
+    .box-shadow(0px 2px 0px @ecolor);
+  }
+  &.tiny {
+    .box-shadow(0px 2px 0px @ecolor);
+  }
+}
+
+/* ESTILOS DE LOS BOTONES */
+
 .btn {
   /* General */
   cursor: pointer;
+  margin:2px;
+  &.text-left {
+    text-align:left;
+  }
+  i {
+    margin-right:10px;
+  }
   /* Colores */
   &.azul {
     .button-variant(@claro,@azul,@azul);
+    &.embossed {
+      .color-box-shadow(@azul-oscuro);
+    }
   }
   &.verde {
     .button-variant(@claro,@verde,@verde);
+    &.embossed {
+      .color-box-shadow(@verde-oscuro);
+    }
   }
   &.amarillo {
     .button-variant(@oscuro,@amarillo,@amarillo);
+    &.embossed {
+      .color-box-shadow(@amarillo-oscuro);
+    }
   }
   &.rojo {
     .button-variant(@claro,@rojo,@rojo);
+    &.embossed {
+      .color-box-shadow(@rojo-oscuro);
+    }
+  }
+  &.naranja {
+    .button-variant(@claro,@naranja,@naranja);
+    &.embossed {
+      .color-box-shadow(@naranja-oscuro);
+    }
   }
   &.oscuro {
     .button-variant(@claro,@oscuro,@oscuro);
+    &.embossed {
+      .color-box-shadow(@oscuro-oscuro);
+    }
   }
   &.claro {
     .button-variant(@oscuro,@claro,@claro);
+    &.embossed {
+      .color-box-shadow(@claro-oscuro);
+    }
   }
   &.gris {
     .button-variant(@claro,@gris,@gris);
+    &.embossed {
+      .color-box-shadow(@gris-oscuro);
+    }
   }
   /* Tamaños */
   &.giant {
     .button-size(24px; 24px; 17px; auto; 8px);
-    &.embossed {
-      .box-shadow(0px 10px 0px @azul-oscuro);
+    padding: 24px 30px;
+  }
+  &.big {
+    .button-size(20px; 20px; 16px; auto; 6px);
+    padding: 18px 23px;
+  }
+  &.normal {
+    .button-size(15px; 15px; 12px; auto; 4px);
+    padding: 15px 20px;
+  }
+  &.small {
+    .button-size(11px; 11px; 11px; auto; 3px);
+    padding: 11px 15px;
+    i {
+      margin-right:7px;
     }
   }
-  
+  &.tiny {
+    .button-size(9px; 9px; 10px; auto; 2px);
+    padding: 9px 12px;
+    i {
+      margin-right:5px;
+    }
+  }
   /* Texto mayúsculas-minúsculas */
   &.change-text {
-    .giant {
+    &.giant {
       text-transform:uppercase;
       font-size:14px;
+    }
+    &.big {
+      text-transform:uppercase;
+      font-size:15px;
+    }
+    &.normal {
+      text-transform:uppercase;
+      font-size:11px;
+    }
+    &.small {
+      text-transform:uppercase;
+      font-size:10px;
+    }
+    &.tiny {
+      text-transform:uppercase;
+      font-size:9px;
     }
   }
   
