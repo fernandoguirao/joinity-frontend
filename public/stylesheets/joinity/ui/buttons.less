@@ -1,32 +1,57 @@
 /*
-Tipos de botones
+Documentación botones
 
-*Variedad colores
-*Texto en mayúsculas o minúsculas
-*Bordes redondeados o no (¿hay alguno?)
-*Tamaños: muy pequeño, pequeño, mediano, grande, muy grande
-*Con icono a la izquierda
-*Sólo con icono
-Con relieve
-Más oscuro/más claro
+Botón -> .btn
+Tamaño -> .giant | big | normal | small | tiny
+Mayúsculas/minúsculas -> text-change
+Con relieve -> embossed
+Alineado a la izquierda el texto central -> text-left
+Que rellene al parent -> btn-block
+
 */
 
 /* Mixin de tamaños-box-shadow-colores */
+
 .color-box-shadow(@ecolor) {
   &.giant {
     .box-shadow(0px 10px 0px @ecolor);
+    &:active {
+      .box-shadow(0px 5px 0px @ecolor);
+      position:relative;
+      top:3px;
+    }
   }
   &.big {
     .box-shadow(0px 5px 0px @ecolor);
+    &:active {
+      .box-shadow(0px 4px 0px @ecolor);
+      position:relative;
+      top:2px;
+    }
   }
   &.normal {
     .box-shadow(0px 3px 0px @ecolor);
+    &:active {
+      .box-shadow(0px 2px 0px @ecolor);
+      position:relative;
+      top:1px;
+    }
   }
   &.small {
     .box-shadow(0px 2px 0px @ecolor);
+    &:active {
+      .box-shadow(0px 1px 0px @ecolor);
+      position:relative;
+      top:1px;
+    }
   }
   &.tiny {
     .box-shadow(0px 2px 0px @ecolor);
+    &:active {
+      .box-shadow(0px 1px 0px @ecolor);
+      position:relative;
+      top:1px;
+    }
   }
 }
 
@@ -39,6 +64,7 @@ Más oscuro/más claro
   &.text-left {
     text-align:left;
   }
+  .transition(background-color .2s);
   i {
     margin-right:10px;
   }
@@ -47,6 +73,10 @@ Más oscuro/más claro
     .button-variant(@claro,@azul,@azul);
     &.embossed {
       .color-box-shadow(@azul-oscuro);
+    }
+    &:hover {
+      background-color:lighten(@azul,3%);
+      border-color:lighten(@azul,3%);
     }
   }
   &.verde {
@@ -141,7 +171,4 @@ Más oscuro/más claro
       font-size:9px;
     }
   }
-  
-/*   .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) { */
-
 }
