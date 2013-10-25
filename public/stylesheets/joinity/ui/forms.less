@@ -68,32 +68,32 @@ Select de notificaciones - > .notification
 }
 
 /* INPUTS */
-.form-control {
-  /* GENERAL */
 
+.form-control {
   &.giant {
     .input-size(84px; 30px; 30px; 22px; 40px; 7px);
     margin: 10px 0;
     &.framed {
       border-width:10px;
+      .box-shadow(rgba(0, 0, 0, 0.14902) 0px 0px 0px 3px);
     }
   }
   &.big {
-    .input-size(60px; 20px; 20px; 17px; 29px; 5px);
+    .input-size(60px; 20px; 20px; 14px; 29px; 5px);
     margin:10px 0;
     &.framed {
-      border-width:8px;
+      border-width:4px;
     }
   }
   &.normal {
     .input-size(40px; 14px; 14px; 13px; 20px; 4px);
     margin:10px 0;
     &.framed {
-      border-width:5px;
+      border-width:3px;
     }
   }
   &.small {
-    .input-size(30px; 15px; 15px; 12px; 16px; 3px);
+    .input-size(30px; 15px; 15px; 12px; 16px; 4px);
     margin:10px 0;
     &.framed {
       border-width:3px;
@@ -108,9 +108,29 @@ Select de notificaciones - > .notification
   }
   &.framed {
     border:10px solid @elcolor;
-    .box-shadow(rgba(0, 0, 0, 0.14902) 0px 0px 0px 3px);
     &:focus {
       border-color:lighten(@elcolor,7%);
+      .box-shadow(transparent 0px 0px 0px 0px);
+    }
+  }
+}
+
+/* Grupos formados por un input y otros elementos */
+
+.form-group {
+  &.form-user {
+    .img {
+      position:absolute;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .form-control {
+      padding-left:57px;
+    }
+    .button-group {
+      position: absolute;
+      margin-top: -63px;
+      right: 24px;
     }
   }
 }
