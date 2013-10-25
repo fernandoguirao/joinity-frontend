@@ -1,0 +1,47 @@
+/*
+
+DOCUMENTACIÓN
+
+Select de notificaciones - > .notification
+
+*/
+
+/* Selects */
+.dropdown-menu {
+  color:@oscuro;
+  text-transform: none;
+}
+
+.notification .dropdown-menu {
+  width:400px;
+  dt {
+    text-transform:uppercase;
+    color:@elcolor;
+  }
+  text-align:left;
+  .unread {
+    background-color:@elcolor;
+    color:@claro;
+  }
+  .read {
+    color:@grisclaro;
+  }
+  a.opt {
+    padding-left:21px!important;
+    white-space:normal;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-right:40px;
+    &:after {
+      content: "\f054";
+      font-family:'fontAwesome';
+      right:24px;
+      color:rgba(0,0,0,.2);
+      position:absolute;
+      top:10px;
+    }
+  }
+}
