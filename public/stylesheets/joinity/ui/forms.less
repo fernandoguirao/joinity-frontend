@@ -11,18 +11,33 @@ Select de notificaciones - > .notification
 .form {
   &.giant {
     .make-md-column(12);
+    &.textarea {
+      min-height:200px;
+    }
   }
   &.big {
     .make-md-column(10);
+    &.textarea {
+      min-height:150px;
+    }
   }
   &.normal {
     .make-md-column(7);
+    &.textarea {
+      min-height:100px;
+    }
   }
   &.small {
     .make-md-column(5);
+    &.textarea {
+      min-height:50px;
+    }
   }
   &.tiny {
     .make-md-column(3);
+    &.textarea {
+      min-height:20px;
+    }
   }
 }
 
