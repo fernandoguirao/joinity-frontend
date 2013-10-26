@@ -7,12 +7,12 @@
 // Variables and mixins copied from bootstrap 2.0.2
 
 // Variables
-@grayLight:             #999;
-@grayLighter:           #eee;
-@white:                 #fff;
-@linkColor:             #08c;
+@grayLight:             @gris;
+@grayLighter:           @grisclaro;
+@white:                 @claro;
+@linkColor:             @rojo;
 @btnPrimaryBackground:  @linkColor;
-@orange:                #f89406;
+@orange:                @naranja;
 @baseLineHeight:        18px;
 
 // Mixins
@@ -295,4 +295,12 @@
 		margin-left:-5px;
 		margin-right:-5px;
 	}
+}
+
+.active.day,.month.active,.year.active {
+  background-color: @rojo!important;
+  color: @claro!important;
+}
+th.datepicker-switch {
+  text-transform:uppercase!important;
 }
