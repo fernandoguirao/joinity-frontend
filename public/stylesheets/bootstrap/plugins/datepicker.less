@@ -80,6 +80,7 @@
 .datepicker {
   padding: 4px;
   .border-radius(4px);
+  min-width:237px;
   &-inline {
     width: 220px;
   }
@@ -93,13 +94,16 @@
   &-dropdown {
     top: 0;
     left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: @azul solid 3px!important;
     &:before {
       content: '';
       display: inline-block;
       border-left:   7px solid transparent;
       border-right:  7px solid transparent;
       border-bottom: 7px solid #ccc;
-      border-bottom-color: rgba(0,0,0,.2);
+      border-bottom-color: @azul;
       position: absolute;
       top: -7px;
       left: 6px;
@@ -109,7 +113,7 @@
       display: inline-block;
       border-left:   6px solid transparent;
       border-right:  6px solid transparent;
-      border-bottom: 6px solid #FFF;
+      border-bottom: 6px solid @azul;
       position: absolute;
       top: -6px;
       left: 7px;
@@ -303,4 +307,74 @@
 }
 th.datepicker-switch {
   text-transform:uppercase!important;
+}
+
+
+/* PERSONALIZACIÓN */
+
+.datepicker {
+  .box-shadow(none);
+  thead {
+    background-color: @azul;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-left: 21px;
+    top: 0;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    color:@claro;
+    th.datepicker-switch {
+      font-size:15px;
+      font-weight:normal;
+      color:@claro;
+      span {
+        font-weight:bold;
+        margin-right:4px;
+        color:darken(@azul,25%);
+      }
+    }
+    th:hover {
+      background-color:darken(@azul,5%)!important;
+    }
+    tr:nth-child(2) {
+      background-color:@grisclaro!important;
+      color:@oscuro;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding-left: 20px;
+      font-size: 12.5px;
+      font-weight: 100;
+      top:36px;
+      th:hover {
+        background-color:transparent!important;
+      }
+    }
+  }
+  tbody {
+    margin-top: 66px!important;
+    display: inline-block;
+    margin-bottom:5px;
+  }
+  .datepicker-months tbody,.datepicker-years tbody {
+    width:200px!important;
+    display:block!important;
+    position:relative!important;
+    margin-top:30px!important;
+    padding-left:15px;
+    margin-bottom:0px;
+    tr {
+      td {
+        width:100%;
+        span {
+          display:inline;
+          position:relative;
+          width:50px;
+          float:left;
+          
+        }
+      }
+    }
+  }
 }

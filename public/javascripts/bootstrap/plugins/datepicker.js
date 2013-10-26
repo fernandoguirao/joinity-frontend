@@ -66,7 +66,7 @@
 		if (this.isRTL){
 			this.picker.addClass('datepicker-rtl');
 			this.picker.find('.prev i, .next i')
-						.toggleClass('icon-arrow-left icon-arrow-right');
+						.toggleClass('icon-chevron-left icon-chevron-right');
 		}
 
 		this.autoclose = false;
@@ -326,7 +326,7 @@
 				this.startDate = DPGlobal.parseDate(this.startDate, this.format, this.language);
 			}
 			this.update();
-			this.updateNavArrows();
+			this.updateNavchevrons();
 		},
 
 		setEndDate: function(endDate){
@@ -335,7 +335,7 @@
 				this.endDate = DPGlobal.parseDate(this.endDate, this.format, this.language);
 			}
 			this.update();
-			this.updateNavArrows();
+			this.updateNavchevrons();
 		},
 
 		setDaysOfWeekDisabled: function(daysOfWeekDisabled){
@@ -347,7 +347,7 @@
 				return parseInt(d, 10);
 			});
 			this.update();
-			this.updateNavArrows();
+			this.updateNavchevrons();
 		},
 
 		place: function(){
@@ -470,10 +470,11 @@
 				currentDate = this.date && this.date.valueOf();
 			this.picker.find('.datepicker-days thead th.datepicker-switch')
 						.text(dates[this.language].months[month]+' '+year);
+			/* this.picker.find('.datepicker-days thead th.datepicker-switch').html('<span>'+dates[this.language].months[month]+'</span>'+year); */
 			this.picker.find('tfoot th.today')
 						.text(dates[this.language].today)
 						.toggle(this.todayBtn !== false);
-			this.updateNavArrows();
+			this.updateNavchevrons();
 			this.fillMonths();
 			var prevMonth = UTCDate(year, month-1, 28,0,0,0,0),
 				day = DPGlobal.getDaysInMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth());
@@ -547,7 +548,7 @@
 			yearCont.html(html);
 		},
 
-		updateNavArrows: function() {
+		updateNavchevrons: function() {
 			if (!this._allow_update) return;
 
 			var d = new Date(this.viewDate),
@@ -852,7 +853,7 @@
 			*/
 			//this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).show();
 			this.picker.find('>div').hide().filter('.datepicker-'+DPGlobal.modes[this.viewMode].clsName).css('display', 'block');
-			this.updateNavArrows();
+			this.updateNavchevrons();
 		}
 	};
 
@@ -1095,9 +1096,9 @@
 		},
 		headTemplate: '<thead>'+
 							'<tr>'+
-								'<th class="prev"><i class="icon-arrow-left"/></th>'+
+								'<th class="prev"><i class="icon-chevron-left"/></th>'+
 								'<th colspan="5" class="datepicker-switch"></th>'+
-								'<th class="next"><i class="icon-arrow-right"/></th>'+
+								'<th class="next"><i class="icon-chevron-right"/></th>'+
 							'</tr>'+
 						'</thead>',
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
