@@ -2,11 +2,15 @@
 br
 br
 br
-form.giant
-  input.form-control.giant.framed(placeholder="Escribe aquí lo que quieras")
-  .btn.giant.azul Busca
-  
-form.normal
-  input.form-control.normal.datepicker(type="text",value="02-16-2012")
-  
-i.fa.fa-chevron-left.fa-6
+
+a.btn.azul.giant(href="#modal",data-toggle="modal") Lanza un modal
+
+.modal.fade#modal(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        h1 ¿Estás seguro de que quieres continuar?
+        br
+        .btn.amarillo.giant.embossed Estoy seguro
