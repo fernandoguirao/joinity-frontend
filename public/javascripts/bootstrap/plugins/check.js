@@ -122,6 +122,10 @@
       var el = $(this.element);
 
       el.parent().addClass('has-pretty-child');
+      
+      if (el.parent().hasClass('task')) {
+        el.addClass('task');
+      }
 
       el.css('display', 'none');
 

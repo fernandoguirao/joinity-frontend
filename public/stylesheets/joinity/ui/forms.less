@@ -4,6 +4,11 @@ DOCUMENTACIÓN
 
 Select de notificaciones - > .notification
 
+Checkboxes y radios
+
+El mixin es: .make-checkbox(@size,@color,@color-checked,@color-disabled,@color-label)
+Si queremos que sea una tarea (con estado disabled al hacer check tenemos que meter en un .task el .form-group
+
 */
 
 /* FORMULARIOS EN GENERAL */
@@ -150,9 +155,29 @@ Select de notificaciones - > .notification
   }
 }
 
-/* Checkboxes y radios */
+/* CHECKBOXES Y RADIOS */
 
 label {
   color:@oscuro;
   font-weight:normal;
+}
+
+.giant {
+  .make-checkbox(55px,@azul,@claro,@grisclaro,@oscuro,1.6%,2.3%);
+  .make-radio(55px,@azul,@claro,@grisclaro,@oscuro,1.5%,2.5%);
+}
+
+.big {
+  .make-checkbox(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.2%);
+  .make-radio(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.5%);
+}
+
+.normal {
+  .make-checkbox(20px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
+  .make-radio(20px,@rojo,@claro,@grisclaro,@oscuro,0.7%,1%);
+}
+
+.small {
+  .make-checkbox(18px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
+  .make-radio(18px,@rojo,@claro,@grisclaro,@oscuro,0.6%,0.9%);
 }

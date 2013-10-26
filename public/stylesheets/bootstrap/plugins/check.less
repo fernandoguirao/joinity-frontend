@@ -1,3 +1,8 @@
+/* Mixins check */
+
+
+
+
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
@@ -49,7 +54,7 @@
 
 .prettyradio {
   a {
-    .border-radius(15px);
+    .border-radius(100px);
     &:focus,&:hover {
       border:1px solid @elcolor;
     }
@@ -74,15 +79,6 @@
 .prettycheckbox a:focus,
 .prettyradio a:focus {outline: 0 none;}
 
-.prettycheckbox a:focus{background-position: 0 -30px;}
-.prettyradio a:focus{background-position: 0 -150px;}
-
-.prettycheckbox a.checked{ background-position: 0 -60px; }
-.prettyradio a.checked { background-position: 0 -180px; }
-
-.prettycheckbox a.checked:focus{ background-position: 0 -90px; }
-.prettyradio a.checked:focus { background-position: 0 -210px; }
-
 .prettycheckbox label,
 .prettyradio label {
   display: block;
@@ -98,10 +94,72 @@
   cursor:not-allowed;
 }
 
-.prettycheckbox.disabled a {
-  background-position: 0 -240px;
+.make-checkbox(@size,@color,@color-checked,@color-disabled,@color-label,@after-top,@after-left) {
+
+  .prettycheckbox a {
+    width:@size;
+    height:@size;
+    background-color:@color;
+    &:hover,&:focus {
+      background-color:darken(@color,10%);
+      border:0px;
+    }
+    &.checked {
+      background-color:@color;
+      &:after {
+        font-size:(@size*25)/55;
+        color:@color-checked;
+        position: absolute;
+        margin-top: @after-top;
+        margin-left: @after-left;
+      }
+    }
+  }
+  
+  label {
+    color:@color-label;
+    font-size:(13*@size)/20
+  }
+  
+  .prettycheckbox.disabled a {
+    background-color:@color-disabled;
+    label {
+      color:@color-disabled;
+    }
+  }
+  
+  .task + a.checked + label {
+    color:@color-disabled!important;
+    text-decoration:line-through!important;
+  }
 }
 
-.prettyradio.disabled a {
-  background-position: 0 -270px;
+.make-radio(@size,@color,@color-checked,@color-disabled,@color-label,@after-top,@after-left) {
+
+  .prettyradio a {
+    width:@size;
+    height:@size;
+    background-color:@color;
+    &:hover,&:focus {
+      background-color:darken(@color,10%);
+      border:0px;
+    }
+    &.checked {
+      background-color:@color;
+      &:after {
+        font-size:(@size*25)/55;
+        color:@color-checked;
+        position: absolute;
+        margin-top: @after-top;
+        margin-left: @after-left;
+      }
+    }
+  }
+  
+  label {
+    color:@color-label;
+    font-size:(13*@size)/20;
+    margin-left:9px;
+  }
+  
 }
