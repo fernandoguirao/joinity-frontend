@@ -13,4 +13,3 @@ $j ->
       selectC.attr('class',$j(this).attr('class')).removeClass('btn-group bootstrap-select')
       $j(this).removeClass('btn')
       
-
