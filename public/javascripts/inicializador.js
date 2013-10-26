@@ -5,7 +5,12 @@
   $j = jQuery;
 
   $j(function() {
-    return $('.selectpicker').selectpicker();
+    $('.selectpicker').selectpicker();
+    return $().ready(function() {
+      return $("input.check").prettyCheckable({
+        color: "red"
+      });
+    });
   });
 
 }).call(this);
