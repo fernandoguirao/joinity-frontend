@@ -44,7 +44,24 @@ select.selectpicker.btn.azul.normal.text-left.text-transform.notification
   optgroup(label="picnic")
     option.unread Esto es una opción
     option.read Esto es una opción
-    
+  
+<!------------------------------>
+<!--! Check y radio buttons  -->
+<!------------------------------>
+
+.form-group.rojo.normal.task
+  input.check.rojo#uno(type="checkbox",value="yes",name="uno",data-label="Right positioned label (no param)")
+
+.form-group.rojo.normal
+  input.check(type="radio",value="yes",name="answer",data-label="Este es el label")
+  
+<!------------------->
+<!--! Datepicker  -->
+<!------------------->
+
+form.normal
+  input.form-control.normal.datepicker(type="text",value="02-16-2012")
+  
 <!---------------->
 <!--! Botones  -->
 <!---------------->

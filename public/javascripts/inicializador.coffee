@@ -1,3 +1,5 @@
+# NOTA: Recuerda inicializar sólo en las páginas pertinentes los plugins
+
 $j = jQuery
 
 $j ->
@@ -9,3 +11,7 @@ $j ->
   # ICHECK
   $().ready ->
     $("input.check").prettyCheckable color: "red"
+
+  # DATEPICKER
+  $().ready ->
+    $('.datepicker').datepicker()
