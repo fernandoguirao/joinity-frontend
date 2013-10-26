@@ -12,32 +12,64 @@
     display: inline-block;
     padding:0;
     margin:0;
+    a {
+      width: 20px;
+      height: 20px;
+      background-color:@grisclaro;
+      display: block;
+      float: left;
+      cursor: pointer;
+      margin:0;
+      margin-top:4px;
+    }
 }
 
-.prettycheckbox a,
-.prettyradio a{
-    width: 30px;
-    height: 30px;
-    background: url(prettyCheckable-blue.png) top left no-repeat;
-    display: block;
-    float: left;
-    cursor: pointer;
-    margin:0;
+.prettycheckbox {
+  a {
+    &:focus,&:hover {
+      border:1px solid @elcolor;
+    }
+    &.checked {
+      text-decoration:none;
+      &:after {
+        content:"\f00c";
+        font-family:"fontawesome";
+        font-size:15px;
+        text-align:center;
+        color:@elcolor;
+        margin-top:-5px;
+        margin-left:2px;
+      }
+      &:focus,&:hover {
+        border:0px;
+      }
+    }
+  }
 }
 
-.prettycheckbox.green a,
-.prettyradio.green a{ background-image: url(prettyCheckable-green.png);}
-
-.prettycheckbox.red a,
-.prettyradio.red a{ background-image: url(prettyCheckable-red.png);}
-
-.prettycheckbox.yellow a,
-.prettyradio.yellow a{ background-image: url(prettyCheckable-yellow.png);}
-
-.prettycheckbox.gray a,
-.prettyradio.gray a{ background-image: url(prettyCheckable-gray.png);}
-
-.prettyradio a {background-position: 0 -120px;}
+.prettyradio {
+  a {
+    .border-radius(15px);
+    &:focus,&:hover {
+      border:1px solid @elcolor;
+    }
+    &.checked {
+      text-decoration:none;
+      &:after {
+        content: "\f111";
+        font-family: "fontawesome";
+        font-size: 14px;
+        text-align: center;
+        color: #18b8d2;
+        margin-top: 0px;
+        margin-left: 4px;
+      }
+      &:focus,&:hover {
+        border:0px;
+      }
+    }
+  }
+}
 
 .prettycheckbox a:focus,
 .prettyradio a:focus {outline: 0 none;}
