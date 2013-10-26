@@ -1,0 +1,63 @@
+
+.ui.big.center.aligned.header(style="background-image:url('/images/joinity-temp/background.jpg')")
+  h1
+    .content joinityTitle
+      .sub.header Category > hobbyName
+  h3
+    .content Information
+      .sub.header Days to finish 
+        span: b joinityDaysToFinish
+      .sub.header Stars 
+        span: b joinityStars
+      .sub.header Joiners
+        span: b
+          //- Empieza lo que sería el mixin del modal
+          div(class= 'joinityNumJoinersbtn ui button')
+            | numJoiners joiners
+          div(class= 'joinityNumJoiners ui modal')
+            i.close.icon.blue
+            .header
+              | Joiners in this joinity
+            .content
+              .ui.grid
+                .wide.three.column
+                  img(src='/images/joinity-temp/avatar.jpeg').ui.image
+                .wide.thirteen.column
+                  .ui.header
+                    .content contactName
+                    .sub.header
+                      .ui.grid.three.column
+                        .row
+                          .wide.column
+                            | contactEmail
+                          .wide.column
+                            | contactLocation
+                        .row
+                          .wide.column
+                            .ui.labelled.icon.inline.green.small.button
+                              i.ui.user.icon
+                              | View profile
+                          .wide.column
+                            .ui.labelled.icon.inline.red.small.button
+                              i.ui.remove.icon
+                              | Expulse from this joinity
+                          .wide.column
+                            .ui.labelled.icon.inline.green.small.button
+                              i.ui.add.icon
+                              | Add friend
+          script
+            $('.joinityNumJoiners.ui.modal').modal();
+            $('.joinityNumJoinersbtn').click(function(){
+              $('.joinityNumJoiners.ui.modal').modal('show')
+            })
+            //- Terminaría el mixin del modal
+      .sub.header Description
+        span: b joinityDescription
+      .sub.header Descripción
+        span: b joinityDescription
+      .other
+        .sub.header Admin
+          span: b joinityAdmin
+        .sub.header Creation date
+          span: b joinityCreationDate
+        .sub.header 

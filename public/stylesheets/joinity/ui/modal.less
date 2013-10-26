@@ -1,0 +1,24 @@
+.modal-header {
+  min-height:58px;
+  .close {
+    color:@claro;
+    .opacity(1);
+    .border-radius(30px);
+    border:3px solid @claro;
+    width:42px;
+    height:42px;
+    text-align:center;
+    font-size:18px;
+    font-weight:lighter;
+    padding-top:7px;
+    z-index:4000;
+    &:hover {
+      color:@amarillo;
+      border-color:@amarillo;
+    }
+    &:active {
+      color:darken(@verde,10%);
+      border-color:darken(@verde,10%);
+    }
+  }
+}
