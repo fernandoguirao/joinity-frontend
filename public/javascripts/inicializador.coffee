@@ -8,7 +8,7 @@ $j ->
 
   $('.selectpicker').selectpicker()
 
-  # ICHECK
+  # CHECKBOXES
   $().ready ->
     $("input.check").prettyCheckable color: "red"
 

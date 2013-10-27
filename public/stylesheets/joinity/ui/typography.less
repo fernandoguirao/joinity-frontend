@@ -1,10 +1,20 @@
 h1 {
   font-size:39px;
+  &.font {
+    font-size:36px;
+    font-family:'Proxima';
+    font-weight:normal;
+  }
 }
 
 h2 {
   font-size:32px;
   font-weight:lighter;
+  &.font {
+    font-family: 'Proxima';
+    font-weight:normal;
+    font-size:30px;
+  }
 }
 
 h3 {
@@ -16,6 +26,8 @@ h4 {
   font-size:13px;
   text-transform:uppercase;
   font-weight:lighter;
+  margin-top:5px;
+  margin-bottom:5px;
 }
 
 h5 {
@@ -42,6 +54,12 @@ h6 {
 
 p {
   color:@oscuro;
+  &.sub {
+    font-family:'Proxima';
+    font-weight:normal;
+    font-size:13px;
+    font-style: italic;
+  }
 }
 
 .txt-center {
@@ -49,31 +67,63 @@ p {
 }
 
 h1,h2,h3,h4,h5,h6,p,span {
+  &.lined {
+    display:block;
+    border-bottom:1px solid @grisclaro;
+  }
+  /* COLORES */
   &.azul {
     color:@azul;
+    &.lined {
+      border-color:@azul;
+    }
   }
   &.rojo {
     color:@rojo;
+    &.lined {
+      border-color:@rojo;
+    }
   }
   &.amarillo {
     color:@amarillo;
+    &.lined {
+      border-color:@amarillo;
+    }
   }
   &.verde {
     color:@verde;
+    &.lined {
+      border-color:@verde;
+    }
   }
   &.naranja {
     color:@naranja;
+    &.lined {
+      border-color:@naranja;
+    }
   }
   &.oscuro {
     color:@oscuro;
+    &.lined {
+      border-color:@oscuro;
+    }
   }
   &.claro {
     color:@claro;
+    &.lined {
+      border-color:@claro;
+    }
   }
   &.gris {
     color:@gris;
+    &.lined {
+      border-color:@gris;
+    }
   }
   &.grisclaro {
     color:@grisclaro;
+    &.lined {
+      border-color:@grisclaro;
+    }
   }
 }
