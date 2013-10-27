@@ -1,64 +1,9 @@
-.jSearchModal.ui.basic.modal
-  i.close.icon
-  .header
-  .content
-    //Búsqueda inicial
-    .ui.form
-      .field
-        .ui.massive.icon.input
-          input(type="text",placeholder="Find plans, products, users, groups or places")
-          i.search.icon
-        .ui.large.blue.submit.button Search
-    //Resultados | Si aún no se ha buscado añadir la clase .jHidden
-    .ui.grid
-      .five.wide.column
-        .ui.tabular.filter.vertical.menu
-          a.item.active(data-tab='joinitys') Joinitys
-          a.item(data-tab='usuarios') Usuarios
-          a.item(data-tab='eventos') Eventos
-          a.item(data-tab='aficiones') Aficiones
-          a.item(data-tab='lugares') Lugares
-          
-      .eleven.wide.column
-        h2.header Results
-        //Si no hay resultados en alguna sección añadirle la clase .noResults
-
-        .ui.divided.inbox.selection.list.tab.active(data-tab='joinitys')
-          //Si es un joinity de aficiones o family & friends
-          a.item
-            .content
-              img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg",alt="") 
-              b joinityTitle
-              p In joinityPlace, with joinityNumber joiners, on joinityDate
-          //Si es un joinity de compras
-          a.item
-            .content
-              img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg",alt="") 
-              b joinityTitle, joinityBrand
-              p For joinityAmount €, with joinityNumber joiners, until joinityDate
-
-        .ui.divided.inbox.selection.list.tab(data-tab='usuarios')
-          a.item
-            .content
-              img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg",alt="") 
-              b userFullName
-              p In Joinity since userRegisterDate. Active in userNumberJoinitys joinitys
-
-        .ui.divided.inbox.selection.list.tab(data-tab='eventos')
-          a.item
-            .content
-              img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg",alt="") 
-              b eventTitle, inside joinityTitle
-              p With eventNumberParticipants, on eventStartDate
-
-        .ui.divided.inbox.selection.list.tab(data-tab='aficiones')
-          a.item
-            .content
-              img.ui.avatar.image(src="/images/joinity-temp/avatar.jpeg",alt="") 
-              b hobbyTitle
-              p hobbyNumberJoinitys joinitys with this hobby, and hobbyNumberUsers joiners
-
-        .ui.divided.inbox.selection.list.tab(data-tab='lugares')
-          a.item
-            b placeTitle
-              p placeNumberJoinitys joinitys in this place, and placeNumberJoiners joiners
+.modal.fade#search(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        h1 ¿Estás seguro de que quieres continuar?
+        br
+        .btn.amarillo.giant.embossed Estoy seguro

@@ -58,11 +58,19 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
   dt {
     text-transform:uppercase;
     color:@elcolor;
+    padding:10px;
   }
   text-align:left;
   .unread {
     background-color:@elcolor;
     color:@claro;
+    &:hover {
+      background-color:@elcolor!important;
+      color:@claro!important;
+      &:after {
+        color:@claro!important;
+      }
+    }
   }
   .read {
     color:@grisclaro;
@@ -76,6 +84,8 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
     padding-top: 7px;
     padding-bottom: 9px;
     padding-right:40px;
+    position:relative;
+    .transition(padding .2s);
     &:after {
       content: "\f054";
       font-family:'fontAwesome';
@@ -83,6 +93,17 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
       color:rgba(0,0,0,.2);
       position:absolute;
       top:10px;
+      .transition(right .2s)
+    }
+    &:hover {
+      background-color:rgba(0,0,0,.05);
+      padding-left:40px!important;
+      padding-right:10px;
+      color:@gris;
+      &:after {
+        right:35px;
+        color:@gris;
+      }
     }
   }
 }

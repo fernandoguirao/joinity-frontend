@@ -1,9 +1,12 @@
 .cover {
   .background-size();
+  background-repeat:no-repeat;
 }
 
 .img {
 
+  .cover;
+  
   /* TAMAÑOS */
   
   &.giant {
@@ -39,7 +42,6 @@
     width:40px;
     height:40px;
     .border-radius(3px);
-    .cover;
     &.circle {
       width:42px;
       height:42px;
@@ -47,6 +49,8 @@
     &.big {
       width:94px;
       height:94px;
+      min-width:94px;
+      .border-radius(6px);
     }
     &.small {
       width:30px;
