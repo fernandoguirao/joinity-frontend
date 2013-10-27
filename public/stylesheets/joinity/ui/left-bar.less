@@ -1,5 +1,4 @@
 .left-bar {
-  overflow-x:hidden;
   .brand {
     margin-top:5px;
     margin-bottom:40px;
@@ -109,7 +108,7 @@
     padding-top:20px;
     li {
       position: relative;
-      width: 293px;
+      width: 283px;
       height: 59px;
       margin-left: -26px;
     }
@@ -117,15 +116,19 @@
       position:absolute;
       left:-2px;
       border:0;
-      padding-top:8px!important;
+      padding-top:12px!important;
       .border-radius(0);
       text-align:left;
       padding-left:19px!important;
       font-size:13.5px!important;
+      &.active {
+        background-color:@claro;
+        color:@azul;
+      }
       i {
-        font-size: 31px;
+        font-size: 24px;
         position: relative;
-        top: 7px;
+        top: 4px;
         margin-right: 21px;
         margin-left: 7px;
       }
