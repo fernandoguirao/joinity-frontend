@@ -1,0 +1,41 @@
+.timeline {
+  .item {
+    padding-bottom:22px;
+    display:inline-block;
+    .item-data {
+      .make-md-column(2.3);
+      padding-left:0;
+      .btn.azul,.btn.verde,.btn.amarillo,.btn.rojo {
+        padding-left:19px!important;
+      }
+    }
+    .item-content {
+      .make-md-column(9.7);
+      padding-right:0;
+      .img.avatar.tiny {
+        float:left;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: -4px;
+        margin-right: 8px;
+      }
+      h6 {
+        a {
+          margin-right:5px;
+        }
+      }
+      p {
+        margin-top:13px;
+      }
+    }
+    &.picture {
+      .item-content {
+        .img.big {
+          .border-radius(7px);
+          margin-top:20px;
+        }
+      }
+    }
+  }
+}
