@@ -5,14 +5,14 @@
   $j = jQuery;
 
   $j(function() {
-    $('.selectpicker').selectpicker();
-    $().ready(function() {
-      return $("input.check").prettyCheckable({
+    $j('.selectpicker').selectpicker();
+    $j().ready(function() {
+      return $j("input.check").prettyCheckable({
         color: "red"
       });
     });
-    return $().ready(function() {
-      return $('.datepicker').datepicker();
+    return $j().ready(function() {
+      return $j('.datepicker').datepicker();
     });
   });
 

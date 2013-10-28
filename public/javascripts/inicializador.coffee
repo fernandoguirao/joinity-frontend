@@ -6,12 +6,13 @@ $j ->
 
   # SELECT
 
-  $('.selectpicker').selectpicker()
+  $j('.selectpicker').selectpicker()
 
   # CHECKBOXES
-  $().ready ->
-    $("input.check").prettyCheckable color: "red"
+  $j().ready ->
+    $j("input.check").prettyCheckable color: "red"
 
   # DATEPICKER
-  $().ready ->
-    $('.datepicker').datepicker()
+  $j().ready ->
+    $j('.datepicker').datepicker()
+  

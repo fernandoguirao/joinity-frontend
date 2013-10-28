@@ -1,69 +1,69 @@
-
-.brand.dropdown.notification
-  .logo-notification(data-toggle="dropdown")
-    img.logo(src="/images/ui/logo@2x.png")
-    .globo 3
-  ul.dropdown-menu(role="menu",aria-labelledby="dropdownMenu1")
-    li.selected
-      dt Notificaciones
-    li(role="presentation")
-      a.opt.unread(role="menuitem",tabindex="-1",href="")
-        | Alguien te ha escrito bla bla
-    li(role="presentation")
-      a.opt.read(role="menuitem",tabindex="-1",href="")
-        | Esto es otra notificación, una vez leida
-
-.user
-  .centerer
-    .img.avatar.big(style="background-image:url('/images/joinity-temp/background.jpg');")
+.content
+  .brand.dropdown.notification
+    .logo-notification(data-toggle="dropdown")
+      img.logo(src="/images/ui/logo@2x.png")
+      .globo 3
+    ul.dropdown-menu(role="menu",aria-labelledby="dropdownMenu1")
+      li.selected
+        dt Notificaciones
+      li(role="presentation")
+        a.opt.unread(role="menuitem",tabindex="-1",href="")
+          | Alguien te ha escrito bla bla
+      li(role="presentation")
+        a.opt.read(role="menuitem",tabindex="-1",href="")
+          | Esto es otra notificación, una vez leida
+  
+  .user
+    .centerer
+      .img.avatar.big(style="background-image:url('/images/joinity-temp/background.jpg');")
+      ul
+        li
+          a.claro(href="/user/me")
+            h6 Profile
+        li
+          a.claro(href="/user/me")
+            h6 Contacts
+        li
+          a.claro(href="/user/me")
+            h6 Bills
+        li
+          a.claro(href="/user/me")
+            h6 Settings
+  
+  .utility
+    .btn.azul.normal.text-center.btn-block Create a joinity
+    a.btn.azul.normal.text-center.btn-block(href="#search",data-toggle="modal")
+      i.icon-search
+  
+  .links
+    p.claro.lined.small Joinitys
+    a.claro(href="")
+      h6 View all
     ul
       li
-        a.claro(href="/user/me")
-          h6 Profile
+        a.btn.azul.btn-block(href="/joinitys/hobbies/hobbyName")
+          .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
+          h6 Hobbies
       li
-        a.claro(href="/user/me")
-          h6 Contacts
+        a.btn.azul.btn-block(href="")
+          .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
+          h6 Shopping
       li
-        a.claro(href="/user/me")
-          h6 Bills
+        a.btn.azul.btn-block(href="")
+          .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
+          h6 Fam. & friends
+  
+  .my-sections
+    ul
       li
-        a.claro(href="/user/me")
-          h6 Settings
-
-.utility
-  .btn.azul.normal.text-center.btn-block Create a joinity
-  a.btn.azul.normal.text-center.btn-block(href="#search",data-toggle="modal")
-    i.icon-search
-
-.links
-  p.claro.lined.small Joinitys
-  a.claro(href="")
-    h6 View all
-  ul
-    li
-      a.btn.azul.btn-block(href="/joinitys/hobbies/hobbyName")
-        .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
-        h6 Hobbies
-    li
-      a.btn.azul.btn-block(href="")
-        .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
-        h6 Shopping
-    li
-      a.btn.azul.btn-block(href="")
-        .img.small(style="background-image:url('/images/joinity-temp/background.jpg');")
-        h6 Fam. & friends
-
-.my-sections
-  ul
-    li
-      .btn.azul.big.btn-block
-        i.icon-tasks
-        | My tasks
-    li
-      a.btn.azul.big.btn-block.active(href="/joinitys/hobbies/joinityName")
-        i.icon-group
-        | My joinities
-    li
-      .btn.azul.big.btn-block
-        i.icon-calendar
-        | My events
+        .btn.azul.big.btn-block
+          i.icon-tasks
+          | My tasks
+      li
+        a.btn.azul.big.btn-block.active(href="/joinitys/hobbies/joinityName")
+          i.icon-group
+          | My joinities
+      li
+        .btn.azul.big.btn-block
+          i.icon-calendar
+          | My events

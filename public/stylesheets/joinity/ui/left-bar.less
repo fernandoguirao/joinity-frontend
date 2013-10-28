@@ -1,4 +1,14 @@
 .left-bar {
+  &.fixed {
+    position:fixed;
+    z-index:-1;
+/*
+    .content {
+      padding-top:36px;
+      overflow:visible;
+    }
+*/
+  }
   .brand {
     margin-top:5px;
     margin-bottom:40px;
@@ -81,6 +91,7 @@
       border:1px solid rgba(255,255,255,.3);
       background-color:#19b4cd;
       margin-bottom:10px;
+      padding:12px 20px!important;
       &:hover {
         background-color:lighten(@azul,2%);
       }
@@ -100,12 +111,17 @@
       margin-left:-1px;
     }
     ul {
+      margin-top:19px;
       li {
         clear:left;
-        padding-top:11px;
+        padding-top:0px;
+        padding-bottom:0px;
+        margin-bottom:1px;
         a {
           text-align: left;
-          margin-bottom:-12px;
+          margin-bottom:0px;
+          padding-bottom:0;
+          padding-top:0;
           h6 {
             float: none;
             top:0;
@@ -115,7 +131,8 @@
           }
           .img {
             width:30px;
-            height:30px;
+            height:26px;
+            margin-top:3px;
             float:left;
           }
         }
@@ -124,7 +141,7 @@
   }
   .my-sections {
     clear:both;
-    padding-top:20px;
+    padding-top:11px;
     .btn {
       left:-2px;
       position:relative;
