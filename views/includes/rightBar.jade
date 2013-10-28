@@ -1,1 +1,29 @@
-p rightbar
+.plans
+  p.gris.lined Plans right for you
+  select.selectpicker.btn.grisclaro.normal.text-left
+    optgroup(label="Filter your plans")
+      option.unread En mi zona
+      option.unread De mis aficiones
+  ul
+    li
+      figure
+        a.rojo(href="")
+          .img.small.display-block(style="background-image:url('/images/joinity-temp/background.jpg');")
+          figcaption
+            h5.gris Comer hasta reventar en la plaza San Marcos
+      figure
+        a.verde(href="")
+          .img.small.display-block(style="background-image:url('/images/joinity-temp/background.jpg');")
+          figcaption
+            h5.gris Comer hasta reventar en la plaza San Marcos
+
+.products
+  p.gris.lined Starred products
+  ul
+    li
+      a(href="")
+        .amount
+          h6.oscuroclaro 57 €
+        .title
+          h6.oscuroclaro iPhone 5
+        .img.normal.display-block(style="background-image:url('/images/joinity-temp/background.jpg');")

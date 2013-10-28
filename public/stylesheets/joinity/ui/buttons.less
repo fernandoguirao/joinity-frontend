@@ -145,6 +145,15 @@ Que rellene al parent -> btn-block
       border-top-color:@oscuro;
     }
   }
+  &.grisclaro {
+    .button-variant(@oscuro,@grisclaro,@grisclaro);
+    &.embossed {
+      .color-box-shadow(@gris-oscuro);
+    }
+    .caret {
+      border-top-color:@oscuro;
+    }
+  }
   /* Tamaños */
   &.giant {
     .button-size(24px; 24px; 17px; auto; 8px)!important;
