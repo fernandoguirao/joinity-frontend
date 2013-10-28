@@ -276,11 +276,21 @@ label {
 
 /* PUNTUAR */
 
-.icon-star {
-  color:rgba(0,0,0,.3);
-  margin-right:3px;
-  font-size:16px;
-  &.active {
-    color:@claro;
+.votacion {
+  .icon-star {
+    color:rgba(0,0,0,.3);
+    margin-right:3px;
+    font-size:16px;
+    &.active {
+      color:@claro;
+    }
+  }
+  &.no-votado {
+    .icon-star {
+      cursor:pointer;
+      &:hover {
+        color:@claro;
+      }
+    }
   }
 }

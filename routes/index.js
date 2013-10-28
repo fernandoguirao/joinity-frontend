@@ -113,31 +113,36 @@ exports.tasks = function(req, res){
 
 /* USERS */
 
+/* Mi perfil */
+
 exports.user = function(req, res){
-  res.render('pages/user/index', { title: 'My profile' });
+  res.render('pages/user/me/index', { title: 'My profile' });
 };
 
 exports.userContacts = function(req, res){
-  res.render('pages/user/contacts/index', { title: 'Contacts' });
+  res.render('pages/user/me/contacts/index', { title: 'Contacts' });
 };
+
+exports.userEdit = function(req, res){
+  res.render('pages/user/me/edit/index', { title: 'Edit profile' });
+};
+
+exports.userSettings = function(req, res){
+  res.render('pages/user/me/settings/index', { title: 'Settings' });
+};
+
+/* Otros usuarios */
+
+exports.userUser = function(req, res){
+  res.render('pages/user/others/index', { title: 'UserName' });
+};
+
+/* Otras opciones */
 
 exports.userCreate = function(req, res){
   res.render('pages/user/create/index', { title: 'Create user' });
 };
 
-exports.userEdit = function(req, res){
-  res.render('pages/user/edit/index', { title: 'Edit profile' });
-};
-
 exports.userLogin = function(req, res){
   res.render('pages/user/login/index', { title: 'Login' });
 };
-
-exports.userSettings = function(req, res){
-  res.render('pages/user/settings/index', { title: 'Settings' });
-};
-
-exports.userUser = function(req, res){
-  res.render('pages/user/user/index', { title: 'UserName' });
-};
-

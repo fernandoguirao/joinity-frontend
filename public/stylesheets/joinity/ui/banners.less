@@ -1,5 +1,5 @@
 .banner {
-  
+  .transition(all .6s);
   .top-data {
     text-align:right;
     padding-top:15px;
@@ -10,14 +10,27 @@
     text-align:center;
     padding-bottom:20px;
     padding-top:40px;
+    z-index:1;
     h1 {
       margin-top:13px;
       margin-bottom:16px;
+    }
+    .btn {
+      z-index:1;
+      position:relative;
     }
     .img {
       display:inline-block;
       border:3px solid @claro;
       
+    }
+    h6 {
+      padding-top:30px;
+      padding-bottom:3px;
+    }
+    .more-info {
+      margin-bottom: 40px;
+      margin-top: 10px;
     }
   }
   
@@ -25,7 +38,8 @@
     background-color:rgba(0,0,0,.15);
     position: relative;
     overflow:hidden;
-    height:47px;
+    max-height:47px;
+    .transition(all .6s);
     .visible-data {
       ul {
         position:relative;
@@ -47,7 +61,25 @@
       }
     }
     .hidden-data {
-      
+      ul {
+        li {
+          .make-md-column(3);
+          text-align:center;
+          .azul {
+            color:lighten(@azul,25%);
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    .bottom-data {
+      position: relative;
+      overflow: hidden;
+      max-height:500px;
+      margin-top: -85px;
+      padding-top: 39px;
+      padding-bottom: 30px;
     }
   }
 }

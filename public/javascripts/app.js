@@ -8,13 +8,21 @@
     var selectp;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
-      return selectp.each(function() {
+      selectp.each(function() {
         var selectC;
         selectC = $j(this).children('.dropdown-toggle');
         selectC.attr('class', $j(this).attr('class')).removeClass('btn-group bootstrap-select');
         return $j(this).removeClass('btn');
       });
     }
+    $j('.votacion.no-votado .icon-star').hover((function() {
+      return $j(this).prevAll().addClass('active');
+    }), (function() {
+      return $j('.votacion.no-votado .icon-star').removeClass('active');
+    }));
+    return $j('.more-info').click(function() {
+      return $j('.banner').toggleClass('open');
+    });
   });
 
 }).call(this);

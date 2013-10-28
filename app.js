@@ -63,8 +63,8 @@ app.get('/shoppings/purchases', routes.shoppingsPurchases);
 /* Tasks */
 app.get('/tasks', routes.tasks);
 /* Users */
-app.get('/user', routes.user);
-app.get('/user/userName', routes.userUser);
+app.get('/user/me', routes.user);
+app.get('/users/other', routes.userUser);
 app.get('/user/login', routes.userLogin);
 app.get('/user/contacts', routes.userContacts);
 app.get('/user/edit', routes.userEdit);
