@@ -1,0 +1,53 @@
+.banner {
+  
+  .top-data {
+    text-align:right;
+    padding-top:15px;
+    padding-right:20px;
+  }
+  
+  .main-data {
+    text-align:center;
+    padding-bottom:20px;
+    padding-top:40px;
+    h1 {
+      margin-top:13px;
+      margin-bottom:16px;
+    }
+    .img {
+      display:inline-block;
+      border:3px solid @claro;
+      
+    }
+  }
+  
+  .bottom-data {
+    background-color:rgba(0,0,0,.15);
+    position: relative;
+    overflow:hidden;
+    height:47px;
+    .visible-data {
+      ul {
+        position:relative;
+        top:-15px;
+        li {
+          .make-md-column(3);
+          b {
+            font-size:28px;
+            font-weight:normal;
+            position:relative;
+            top:4px;
+            margin-right:8px;
+            font-family:'Proxima';
+          }
+          &.no-number {
+            margin-top:15px;
+          }
+        }
+      }
+    }
+    .hidden-data {
+      
+    }
+  }
+}
