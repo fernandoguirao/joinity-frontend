@@ -42,14 +42,23 @@ app.get('/brands/brandName/edit', routes.brandsEdit);
 app.get('/events/eventName', routes.events);
 app.get('/events/eventName/edit', routes.eventsEdit);
 /* Joinitys */
+  /* Todos los joinitys */
 app.get('/joinitys', routes.joinitys);
+  /* Crea un joinity */
 app.get('/joinitys/create', routes.joinitysCreate);
+  /* Página de una afición */
 app.get('/joinitys/hobbies/hobbyName', routes.joinitysHobbiesHobby);
+  /* Un joinity > aficiones */
 app.get('/joinitys/hobbies/joinityName', routes.joinitysHobbiesJoinity);
+  /* Un joinity > f&f */
 app.get('/joinitys/familyandfriends/joinityName', routes.joinitysFamilyandfriendsJoinity);
+  /* Un joinity compras */
 app.get('/joinitys/shoppings/joinityName', routes.joinitysShoppingsJoinity);
+  /* Edición de joinity aficiones */
 app.get('/joinitys/hobbies/joinityName/edit', routes.joinitysHobbiesJoinityEdit);
+  /* Edición de joinity f&f */
 app.get('/joinitys/familyandfriends/joinityName/edit', routes.joinitysFamilyandfriendsJoinityEdit);
+  /* Edición de joinity compras */
 app.get('/joinitys/shoppings/joinityName/edit', routes.joinitysShoppingsJoinityEdit);
 /* Messages */
 app.get('/messages', routes.messages);
