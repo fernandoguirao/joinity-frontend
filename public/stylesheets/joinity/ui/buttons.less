@@ -154,6 +154,13 @@ Que rellene al parent -> btn-block
       border-top-color:@oscuro;
     }
   }
+  &.transparente {
+    .button-variant(@claro,transparent,transparent);
+    border:1px solid @claro;
+    &:hover {
+      border:1px solid @claro;
+    }
+  }
   /* Tamaños */
   &.giant {
     .button-size(24px; 24px; 17px; auto; 8px)!important;
