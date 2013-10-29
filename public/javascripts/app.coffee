@@ -23,3 +23,25 @@ $j ->
   
   $j('.more-info').click ->
     $j('.banner').toggleClass('open')
+  
+  # Dial donuts
+  donutfunction = ->
+    $j(".azul .donutchart").donutchart()
+    $j(".rojo .donutchart").donutchart bgColor: "#aa252b"
+    $j(".verde .donutchart").donutchart bgColor: "#08705b"
+    timer = undefined
+    delay = 400
+    $j(".joinity-thumb").hover (->
+      donut = $j(".donutchart", this)
+      # donut.stop()
+      timer = setTimeout(->
+        donut.donutchart "animate"
+        # do your stuff here
+      , delay)
+    ), ->
+      clearTimeout timer
+  donutfunction()
+  
+  
+
+

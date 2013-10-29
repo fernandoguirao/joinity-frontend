@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var selectp;
+    var donutfunction, selectp;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -20,9 +20,31 @@
     }), (function() {
       return $j('.votacion.no-votado .icon-star').removeClass('active');
     }));
-    return $j('.more-info').click(function() {
+    $j('.more-info').click(function() {
       return $j('.banner').toggleClass('open');
     });
+    donutfunction = function() {
+      var delay, timer;
+      $j(".azul .donutchart").donutchart();
+      $j(".rojo .donutchart").donutchart({
+        bgColor: "#aa252b"
+      });
+      $j(".verde .donutchart").donutchart({
+        bgColor: "#08705b"
+      });
+      timer = void 0;
+      delay = 400;
+      return $j(".joinity-thumb").hover((function() {
+        var donut;
+        donut = $j(".donutchart", this);
+        return timer = setTimeout(function() {
+          return donut.donutchart("animate");
+        }, delay);
+      }), function() {
+        return clearTimeout(timer);
+      });
+    };
+    return donutfunction();
   });
 
 }).call(this);

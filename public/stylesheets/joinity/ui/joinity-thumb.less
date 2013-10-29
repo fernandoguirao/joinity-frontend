@@ -3,6 +3,8 @@
   height:211px;
   position:relative;
   overflow:hidden;
+  display:inline-block;
+  margin: 0 16px 10px 0;
   &:hover {
     .front {
       margin-bottom:-110px;
@@ -10,21 +12,36 @@
     .back {
       margin-top:0;
     }
+/*
+    .rueda {
+      .opacity(1)!important;
+    }
+*/
   }
   &.azul {
     .front,.back {
       background-color:@azul;
+    }
+    .img:before {
+      border-color: darken(@azul,3%) transparent transparent transparent;
     }
   }
   &.verde {
     .front,.back {
       background-color:@verde;
     }
+    .img:before {
+      border-color: darken(@verde,3%) transparent transparent transparent;
+    }
   }
   &.rojo {
     .front,.back {
       background-color:@rojo;
     }
+    .img:before {
+      border-color: darken(@rojo,3%) transparent transparent transparent;
+    }
+
   }
   .front,.back {
     position:absolute;
@@ -33,10 +50,10 @@
   .front {
     text-align:center;
     bottom: 0;
-    z-index:2;
+    z-index:1;
     padding: 21px 30px 0px;
     height: 111px;
-    .transition(margin-bottom .2s);
+    .transition(margin-bottom .4s);
     p {
       margin:4px 0;
     }
@@ -44,7 +61,8 @@
   .back {
     height:100%;
     margin-top:211px;
-    .transition(margin-top .2s);
+    .transition(margin-top .4s);
+    padding:10px 17px;
     .fecha {
       display:inline-block;
       float:right;
@@ -63,16 +81,28 @@
       p,h6 {
         margin:0;
       }
+      .rueda {
+        /*
+.opacity(0);
+        .transition(opacity, 1.5s);
+*/
+        border: 8px solid rgba(0,0,0,.07);
+        height: 132px;
+        margin: 40px auto;
+        width: 132px;
+        position:relative;
+        top:-16px;
+      }
+      .datos {
+        position:relative;
+        margin-top:-140px;
+      }
     }
     .votacion {
-      float:right;
-    }
-    .reseter {
-      clear:both;
-      width:1px;
-      height:1px;
-    }
-    
+      position:absolute;
+      bottom:10px;
+      right:17px;
+    }    
   }
   .img {
     height:211px;
@@ -81,11 +111,12 @@
       width: 0px;
       height: 0px;
       border-style: solid;
-      border-width: 7px 7px 0 0px;
-      border-color: @azul transparent transparent transparent;
-      top: 11px;
+      border-width: 22px 22px 0 0px;
+      border-color: darken(@azul,3%) transparent transparent transparent;
+      top: 21px;
       position: relative;
-      left: 11px;
+      left: 0px;
+      z-index:1;
     }
   }
 }
