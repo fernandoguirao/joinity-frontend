@@ -33,15 +33,11 @@ $j ->
     delay = 400
     $j(".joinity-thumb").hover (->
       donut = $j(".donutchart", this)
-      # donut.stop()
+      donut.stop().donutchart "stopanimate"
       timer = setTimeout(->
-        donut.donutchart "animate"
+        donut.stop().donutchart "animate"
         # do your stuff here
       , delay)
     ), ->
       clearTimeout timer
   donutfunction()
-  
-  
-
-

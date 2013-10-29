@@ -37,8 +37,9 @@
       return $j(".joinity-thumb").hover((function() {
         var donut;
         donut = $j(".donutchart", this);
+        donut.stop().donutchart("stopanimate");
         return timer = setTimeout(function() {
-          return donut.donutchart("animate");
+          return donut.stop().donutchart("animate");
         }, delay);
       }), function() {
         return clearTimeout(timer);
