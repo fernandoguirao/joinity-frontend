@@ -1,0 +1,91 @@
+.joinity-thumb {
+  width:244px;
+  height:211px;
+  position:relative;
+  overflow:hidden;
+  &:hover {
+    .front {
+      margin-bottom:-110px;
+    }
+    .back {
+      margin-top:0;
+    }
+  }
+  &.azul {
+    .front,.back {
+      background-color:@azul;
+    }
+  }
+  &.verde {
+    .front,.back {
+      background-color:@verde;
+    }
+  }
+  &.rojo {
+    .front,.back {
+      background-color:@rojo;
+    }
+  }
+  .front,.back {
+    position:absolute;
+    width:100%;
+  }
+  .front {
+    text-align:center;
+    bottom: 0;
+    z-index:2;
+    padding: 21px 30px 0px;
+    height: 111px;
+    .transition(margin-bottom .2s);
+    p {
+      margin:4px 0;
+    }
+  }
+  .back {
+    height:100%;
+    margin-top:211px;
+    .transition(margin-top .2s);
+    .fecha {
+      display:inline-block;
+      float:right;
+      text-align:center;
+      p {
+        font-size:18px;
+        margin:0;
+      }
+      h5 {
+        margin:0;
+      }
+    }
+    .donut {
+      clear:both;
+      text-align:center;
+      p,h6 {
+        margin:0;
+      }
+    }
+    .votacion {
+      float:right;
+    }
+    .reseter {
+      clear:both;
+      width:1px;
+      height:1px;
+    }
+    
+  }
+  .img {
+    height:211px;
+    &:before {
+      content:"";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 7px 7px 0 0px;
+      border-color: @azul transparent transparent transparent;
+      top: 11px;
+      position: relative;
+      left: 11px;
+    }
+  }
+}
