@@ -6,12 +6,10 @@
 
   $j(function() {
     $j('.selectpicker').selectpicker();
-    $j().ready(function() {
-      return $j("input.check").prettyCheckable({
+    return $j().ready(function() {
+      $j("input.check").prettyCheckable({
         color: "red"
       });
-    });
-    return $j().ready(function() {
       return $j('.datepicker').datepicker();
     });
   });

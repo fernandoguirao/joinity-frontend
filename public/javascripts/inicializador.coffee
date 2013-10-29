@@ -8,10 +8,13 @@ $j ->
 
   $j('.selectpicker').selectpicker()
 
-  # CHECKBOXES
   $j().ready ->
+ 
+    # CHECKBOXES
+    
     $j("input.check").prettyCheckable color: "red"
 
-  # DATEPICKER
-  $j().ready ->
+    # DATEPICKER
+    
     $j('.datepicker').datepicker()
+    

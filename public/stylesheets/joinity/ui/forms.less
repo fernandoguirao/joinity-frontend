@@ -153,8 +153,32 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
       border-color:lighten(@elcolor,7%);
       .box-shadow(transparent 0px 0px 0px 0px);
     }
+    &.amarillo {
+      border:10px solid lighten(@verde,15%);
+      background-color:transparent;
+      /* color:@claro!important; */
+      /* text-align:center; */
+      .box-shadow(transparent 0px 0px 0px 0px);
+      &:focus {
+        border-color:lighten(@amarillo,7%);
+        .box-shadow(transparent 0px 0px 0px 0px);
+      }
+      &::-webkit-input-placeholder{
+        color:@claro;
+/*
+        font-family:'Proxima';
+        font-style:italic;
+*/
+      }
+    }
   }
 }
+
+/*
+PLACEHOLDER
+.placeholder,input::-webkit-input-placeholder,input:-moz-placeholder { color: @claro!important; }
+*/
+
 
 /* Grupos formados por un input y otros elementos */
 
