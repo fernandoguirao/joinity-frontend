@@ -1,0 +1,31 @@
+  ul.nav.nav-tabs {
+    margin-top:30px;
+    border-bottom:1px solid @amarillo;
+    padding-bottom:5px;
+    text-align:center;
+    position:relative;
+    margin-bottom:20px;
+    overflow:hidden;
+    height:50px;
+    li {
+      float:none;
+      display:inline-block;
+    }
+    .btn {
+      border-color:transparent;
+      &:hover {
+        /* border:1px solid @claro; */
+        background-color:rgba(0,0,0,.1);
+        color:#FDEFB4;
+      }
+    }
+    .active a {
+      background-color:transparent!important;
+      color:@amarillo;
+      border-color:@amarillo;
+      &:hover {
+        border-color:@amarillo!important;
+        background-color:transparent!important;
+      }
+    }
+  }
