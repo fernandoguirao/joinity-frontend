@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var donutfunction, selectp;
+    var donutfunction, functionTimeOut, liFirst, liLast, selectp;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -45,7 +45,45 @@
         return clearTimeout(timer);
       });
     };
-    return donutfunction();
+    donutfunction();
+    functionTimeOut = function(a) {
+      var delay, timer;
+      timer = void 0;
+      delay = 500;
+      return timer = setTimeout(function() {
+        return a.addClass('activo');
+      }, delay);
+    };
+    liFirst = $j('.pasos li:first');
+    liLast = $j('.pasos li:last');
+    $j('.pasos li .play').click((function() {
+      var li;
+      li = $j(this).parent();
+      if (li.is(liFirst)) {
+        li.removeClass('activo');
+        return functionTimeOut(li.next());
+      } else if (li.is(liLast)) {
+        li.removeClass('activo');
+        return functionTimeOut(liFirst);
+      } else {
+        li.removeClass('activo');
+        return functionTimeOut(li.next());
+      }
+    }));
+    return $j('.pasos li .rewind').click((function() {
+      var li;
+      li = $j(this).parent();
+      if (li.is(liFirst)) {
+        li.removeClass('activo');
+        return functionTimeOut(liLast);
+      } else if (li.is(liLast)) {
+        li.removeClass('activo');
+        return functionTimeOut(li.prev());
+      } else {
+        li.removeClass('activo');
+        return functionTimeOut(li.prev());
+      }
+    }));
   });
 
 }).call(this);
