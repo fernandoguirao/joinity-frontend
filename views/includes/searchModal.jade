@@ -22,10 +22,24 @@
         .tab-content
           .tab-pane.active#users
             .results
-              .result
+              a.result(href="")
+                .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
                 p.amarillo
                   b Nombre de usaurio
-                p.sub.claro Detalles del usuario 
+                p.sub.claro 
+                  i.icon-calendar
+                  | En Joinity desde el 14.05.2013
+                  i.icon-camera
+                  | Ha subido 50 fotos
+                p.sub.claro
+                  i.icon-group
+                  | Participa en 50 joinities
+              a.result(href="")
+                .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
+                p.amarillo
+                  b Nombre de usaurio
+                p.sub.claro En Joinity desde el 14.05.2013
+                p.sub.claro Participa en 50 joinities
           .tab-pane#joinities
             p.claro Joinities
           .tab-pane#places
