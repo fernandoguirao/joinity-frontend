@@ -179,29 +179,42 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
 
 /* CHECKBOXES Y RADIOS */
 
-label {
-  color:@oscuro;
-  font-weight:normal;
-}
-
-.giant {
-  .make-checkbox(55px,@azul,@claro,@grisclaro,@oscuro,1.6%,2.3%);
-  .make-radio(55px,@azul,@claro,@grisclaro,@oscuro,1.5%,2.5%);
-}
-
-.big {
-  .make-checkbox(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.2%);
-  .make-radio(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.5%);
-}
-
-.normal {
-  .make-checkbox(20px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
-  .make-radio(20px,@rojo,@claro,@grisclaro,@oscuro,0.7%,1%);
-}
-
-.small {
-  .make-checkbox(18px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
-  .make-radio(18px,@rojo,@claro,@grisclaro,@oscuro,0.6%,0.9%);
+.form-group {
+  clear:both;
+  label {
+    color:@oscuro;
+    font-weight:normal;
+  }
+  
+  &.giant {
+    .make-checkbox(55px,@azul,@claro,@grisclaro,@oscuro,1.6%,2.3%);
+    .make-radio(55px,@azul,@claro,@grisclaro,@oscuro,1.5%,2.5%);
+  }
+  
+  &.big {
+    .make-checkbox(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.2%);
+    .make-radio(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.5%);
+  }
+  
+  &.normal {
+    .make-checkbox(20px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
+    .make-radio(20px,@rojo,@claro,@grisclaro,@oscuro,0.7%,1%);
+  }
+  
+  &.small {
+    .make-checkbox(18px,@rojo,@claro,@grisclaro,@oscuro,0.8%,0.8%);
+    .make-radio(18px,@rojo,@claro,@grisclaro,@oscuro,0.6%,0.9%);
+    margin-top: 5px;
+    margin-bottom:0px;
+    &.claro {
+      .make-checkbox(18px,@claro,@oscuro,@gris,@gris,0.8%,0.8%)
+    }
+    .prettycheckbox a.checked:after {
+      font-size: 11px!important;
+      margin-top: 0.7%!important;
+      margin-left: 1.2%!important;
+    }
+  }
 }
 
 /* DATE PICKER */

@@ -15,4 +15,3 @@ $j ->
   # DATEPICKER
   $j().ready ->
     $j('.datepicker').datepicker()
-  
