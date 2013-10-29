@@ -1,0 +1,24 @@
+extends layout-html
+
+block head
+
+block content
+
+  //- Variable nombrePagina Ej: #home
+  //- Variable tipoPagina Ej: 3columns
+  #nombrePagina.tipoPagina.app
+    header
+      include ../includes/header
+      
+    nav.top-bar
+      include ../includes/topBar
+    
+    .main-content.topbar
+      //- Aquí extendemos la plantilla a su contenido específico
+      block mainContent
+      
+      //Footer
+      //include ../includes/footer
+    
+    //- Modales
+    include ../includes/searchModal
