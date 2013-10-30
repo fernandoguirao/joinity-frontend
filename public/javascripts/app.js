@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp;
+    var delay, donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp, task, timer, userTask;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -89,8 +89,22 @@
     inputSearch.focus(function() {
       return results.removeClass('oculto');
     });
-    return inputSearch.focusout(function() {
+    inputSearch.focusout(function() {
       return results.addClass('oculto');
+    });
+    task = $j('li.task');
+    userTask = $j('.asignada');
+    timer = void 0;
+    delay = 200;
+    return task.hover((function() {
+      var etask;
+      etask = $j(this);
+      return timer = setTimeout(function() {
+        return etask.find(userTask).addClass('show');
+      }, delay);
+    }), function() {
+      clearTimeout(timer);
+      return userTask.removeClass('show');
     });
   });
 

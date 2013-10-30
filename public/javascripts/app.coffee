@@ -85,3 +85,18 @@ $j ->
     results.removeClass('oculto')
   inputSearch.focusout ->
     results.addClass('oculto')
+  
+  # Tasks -> users aparecen después de más info
+  task = $j('li.task')
+  userTask = $j('.asignada')
+  timer = undefined
+  delay = 200
+  task.hover (->
+    etask = $j(this)
+    timer = setTimeout(->
+      etask.find(userTask).addClass('show')
+    , delay)
+  ), ->
+    clearTimeout timer
+    userTask.removeClass('show')
+    
