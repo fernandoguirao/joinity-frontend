@@ -201,6 +201,8 @@ PLACEHOLDER
 
 /* CHECKBOXES Y RADIOS */
 
+/* .make-checkbox(@size,@color,@color-checked,@color-disabled,@color-label,@after-top,@after-left) */
+
 .form-group {
   clear:both;
   label {
@@ -214,8 +216,24 @@ PLACEHOLDER
   }
   
   &.big {
-    .make-checkbox(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.2%);
-    .make-radio(30px,@rojo,@claro,@grisclaro,@oscuro,0.8%,1.5%);
+    .make-checkbox(30px,@grisclaro,@gris,@grisclaro,@oscuro,0.8%,1.2%);
+    .make-radio(30px,@gris,@oscuro,@grisclaro,@oscuro,0.8%,1.5%);
+    font-family:'Proxima';
+    .prettycheckbox a {
+      width:22px;
+      height:22px;
+      margin-top:7px;
+      margin-right:10px;
+      &.checked {
+        &:after {
+          margin-top:0.2%;
+          margin-left:1%;
+        }
+      }
+    }
+    label {
+      margin-top:0;
+    }
   }
   
   &.normal {
@@ -295,7 +313,7 @@ PLACEHOLDER
     margin-top:30px!important;
     padding-left:15px;
     margin-bottom:0px;
-    tr {
+     tr {
       td {
         width:100%;
         span {

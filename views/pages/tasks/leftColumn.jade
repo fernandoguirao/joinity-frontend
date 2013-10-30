@@ -1,10 +1,28 @@
 section
   header
-    h4.amarillo Conversación con
-    h1.font.oscuro Antoni Espinosa
-  .content
-    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-    p Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum.
-
-    p Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    h4.amarillo Tareas en el joinity
+    h1.font.oscuro Viaje a Formentera
+  .content.tasks
+    ul
+      li
+        .task
+          .form-group.big.task
+            input.check#uno(type="checkbox",value="yes",name="uno",data-label="Esto es una tarea con una descripción de más de una línea")
+          .date
+            h4.grisclaro
+              span 25
+              | dec
+          .more-info
+            p.sub.gris Asignada por Borja de Gregorio
+            p.sub.gris Eliminar esta tarea
+      li
+        .task
+          .form-group.big.task
+            input.check#uno(type="checkbox",value="yes",name="uno",data-label="Esto es una tarea con una descripción de más de una línea")
+          .date
+            h4.grisclaro
+              span 25
+              | dec
+          .more-info
+            p.sub.gris Asignada por Borja de Gregorio
+            p.sub.gris Eliminar esta tarea
