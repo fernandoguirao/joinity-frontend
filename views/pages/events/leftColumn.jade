@@ -1,27 +1,69 @@
-section.messages
+section.events
   header
-    h4.amarillo Conversación con
-    h1.font.oscuro Antoni Espinosa
+    .img.display-block.big(style="background-image:url('/images/joinity-temp/aficiones.png')")
+    h3.verde Bbq, bici, kayak
+    p.oscuro
+      | Con Joinity ya hemos gestionado todo. Estaría bien organizar una bbq en la playa una vez estemos allí, y una excursión en bici y en Kayak quien quiera
   .content
-    form.giant
-      .form-group.form-user
-        .img.avatar.cover(style="background-image:url('/images/joinity-temp/usuario.png')")
-        input.form-control.big.framed(placeholder="Escríbele algo a tu amigo")
-        .button-group
-          .btn.small.azul.text-transform Enviar
-    ul
-      li.me
-        p.small.grisclaro 25 de diciembre, 2013. 12:32 PM
-        .bubble
-          p.normal.oscuro Este es el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
-          .img.tiny(style="background-image:url('/images/joinity-temp/usuario.png');")
-      li.not-me
-        p.small.grisclaro 25 de diciembre, 2013. 12:32 PM
-        .bubble
-          p.normal.oscuro Este es el mensaje el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
-          .img.tiny(style="background-image:url('/images/joinity-temp/aficiones.png');")
-      li.me
-        p.small.grisclaro 25 de diciembre, 2013. 12:32 PM
-        .bubble
-          p.normal.oscuro Este es el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
-          .img.tiny(style="background-image:url('/images/joinity-temp/usuario.png');")
+
+    h3.font.verde.lined.display-block Fechas
+    p.oscuro
+      span Inicio:
+      | 26 de agosto de 2013
+    p.oscuro
+      span Fin:
+      | 2 de agosto de 2013
+
+    h3.font.verde.lined.display-block Participantes
+    ul.list
+      li
+        .img.small(style="background-image:url('/images/joinity-temp/familyandfriends.png');")
+        p.oscuro
+          b Borja de Gregorio
+          span Valencia
+        .btn.small.azul.float-right.text-transform Sois amigos
+      li
+        .img.small(style="background-image:url('/images/joinity-temp/familyandfriends.png');")
+        p.oscuro
+          b Borja de Gregorio
+          span Valencia
+        .btn.small.azul.float-right.text-transform Sois amigos
+      li.fin
+
+    h3.font.verde.lined.display-block Ubicación
+    p.oscuro
+      span Ciudad:
+      | Formentera, España.
+    img.img.display-block(src="http://maps.googleapis.com/maps/api/staticmap?center={{lugar.lugar}}&zoom=13&size=600x500&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&sensor=false",alt="")
+
+    h3.font.verde.lined.display-block Comentarios
+    .messages
+      .content
+        form.giant
+          .form-group.form-user
+            .img.avatar.cover(style="background-image:url('/images/joinity-temp/usuario.png')")
+            input.form-control.big.framed(placeholder="Escríbele algo a tu amigo")
+            .button-group
+              .btn.small.azul.text-transform Enviar
+        ul
+          li.me
+            p.small.grisclaro
+              span Fernando Guirao, 
+              | el 25 de diciembre, 2013. 12:32 PM
+            .bubble
+              p.normal.oscuro Este es el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
+              .img.tiny(style="background-image:url('/images/joinity-temp/usuario.png');")
+          li.not-me
+            p.small.grisclaro
+              span Fernando Guirao, 
+              | el 25 de diciembre, 2013. 12:32 PM
+            .bubble
+              p.normal.oscuro Este es el mensaje el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
+              .img.tiny(style="background-image:url('/images/joinity-temp/aficiones.png');")
+          li.me
+            p.small.grisclaro
+              span Fernando Guirao, 
+              | el 25 de diciembre, 2013. 12:32 PM
+            .bubble
+              p.normal.oscuro Este es el mensaje lorem ipsum dolor sit amet el mensaje lorem ipsum dolor sit amet
+              .img.tiny(style="background-image:url('/images/joinity-temp/usuario.png');")
