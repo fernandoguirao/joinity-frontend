@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var donutfunction, functionTimeOut, liFirst, liLast, selectp;
+    var donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -70,7 +70,7 @@
         return functionTimeOut(li.next());
       }
     }));
-    return $j('.pasos li .rewind').click((function() {
+    $j('.pasos li .rewind').click((function() {
       var li;
       li = $j(this).parent();
       if (li.is(liFirst)) {
@@ -84,6 +84,14 @@
         return functionTimeOut(li.prev());
       }
     }));
+    results = $j('.results-content');
+    inputSearch = $j('#search .giant');
+    inputSearch.focus(function() {
+      return results.removeClass('oculto');
+    });
+    return inputSearch.focusout(function() {
+      return results.addClass('oculto');
+    });
   });
 
 }).call(this);

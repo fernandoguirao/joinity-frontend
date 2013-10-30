@@ -15,6 +15,7 @@
         padding-right:0;
         label {
           width:80%!important;
+          font-size:18px;
         }
       }
       .date {
@@ -38,6 +39,23 @@
         .opacity(0);
         max-height:0;
         .transition(all .3s);
+        .asignada {
+          li {
+            display:block;
+            clear:both;
+            .img,p,.btn {
+              display:inline-block;
+            }
+            .img {
+              position: relative;
+              top: 6px;
+              margin-right: 12px;
+            }
+            .btn {
+              float:right;
+            }
+          }
+        }
         .sub {
           font-style:normal;
           margin-bottom:2px;
@@ -48,9 +66,10 @@
         background-color:rgba(red(@claro),green(@claro),blue(@claro),.5);
         padding-top:10px;
         padding-bottom:10px;
+        margin-top:-10px;
         .more-info {
           .opacity(1);
-          max-height:300px;
+          max-height:30000px;
         }
         .date {
           h4 {

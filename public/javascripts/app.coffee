@@ -76,3 +76,12 @@ $j ->
       li.removeClass('activo')
       functionTimeOut(li.prev())
   )
+  
+  # Search-results fade on focus search input
+    
+  results = $j('.results-content')
+  inputSearch = $j('#search .giant')
+  inputSearch.focus ->
+    results.removeClass('oculto')
+  inputSearch.focusout ->
+    results.addClass('oculto')

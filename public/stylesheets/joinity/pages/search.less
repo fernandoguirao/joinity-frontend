@@ -27,7 +27,12 @@
       }
     }
   }
+  .results-content.oculto {
+    .opacity(0);
+  }
   .results {
+    .transition(opacity .3s);
+    .opacity(1);
     .result {
       margin:10px 0;
       display:block;

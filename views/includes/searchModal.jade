@@ -8,41 +8,41 @@
         form.giant
           input.form-control.giant.framed.amarillo(placeholder="Busca grupos, amigos, aficiones, lugares...")
           // .btn.giant.amarillo Busca en Joinity
-
-        ul.nav.nav-tabs#search-result
-          li.active
-            a(href="#users" data-toggle="tab").btn.normal.transparente.text-transform Users
-          li
-            a(href="#joinities" data-toggle="tab").btn.normal.transparente.text-transform Joinities
-          li
-            a(href="#places" data-toggle="tab").btn.normal.transparente.text-transform Places
-          li
-            a(href="#hobbies" data-toggle="tab").btn.normal.transparente.text-transform Hobbies
-
-        .tab-content
-          .tab-pane.active#users
-            .results
-              a.result(href="")
-                .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
-                p.amarillo
-                  b Nombre de usaurio
-                p.sub.claro 
-                  i.icon-calendar
-                  | En Joinity desde el 14.05.2013
-                  i.icon-camera
-                  | Ha subido 50 fotos
-                p.sub.claro
-                  i.icon-group
-                  | Participa en 50 joinities
-              a.result(href="")
-                .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
-                p.amarillo
-                  b Nombre de usaurio
-                p.sub.claro En Joinity desde el 14.05.2013
-                p.sub.claro Participa en 50 joinities
-          .tab-pane#joinities
-            p.claro Joinities
-          .tab-pane#places
-            p.claro Places
-          .tab-pane#hobbies
-            p.claro Hobbies
+        .results-content.oculto
+          ul.nav.nav-tabs#search-result
+            li.active
+              a(href="#users" data-toggle="tab").btn.normal.transparente.text-transform Users
+            li
+              a(href="#joinities" data-toggle="tab").btn.normal.transparente.text-transform Joinities
+            li
+              a(href="#places" data-toggle="tab").btn.normal.transparente.text-transform Places
+            li
+              a(href="#hobbies" data-toggle="tab").btn.normal.transparente.text-transform Hobbies
+  
+          .tab-content
+            .tab-pane.active#users
+              .results
+                a.result(href="")
+                  .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
+                  p.amarillo
+                    b Nombre de usaurio
+                  p.sub.claro 
+                    i.icon-calendar
+                    | En Joinity desde el 14.05.2013
+                    i.icon-camera
+                    | Ha subido 50 fotos
+                  p.sub.claro
+                    i.icon-group
+                    | Participa en 50 joinities
+                a.result(href="")
+                  .img.avatar.normal(style="background-image:url('/images/joinity-temp/usuario.png');")
+                  p.amarillo
+                    b Nombre de usaurio
+                  p.sub.claro En Joinity desde el 14.05.2013
+                  p.sub.claro Participa en 50 joinities
+            .tab-pane#joinities
+              p.claro Joinities
+            .tab-pane#places
+              p.claro Places
+            .tab-pane#hobbies
+              p.claro Hobbies
