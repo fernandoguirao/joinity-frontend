@@ -1,0 +1,27 @@
+//-
+  NOTAS
+  
+  1) Ejemplo de este mixin en uso: mixin select('selectLabel','selectId',['sdsd','sdsd'])
+  
+  2) Si queremos que no haya label en el select sólo tenemos que añadir en la variable selectLabel el valor 'no label' (para que no se ejecute el if de la línea 12).
+  
+mixin select(selectLabel,selectId,selectArray)
+  i = 0
+  - var selectId = { selLabel:selectLabel, selId:selectId, selArray:selectArray };
+
+  .field
+    -if(selectId.selLabel!=='no label') {
+      label
+        = selectId.selLabel
+    -}
+      div(class='ui selection dropdown '+selectId.selId)
+        i.dropdown.icon
+        .text
+          = selectId.selArray[0]
+        .menu.ui.transition.hidden
+          - each sel in selectId.selArray
+            .item
+              = selectId.selArray[i]
+            - i++
+  script
+    $('.#{selectId.selId}.dropdown').dropdown({action: 'updateForm'});

@@ -1,0 +1,17 @@
+mixin add-image(modalId, uploadTextLauncher)
+  div(class= modalId + 'btn ui button')
+    | #{uploadTextLauncher}
+  div(class= modalId+ ' ui modal')
+    i.close.icon.blue
+    .header
+      | Upload an image
+    .content
+      input.uploadImage(name=modalId,type="file")
+      .actions
+        .ui.big.green.button Upload it!
+        .ui.big.red.button Cancel
+  script
+    $('.#{modalId}.ui.modal').modal();
+    $('.#{modalId}btn').click(function(){
+      $('.#{modalId}.ui.modal').modal('show')
+    })
