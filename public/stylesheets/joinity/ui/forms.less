@@ -51,10 +51,28 @@ Si queremos que sea una tarea (con estado disabled al hacer check tenemos que me
 .dropdown-menu {
   color:@oscuro;
   text-transform: none;
+  padding-bottom:13px;
+  span.text {
+    color:@oscuroclaro;
+  }
+  dt span.text {
+    color: lightblue;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: left;
+    display: block;
+    margin-left: 14px;
+    border-bottom: 1px dashed lightblue;
+    margin-right: 14px;
+    padding-bottom: 8px;
+    padding-top: 2px;
+  }
 }
 
 .notification .dropdown-menu {
   width:400px;
+  padding-bottom:0;
   dt {
     text-transform:uppercase;
     color:@elcolor;
