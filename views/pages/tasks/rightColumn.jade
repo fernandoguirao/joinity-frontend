@@ -1,17 +1,19 @@
-extends ../../layouts/layout-2-columns-right
-
-block breadcrumb
-  a(href="").section My tasks 
-  i.right.arrow.icon.divider
-  .active.section Tasks by joinity
-
-block listItemContent
-  // Loop de lista de items
-  a(href="").jActive.ui.item.top.aligned.three.column.grid
-    .right.floated.tiny.teal.ui.button 2
-    //Foto del joinity al que pertenece la tarea
-    img.column(src="images/joinity-temp/avatar.jpeg",alt="")
-    .content
-      .header taskJoinity
-      .metadata lastTaskCompletionDate
-      .text lastTaskTitle
+section
+  header
+    h2.font.oscuro Tareas
+  ul
+    li
+      a(href="")
+        .content
+          .img.avatar.circle(style="background-image:url('/images/joinity-temp/background.jpg');")
+          .data
+            h4.verde Antoni Espinosa
+            p 27 de mayo, 2013
+            p.sub ¿Hola qué tal estás?
+    li.active
+      .content
+        .img.avatar.circle(style="background-image:url('/images/joinity-temp/background.jpg');")
+        .data
+          h4.verde Antoni Espinosa
+          p 27 de mayo, 2013
+          p.sub ¿Hola qué tal estás?
