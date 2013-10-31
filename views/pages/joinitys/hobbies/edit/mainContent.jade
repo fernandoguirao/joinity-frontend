@@ -1,1 +1,10 @@
-p page
+extends ../../../../layouts/layout-1-column
+
+block singleColumn
+  .single-column
+    .pasos(style="height:800px;")
+      ul
+        li.activo
+          include paso01
+        li
+          include paso02

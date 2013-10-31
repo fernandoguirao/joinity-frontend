@@ -116,25 +116,25 @@ exports.tasks = function(req, res){
 /* Mi perfil */
 
 exports.user = function(req, res){
-  res.render('pages/user/me/index', { title: 'My profile' });
+  res.render('pages/user/profile/index', { title: 'My profile' });
 };
 
 exports.userContacts = function(req, res){
-  res.render('pages/user/me/contacts/index', { title: 'Contacts' });
+  res.render('pages/user/profile/contacts/index', { title: 'Contacts' });
 };
 
 exports.userEdit = function(req, res){
-  res.render('pages/user/me/edit/index', { title: 'Edit profile' });
+  res.render('pages/user/profile/edit/index', { title: 'Edit profile' });
 };
 
 exports.userSettings = function(req, res){
-  res.render('pages/user/me/settings/index', { title: 'Settings' });
+  res.render('pages/user/profile/settings/index', { title: 'Settings' });
 };
 
 /* Otros usuarios */
 
 exports.userUser = function(req, res){
-  res.render('pages/user/others/index', { title: 'UserName' });
+  res.render('pages/user/profile/index', { title: 'UserName' });
 };
 
 /* Otras opciones */
