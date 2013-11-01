@@ -1,0 +1,75 @@
+.edit-page {
+  .crea-botones {
+    margin-top: 76px;
+    text-align: center;
+    padding: 0 3%;
+    & > div {
+      float:left;
+      width:31%;
+      /* max-width:200px; */
+      height:170px;
+      padding:23px 0px;
+      .border-radius(4px);
+      text-align:center;
+      margin:5px 1%;
+      position:relative;
+      max-height:170px;
+      cursor:pointer;
+      &:hover {
+        &:before {
+          .background-size(160%);
+        }
+        img {
+          top:-4px;
+          width:90px;
+          height:84px;
+        }
+        p {
+          margin-top:9px;
+        }
+      }
+      p {
+        font-size:18.5px;
+        font-family:proxima;
+        font-weight:normal;
+        margin-top:15px;
+        .transition(margin-top .2s);
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 105px;
+      }
+      &:before {
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-image:url("../images/ui/transparencia@2x.png");
+        .cover();
+        .background-size(110%);
+        .transition(background-size .8s);
+        left:0;
+        top:0;
+        content:"";
+      }
+      img {
+        width:83px;
+        height:78px;
+        position:relative;
+        top:4px;
+        .transition(all .3s);
+      }
+      &.aficiones {
+        background-color:@azul;
+      }
+      &.compras {
+        background-color:@rojo;
+      }
+      &.family {
+        background-color:@verde;
+      }
+    }
+  }
+  .pages {
+    padding-top:55px!important;
+  }
+}
