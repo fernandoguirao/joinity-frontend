@@ -45,7 +45,10 @@ app.get('/events/eventName/edit', routes.eventsEdit);
   /* Mis joinitys */
 app.get('/myjoinities', routes.joinitys);
   /* Crea un joinity */
-app.get('/joinitys/create', routes.joinitysCreate);
+    /* Paso 1 */
+app.get('/joinitys/create/1', routes.joinitysCreate01);
+    /* Paso 2 */
+app.get('/joinitys/create/2', routes.joinitysCreate02);
   /* Página de una afición */
 app.get('/joinitys/hobbies/hobbyName', routes.joinitysHobbiesHobby);
   /* Un joinity > aficiones */
