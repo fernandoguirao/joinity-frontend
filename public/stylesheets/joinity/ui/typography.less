@@ -62,7 +62,7 @@ h6 {
 
 p {
   color:@oscuro;
-  &.sub {
+  &.small {
     font-family:'Proxima';
     font-weight:normal;
     font-size:13px;
@@ -147,6 +147,49 @@ h1,h2,h3,h4,h5,h6,p,span,a {
     color:@oscuroclaro;
     &.lined {
       border-color:@gris;
+    }
+  }
+}
+
+.icon-joinity {
+  font-family:joinity;
+  font-size:25px;
+}
+
+
+header.lined {
+  border-bottom:1px dashed @gris;
+  padding-bottom:12px;
+  margin-bottom:25px;
+  * {
+    display:inline;
+  }
+  h3 {
+    font-size: 20px;
+    margin-left: 9px;
+    position: relative;
+    top: 10px;
+  }
+  .btn.tiny {
+    padding: 0!important;
+    height: 30px!important;
+    width: 30px!important;
+    overflow: hidden;
+    display: inline-block;
+    .border-radius(4px);
+  }
+  .float-right {
+    position: relative;
+    top: 15px;
+    i {
+      margin-right:5px;
+    }
+    a {
+      margin-right:20px;
+      &:hover {
+        text-decoration:none;
+        
+      }
     }
   }
 }

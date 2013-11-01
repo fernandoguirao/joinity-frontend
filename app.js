@@ -42,8 +42,8 @@ app.get('/brands/brandName/edit', routes.brandsEdit);
 app.get('/events/eventName', routes.events);
 app.get('/events/eventName/edit', routes.eventsEdit);
 /* Joinitys */
-  /* Todos los joinitys */
-app.get('/joinitys', routes.joinitys);
+  /* Mis joinitys */
+app.get('/myjoinities', routes.joinitys);
   /* Crea un joinity */
 app.get('/joinitys/create', routes.joinitysCreate);
   /* Página de una afición */

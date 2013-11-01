@@ -40,7 +40,7 @@ exports.eventsEdit = function(req, res){
 /* JOINITYS */
 
 exports.joinitys = function(req, res){
-  res.render('pages/joinitys/index', { title: 'Joinitys' });
+  res.render('pages/joinitys/my-joinities/index', { title: 'Joinitys' });
 };
 
 exports.joinitysCreate = function(req, res){
