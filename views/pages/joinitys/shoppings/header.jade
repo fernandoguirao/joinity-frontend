@@ -1,63 +1,60 @@
-
-.ui.big.center.aligned.header(style="background-image:url('/images/joinity-temp/background.jpg')")
-  h1
-    .content joinityTitle
-      .sub.header Category > hobbyName
-  h3
-    .content Information
-      .sub.header Days to finish 
-        span: b joinityDaysToFinish
-      .sub.header Stars 
-        span: b joinityStars
-      .sub.header Joiners
-        span: b
-          //- Empieza lo que sería el mixin del modal
-          div(class= 'joinityNumJoinersbtn ui button')
-            | numJoiners joiners
-          div(class= 'joinityNumJoiners ui modal')
-            i.close.icon.blue
-            .header
-              | Joiners in this joinity
-            .content
-              .ui.grid
-                .wide.three.column
-                  img(src='/images/joinity-temp/avatar.jpeg').ui.image
-                .wide.thirteen.column
-                  .ui.header
-                    .content contactName
-                    .sub.header
-                      .ui.grid.three.column
-                        .row
-                          .wide.column
-                            | contactEmail
-                          .wide.column
-                            | contactLocation
-                        .row
-                          .wide.column
-                            .ui.labelled.icon.inline.green.small.button
-                              i.ui.user.icon
-                              | View profile
-                          .wide.column
-                            .ui.labelled.icon.inline.red.small.button
-                              i.ui.remove.icon
-                              | Expulse from this joinity
-                          .wide.column
-                            .ui.labelled.icon.inline.green.small.button
-                              i.ui.add.icon
-                              | Add friend
-          script
-            $('.joinityNumJoiners.ui.modal').modal();
-            $('.joinityNumJoinersbtn').click(function(){
-              $('.joinityNumJoiners.ui.modal').modal('show')
-            })
-            //- Terminaría el mixin del modal
-      .sub.header Description
-        span: b joinityDescription
-      .sub.header Descripción
-        span: b joinityDescription
-      .other
-        .sub.header Admin
-          span: b joinityAdmin
-        .sub.header Creation date
-          span: b joinityCreationDate
-        .sub.header 
+.banner.cover.text-center(style="background-image:url('/images/joinity-temp/compras-banner.jpg')")
+  .top-data
+    .votacion.no-votado
+      i.icon-star.active
+      i.icon-star.active
+      i.icon-star
+      i.icon-star
+      i.icon-star
+    
+  .main-data
+    h6 Tecnología > gadgets
+    .img.avatar.big(style="background-image:url('/images/joinity-temp/compras02.png')")
+    h1.claro iPhone 5s
+    .btn.amarillo.normal.more-info Únete y cómpralo
+    .btn.azul.normal.more-info Información del producto
+    
+  .bottom-data
+    .visible-data.large
+      ul
+        li
+          h6.claro
+            b 25
+            | joiners
+        li
+          h6.claro
+            b 15%
+            | descuento
+        li
+          h6.claro
+            b 17
+            | días
+        li
+          h6.claro
+            b 300
+            | euros
+    .hidden-data
+      ul
+        li
+          .field
+            h5.claro Administrador
+            h5.azul Borja de Gregorio
+          .field
+            h5.claro Fecha de creación
+            h5.azul 27.05.2013
+        li
+          .field
+            h5.claro Requisitos
+            h5.azul Sin requisitos
+        li
+          .field
+            h5.claro ¿Se repite?
+            h5.azul Semanalmente
+          .field
+            h5.claro Nivel necesario
+            h5.azul Sin nivel
+        li
+          .field
+            h5.claro Descripción
+            h5.azul Lorem ipsum dolor sit amet consqequetur adis cipit erat
+            
