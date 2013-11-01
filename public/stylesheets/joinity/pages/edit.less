@@ -15,9 +15,33 @@
       position:relative;
       max-height:170px;
       cursor:pointer;
+      .oculto {
+        position: absolute;
+        width: 220%;
+        display: block;
+        top: -316px;
+        left: 49%;
+        font-size: 21px;
+        .opacity(0);
+        .transition(opacity .3s);
+        color:@gris;
+      }
+      &.compras {
+        .oculto {
+          left:-55%!important;
+        }
+      }
+      &.family {
+        .oculto {
+          left:-162%!important;
+        }
+      }
       &:hover {
         &:before {
           .background-size(160%);
+        }
+        .oculto {
+          .opacity(1);
         }
         img {
           top:-4px;
