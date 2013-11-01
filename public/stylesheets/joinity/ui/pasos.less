@@ -12,4 +12,45 @@
       position:relative;
     }
   }
+  ul.pages {
+    clear:both;
+    position:relative;
+    text-align:center;
+    padding-top:30px;
+    li {
+      .opacity(1);
+      position:relative;
+      display: inline-block;
+      margin: 0 10px;
+      & > div {
+        background-color:@amarillo;
+        color:@oscuro;
+        .border-radius(100px);
+        width:28px;
+        height:28px;
+      }
+      &:first-child,&:last-child {
+        & > div {
+          width:11px;
+          height:11px;
+          margin:0 2px;
+          position: relative;
+          top:-8px;
+        }
+      }
+      &.activo {
+        & > div {
+          width:52px;
+          height:52px;
+          font-size:24px;
+          font-weight:lighter;
+          font-family:proxima;
+          text-align:center;
+          padding-top:8px;
+          position: relative;
+          top:-6px;
+        }
+      }
+    }
+  }
 }
