@@ -18,3 +18,7 @@ $j ->
     
     $j('.datepicker').datepicker()
     
+    # FILE INPUT
+    
+    $j('input[type=file]').bootstrapFileInput();
+    $j('.file-inputs').bootstrapFileInput();

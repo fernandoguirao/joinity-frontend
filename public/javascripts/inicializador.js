@@ -10,7 +10,9 @@
       $j("input.check").prettyCheckable({
         color: "red"
       });
-      return $j('.datepicker').datepicker();
+      $j('.datepicker').datepicker();
+      $j('input[type=file]').bootstrapFileInput();
+      return $j('.file-inputs').bootstrapFileInput();
     });
   });
 

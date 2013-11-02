@@ -34,10 +34,24 @@ block singleColumn
           p.first-column Checkbox buttons
           .second-column
             .form-group.grisclaro.normal.task
-              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="Right positioned label (no param)")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="Un checkbox normal")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="Otro checkbox normal")
         li
           p.first-column Radio buttons
           .second-column
-                
             .form-group.grisclaro.normal
               input.check(type="radio", value="yes",name="answer",data-label="Este es el label")
+              input.check(type="radio", value="no",name="answer",data-label="Otra opción")
+        li
+          p.first-column Sube un archivo
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
