@@ -26,6 +26,21 @@ form.giant
 form.form.giant
   textarea.form-control.normal
 
+<!--------------------------------->
+<!--! File upload - file input  -->
+<!--------------------------------->
+
+.fileupload.fileupload-new(data-provides="fileupload")
+  span.btn.grisclaro.normal.btn-file
+    span.fileupload-new
+      i.icon-upload.icon-large
+      | Selecciona un archivo
+    span.fileupload-exists Cambia
+    input(type="file")
+  span.fileupload-preview.oscuro
+  a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+    i.icon-remove-sign
+
 <!---------------------->
 <!--! Select normal  -->
 <!---------------------->
