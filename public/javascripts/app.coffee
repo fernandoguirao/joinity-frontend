@@ -100,7 +100,7 @@ $j ->
     clearTimeout timer
     userTask.removeClass('show')
     
-  # Login bars bajab al hacer click en login o invitación
+  # Para que bajen las barras de invitación o login
   barBaja = (barra,boton,input,verdad) ->
     boton.click ->
       barra.addClass('down')
@@ -111,7 +111,24 @@ $j ->
       barra.removeClass('down')  if not barra.is(e.target) and barra.has(e.target).length is 0
       if verdad
         $j('.topbar-layout').removeClass('darken')
-    
+  # Ejecutando la función
   barBaja($j('.progress-top-bar form.login'),$j('.logbtn'),$j('.progress-top-bar form.login .first'),false)
   barBaja($j('.progress-top-bar form.invite'),$j('.invitebtn'),$j('.progress-top-bar form.invite .second'),false)
-  barBaja($j('.progress-top-bar form.invite'),$j('.alargado'),$j('.progress-top-bar form.invite .second'),true)
+  barBaja($j('.progress-top-bar form.invite'),$j('.modal-invite'),$j('.progress-top-bar form.invite .second'),true)
+  
+  # Precargador en ajax
+    # La función para que desaparezca --> hideLoader
+  hideLoader = (targets) ->
+    targets.children('#fadingBarsG').remove()
+    hijo = targets.children('.hide-text')
+    hijo.contents().unwrap()
+  # Las funciones para que aparezca
+  newPreloader = $j('.preloader')
+  oldPreloader = $j('.ajax-loader #fadingBarsG')
+  newPreloader.click ->
+    if $j(this).has('#fadingBarsG').length
+      hideLoader($j(this))
+    else
+      $j(this).wrapInner( "<div class='hide-text'></div>");
+      oldPreloader.clone().appendTo(newPreloader)
+

@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var barBaja, delay, donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp, task, timer, userTask;
+    var barBaja, delay, donutfunction, functionTimeOut, hideLoader, inputSearch, liFirst, liLast, newPreloader, oldPreloader, results, selectp, task, timer, userTask;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -125,7 +125,23 @@
     };
     barBaja($j('.progress-top-bar form.login'), $j('.logbtn'), $j('.progress-top-bar form.login .first'), false);
     barBaja($j('.progress-top-bar form.invite'), $j('.invitebtn'), $j('.progress-top-bar form.invite .second'), false);
-    return barBaja($j('.progress-top-bar form.invite'), $j('.alargado'), $j('.progress-top-bar form.invite .second'), true);
+    barBaja($j('.progress-top-bar form.invite'), $j('.modal-invite'), $j('.progress-top-bar form.invite .second'), true);
+    hideLoader = function(targets) {
+      var hijo;
+      targets.children('#fadingBarsG').remove();
+      hijo = targets.children('.hide-text');
+      return hijo.contents().unwrap();
+    };
+    newPreloader = $j('.preloader');
+    oldPreloader = $j('.ajax-loader #fadingBarsG');
+    return newPreloader.click(function() {
+      if ($j(this).has('#fadingBarsG').length) {
+        return hideLoader($j(this));
+      } else {
+        $j(this).wrapInner("<div class='hide-text'></div>");
+        return oldPreloader.clone().appendTo(newPreloader);
+      }
+    });
   });
 
 }).call(this);
