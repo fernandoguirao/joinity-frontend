@@ -108,23 +108,33 @@
     });
     barBaja = function(barra, boton, input, verdad) {
       boton.click(function() {
+        var clase;
         barra.addClass('down');
         input.focus();
         if (verdad) {
-          return $j('.topbar-layout').addClass('darken');
+          clase = $j('.darken');
+          return clase.addClass('visible');
+        }
+      });
+      barra.click(function() {
+        var clase;
+        barra.addClass('down');
+        if (verdad) {
+          clase = $j('.darken');
+          return clase.addClass('visible');
         }
       });
       return $(document).mouseup(function(e) {
         if (!barra.is(e.target) && barra.has(e.target).length === 0) {
-          barra.removeClass('down');
-        }
-        if (verdad) {
-          return $j('.topbar-layout').removeClass('darken');
+          if (verdad) {
+            barra.removeClass('down');
+            return $j('.darken').removeClass('visible');
+          }
         }
       });
     };
-    barBaja($j('.progress-top-bar form.login'), $j('.logbtn'), $j('.progress-top-bar form.login .first'), false);
-    barBaja($j('.progress-top-bar form.invite'), $j('.invitebtn'), $j('.progress-top-bar form.invite .second'), false);
+    barBaja($j('.progress-top-bar form.login'), $j('.logbtn'), $j('.progress-top-bar form.login .first'), true);
+    barBaja($j('.progress-top-bar form.invite'), $j('.invitebtn'), $j('.progress-top-bar form.invite .second'), true);
     barBaja($j('.progress-top-bar form.invite'), $j('.modal-invite'), $j('.progress-top-bar form.invite .second'), true);
     hideLoader = function(targets) {
       var hijo;

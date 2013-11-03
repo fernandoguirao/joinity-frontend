@@ -106,14 +106,23 @@ $j ->
       barra.addClass('down')
       input.focus()
       if verdad
-        $j('.topbar-layout').addClass('darken')
-    $(document).mouseup (e) ->
-      barra.removeClass('down')  if not barra.is(e.target) and barra.has(e.target).length is 0
+        clase = $j('.darken')
+        clase.addClass('visible')
+    barra.click ->
+      barra.addClass('down')
+      # Si la variable verdad es true añadimos la capa de opacidad verde
       if verdad
-        $j('.topbar-layout').removeClass('darken')
+        clase = $j('.darken')
+        clase.addClass('visible')
+    $(document).mouseup (e) ->
+      if not barra.is(e.target) and barra.has(e.target).length is 0
+        if verdad
+          barra.removeClass('down')
+          $j('.darken').removeClass('visible')
+
   # Ejecutando la función
-  barBaja($j('.progress-top-bar form.login'),$j('.logbtn'),$j('.progress-top-bar form.login .first'),false)
-  barBaja($j('.progress-top-bar form.invite'),$j('.invitebtn'),$j('.progress-top-bar form.invite .second'),false)
+  barBaja($j('.progress-top-bar form.login'),$j('.logbtn'),$j('.progress-top-bar form.login .first'),true)
+  barBaja($j('.progress-top-bar form.invite'),$j('.invitebtn'),$j('.progress-top-bar form.invite .second'),true)
   barBaja($j('.progress-top-bar form.invite'),$j('.modal-invite'),$j('.progress-top-bar form.invite .second'),true)
   
   # Precargador en ajax

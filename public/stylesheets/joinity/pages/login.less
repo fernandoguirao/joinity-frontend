@@ -63,13 +63,18 @@
   }
 }
 
-.darken:before {
+.darken {
   width: 100%;
   height: 100%;
   background-color: @verde;
-  z-index: 2000;
-  position: absolute;
+  z-index: -1;
+  position: fixed;
   content: "";
-  .opacity(.9);
+  .opacity(0);
+  .transition(opacity .5s);
+  &.visible {
+    z-index: 2000;
+    content: "";
+    .opacity(.9);
+  }
 }
-
