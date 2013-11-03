@@ -68,10 +68,9 @@ app.get('/messages', routes.messages);
 /* Reservations */
 app.get('/reservations', routes.reservations);
 app.get('/reservations/manage', routes.reservationsManage);
-/* Shoppings */
-app.get('/shoppings', routes.shoppings);
-app.get('/shoppings/payment', routes.shoppingsPayment);
-app.get('/shoppings/purchases', routes.shoppingsPurchases);
+/* Payments */
+app.get('/payments', routes.payments);
+app.get('/payments/bills', routes.bills);
 /* Tasks */
 app.get('/tasks', routes.tasks);
 /* Users */

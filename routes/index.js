@@ -95,18 +95,14 @@ exports.reservationsManage = function(req, res){
   res.render('pages/reservations/manage/index', { title: 'Reservations manage' });
 };
 
-/* SHOPPINGS */
+/* PAYMENTA */
 
-exports.shoppings = function(req, res){
-  res.render('pages/shoppings/index', { title: 'Shoppings' });
+exports.payments = function(req, res){
+  res.render('pages/payments/index', { title: 'Shoppings' });
 };
 
-exports.shoppingsPayment = function(req, res){
-  res.render('pages/shoppings/payment/index', { title: 'Shoppings payment' });
-};
-
-exports.shoppingsPurchases = function(req, res){
-  res.render('pages/shoppings/purchases/index', { title: 'Shoppings purchases' });
+exports.bills = function(req, res){
+  res.render('pages/payments/bills/index', { title: 'Shoppings payment' });
 };
 
 /* TASKS */
