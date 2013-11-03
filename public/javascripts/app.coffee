@@ -100,3 +100,18 @@ $j ->
     clearTimeout timer
     userTask.removeClass('show')
     
+  # Login bars bajab al hacer click en login o invitación
+  barBaja = (barra,boton,input,verdad) ->
+    boton.click ->
+      barra.addClass('down')
+      input.focus()
+      if verdad
+        $j('.topbar-layout').addClass('darken')
+    $(document).mouseup (e) ->
+      barra.removeClass('down')  if not barra.is(e.target) and barra.has(e.target).length is 0
+      if verdad
+        $j('.topbar-layout').removeClass('darken')
+    
+  barBaja($j('.progress-top-bar form.login'),$j('.logbtn'),$j('.progress-top-bar form.login .first'),false)
+  barBaja($j('.progress-top-bar form.invite'),$j('.invitebtn'),$j('.progress-top-bar form.invite .second'),false)
+  barBaja($j('.progress-top-bar form.invite'),$j('.alargado'),$j('.progress-top-bar form.invite .second'),true)

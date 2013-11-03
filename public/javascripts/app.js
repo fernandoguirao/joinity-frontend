@@ -5,7 +5,7 @@
   $j = jQuery;
 
   $j(function() {
-    var delay, donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp, task, timer, userTask;
+    var barBaja, delay, donutfunction, functionTimeOut, inputSearch, liFirst, liLast, results, selectp, task, timer, userTask;
     if (selectpickercalled) {
       selectp = $j('.bootstrap-select');
       selectp.each(function() {
@@ -96,7 +96,7 @@
     userTask = $j('.asignada');
     timer = void 0;
     delay = 200;
-    return task.hover((function() {
+    task.hover((function() {
       var etask;
       etask = $j(this);
       return timer = setTimeout(function() {
@@ -106,6 +106,26 @@
       clearTimeout(timer);
       return userTask.removeClass('show');
     });
+    barBaja = function(barra, boton, input, verdad) {
+      boton.click(function() {
+        barra.addClass('down');
+        input.focus();
+        if (verdad) {
+          return $j('.topbar-layout').addClass('darken');
+        }
+      });
+      return $(document).mouseup(function(e) {
+        if (!barra.is(e.target) && barra.has(e.target).length === 0) {
+          barra.removeClass('down');
+        }
+        if (verdad) {
+          return $j('.topbar-layout').removeClass('darken');
+        }
+      });
+    };
+    barBaja($j('.progress-top-bar form.login'), $j('.logbtn'), $j('.progress-top-bar form.login .first'), false);
+    barBaja($j('.progress-top-bar form.invite'), $j('.invitebtn'), $j('.progress-top-bar form.invite .second'), false);
+    return barBaja($j('.progress-top-bar form.invite'), $j('.alargado'), $j('.progress-top-bar form.invite .second'), true);
   });
 
 }).call(this);
