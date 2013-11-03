@@ -1,0 +1,98 @@
+.progress-top-bar {
+  form {
+    margin-top:-96px;
+    .transition(margin-top .3s);
+    position:absolute;
+    width:100%;
+    .form-group {
+      display:block;
+      .form-control.giant,label {
+        width:50%;
+        display:inline-block;
+        font-family:proxima;
+        font-weight:100;
+        font-size:24px;
+        background-color:#fede5d;
+        color:@oscuro!important;
+        .border-radius(0);
+        border:0;
+        text-align:center;
+        &::-webkit-input-placeholder{
+          color:#a68a4d;
+        }
+        &::-moz-placeholder{
+          color:#a68a4d;
+        }
+        .placeholder {
+          color:#a68a4d;
+        }
+        &:focus {
+          background-color:@amarillo;
+          &::-webkit-input-placeholder{
+            color:@oscuro;
+          }
+          &::-moz-placeholder{
+            color:@oscuro;
+          }
+          .placeholder {
+            color:@oscuro;
+          }
+        }
+      }
+    }
+    &.down {
+      margin-top:-11px;
+    }
+    &.invite {
+      .form-group {
+        label {
+          /* background-color:lighten(@verde,15%); */
+          width:25%;
+          padding-top:25px;
+          padding-bottom:25px;
+          top:3px;
+          position:relative;
+        }
+        .form-control.giant {
+          /* background-color:@verde; */
+          &.second {
+            width:75%;
+            text-align:left;
+            /*
+&::-webkit-input-placeholder{
+              color:@claro;
+            }
+            &::-moz-placeholder{
+              color:@claro;
+            }
+            .placeholder {
+              color:@claro;
+            }
+            &:focus {
+              &::-webkit-input-placeholder{
+                color:@claro;
+              }
+              &::-moz-placeholder{
+                color:@claro;
+              }
+              .placeholder {
+                color:@claro;
+              }
+            }
+*/
+          }
+        }
+      }
+    }
+  }
+}
+
+.darken:before {
+  width: 100%;
+  height: 100%;
+  background-color: @verde;
+  z-index: 2000;
+  position: absolute;
+  content: "";
+  .opacity(.9);
+}
