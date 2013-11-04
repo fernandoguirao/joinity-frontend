@@ -149,7 +149,7 @@
         return hideLoader($j(this));
       } else {
         $j(this).wrapInner("<div class='hide-text'></div>");
-        return oldPreloader.clone().appendTo(newPreloader);
+        return oldPreloader.clone().appendTo($j(this));
       }
     });
     if ($j(".infoBar").length) {

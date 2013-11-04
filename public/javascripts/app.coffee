@@ -139,7 +139,7 @@ $j ->
       hideLoader($j(this))
     else
       $j(this).wrapInner( "<div class='hide-text'></div>");
-      oldPreloader.clone().appendTo(newPreloader)
+      oldPreloader.clone().appendTo($j(this))
 
   # Si infobar mover body
   if $j(".infoBar").length

@@ -31,57 +31,112 @@ if ('development' == app.get('env')) {
 
 /* ROUTES */
 
-/* Home */
+/* HOME */
+
 app.get('/', routes.index);
-app.get('/loged', routes.homeLoged);
-app.get('/unloged', routes.homeUnloged);
-/* Brands */
+
+app.get('/unlogged', routes.homeUnlogged);
+
+/* BRANDS */
+
 app.get('/brands/brandName', routes.brands);
+
 app.get('/brands/brandName/edit', routes.brandsEdit);
-/* Events */
+
+/* EVENTS */
+
 app.get('/events/eventName', routes.events);
+
 app.get('/events/eventName/edit', routes.eventsEdit);
-/* Joinitys */
-  /* Mis joinitys */
-app.get('/myjoinities', routes.joinitys);
-  /* Crea un joinity */
-    /* Paso 1 */
-app.get('/joinitys/create/1', routes.joinitysCreate01);
-    /* Paso 2 */
-app.get('/joinitys/create/2', routes.joinitysCreate02);
-  /* Página de una afición */
-app.get('/joinitys/hobbies/hobbyName', routes.joinitysHobbiesHobby);
-  /* Un joinity > aficiones */
-app.get('/joinitys/hobbies/joinityName', routes.joinitysHobbiesJoinity);
-  /* Un joinity > f&f */
-app.get('/joinitys/familyandfriends/joinityName', routes.joinitysFamilyandfriendsJoinity);
-  /* Un joinity compras */
-app.get('/joinitys/shoppings/joinityName', routes.joinitysShoppingsJoinity);
-  /* Edición de joinity aficiones */
-app.get('/joinitys/hobbies/joinityName/edit', routes.joinitysHobbiesJoinityEdit);
-  /* Edición de joinity f&f */
-app.get('/joinitys/familyandfriends/joinityName/edit', routes.joinitysFamilyandfriendsJoinityEdit);
-  /* Edición de joinity compras */
-app.get('/joinitys/shoppings/joinityName/edit', routes.joinitysShoppingsJoinityEdit);
-/* Messages */
+
+/* JOINITIES */
+
+/* Mis joinities */
+
+app.get('/myjoinities', routes.joinities);
+
+/* Crea un joinity */
+
+/*    Paso 1 */
+
+app.get('/joinities/create/', routes.joinitiesCreate01);
+
+/*    Paso 2 */
+
+app.get('/joinities/create/2', routes.joinitiesCreate02);
+
+/* Página de todas las aficiones */
+
+app.get('/joinities/hobbies/all', routes.joinitiesAllHobbiesPage);
+
+/* Página de una afición */
+
+app.get('/joinities/hobbies/hobbyName', routes.joinitiesSingleHobbyPage);
+
+/* Un joinity > aficiones */
+
+app.get('/joinities/hobbies/joinityName', routes.joinitiesHobbiesJoinity);
+
+/* Edición de joinity aficiones */
+
+app.get('/joinities/hobbies/joinityName/edit', routes.joinitiesHobbiesJoinityEdit);
+
+/* Un joinity > f&f */
+
+app.get('/joinities/familyandfriends/joinityName', routes.joinitiesFamilyandfriendsJoinity);
+
+/* Edición de joinity f&f */
+
+app.get('/joinities/familyandfriends/joinityName/edit', routes.joinitiesFamilyandfriendsJoinityEdit);
+
+/* Un joinity compras */
+
+app.get('/joinities/shoppings/joinityName', routes.joinitiesShoppingsJoinity);
+
+/* Edición de joinity compras */
+
+app.get('/joinities/shoppings/joinityName/edit', routes.joinitiesShoppingsJoinityEdit);
+
+/* MESSAGES */
+
 app.get('/messages', routes.messages);
-/* Reservations */
+
+/* RESERVATIONS */
+
 app.get('/reservations', routes.reservations);
+
+/* Reservas (brand) */
+
 app.get('/reservations/manage', routes.reservationsManage);
-/* Payments */
+
+/* PAYMENTS */
+
 app.get('/payments', routes.payments);
+
+/* BILLS */
+
 app.get('/payments/bills', routes.bills);
-/* Tasks */
+
+/* TASKS */
+
 app.get('/tasks', routes.tasks);
-/* Users */
+
+/* USERS */
+
+/* Mi perfil */
+
 app.get('/user/me', routes.user);
+
+/* Perfil de otros */
+
 app.get('/users/other', routes.userUser);
-app.get('/user/login', routes.userLogin);
-app.get('/user/contacts', routes.userContacts);
+
 app.get('/user/edit', routes.userEdit);
+
 app.get('/user/settings', routes.userSettings);
 
 /* OTROS */
+
 app.get('/user/userName', user.list);
 
 /* END ROUTES */

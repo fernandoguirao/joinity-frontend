@@ -6,15 +6,11 @@
 /* HOME */
 
 exports.index = function(req, res){
-  res.render('pages/home/loged/index', { title: 'Joinity' });
+  res.render('pages/home/logged/index', { title: 'Joinity' });
 };
 
-exports.homeLoged = function(req, res){
-  res.render('pages/home/loged/index', { title: 'Joinity' });
-};
-
-exports.homeUnloged = function(req, res){
-  res.render('pages/home/unloged/index', { title: 'Joinity' });
+exports.homeUnlogged = function(req, res){
+  res.render('pages/home/unlogged/index', { title: 'Joinity' });
 };
 
 /* BRANDS */
@@ -37,46 +33,74 @@ exports.eventsEdit = function(req, res){
   res.render('pages/events/edit/index', { title: 'Edit Event' });
 };
 
-/* JOINITYS */
+/* JOINITIES */
 
-exports.joinitys = function(req, res){
-  res.render('pages/joinitys/my-joinities/index', { title: 'Joinitys' });
+/* Mis joinities */
+
+exports.joinities = function(req, res){
+  res.render('pages/joinities/my-joinities/index', { title: 'joinities' });
 };
 
-exports.joinitysCreate01 = function(req, res){
-  res.render('pages/joinitys/create/1/index', { title: 'Create joinity' });
+/* Crea un joinity */
+
+/* Paso 1 */
+
+exports.joinitiesCreate01 = function(req, res){
+  res.render('pages/joinities/create/index', { title: 'Create joinity' });
 };
 
-exports.joinitysCreate02 = function(req, res){
-  res.render('pages/joinitys/hobbies/edit/index', { title: 'Create joinity' });
+/* Paso 2 */
+
+exports.joinitiesCreate02 = function(req, res){
+  res.render('pages/joinities/hobbies/edit/index', { title: 'Create joinity' });
 };
 
-exports.joinitysHobbiesHobby = function(req, res){
-  res.render('pages/joinitys/hobbies/categories/index', { title: 'Hobby Page' });
+/* Página de todas las aficiones */
+
+exports.joinitiesAllHobbiesPage = function(req, res){
+  res.render('pages/joinities/hobbies/all-hobbies-page/index', { title: 'Hobby Page' });
 };
 
-exports.joinitysHobbiesJoinity = function(req, res){
-  res.render('pages/joinitys/hobbies/index', { title: 'Hobby Page' });
+/* Página de una afición */
+
+exports.joinitiesSingleHobbyPage = function(req, res){
+  res.render('pages/joinities/hobbies/single-hobby-page/index', { title: 'Hobby Page' });
 };
 
-exports.joinitysHobbiesJoinityEdit = function(req, res){
-  res.render('pages/joinitys/hobbies/edit/index', { title: 'Hobby Page Edit' });
+/* Un joinity > aficiones */
+
+exports.joinitiesHobbiesJoinity = function(req, res){
+  res.render('pages/joinities/hobbies/index', { title: 'Hobby Page' });
 };
 
-exports.joinitysFamilyandfriendsJoinity = function(req, res){
-  res.render('pages/joinitys/familyandfriends/index', { title: 'Hobby Page' });
+/* Edición de un joinity > aficiones */
+
+exports.joinitiesHobbiesJoinityEdit = function(req, res){
+  res.render('pages/joinities/hobbies/edit/index', { title: 'Hobby Page Edit' });
 };
 
-exports.joinitysFamilyandfriendsJoinityEdit = function(req, res){
-  res.render('pages/joinitys/familyandfriends/edit/index', { title: 'Hobby Page Edit' });
+/* Un joinity > family */
+
+exports.joinitiesFamilyandfriendsJoinity = function(req, res){
+  res.render('pages/joinities/familyandfriends/index', { title: 'Hobby Page' });
 };
 
-exports.joinitysShoppingsJoinity = function(req, res){
-  res.render('pages/joinitys/shoppings/index', { title: 'Shopping Page' });
+/* Edición de un joinity > family */
+
+exports.joinitiesFamilyandfriendsJoinityEdit = function(req, res){
+  res.render('pages/joinities/familyandfriends/edit/index', { title: 'Hobby Page Edit' });
 };
 
-exports.joinitysShoppingsJoinityEdit = function(req, res){
-  res.render('pages/joinitys/shoppings/edit/index', { title: 'Shopping Page Edit' });
+/* Un joinity > compras */
+
+exports.joinitiesShoppingsJoinity = function(req, res){
+  res.render('pages/joinities/shoppings/index', { title: 'Shopping Page' });
+};
+
+/* Edición de un joinity > compras */
+
+exports.joinitiesShoppingsJoinityEdit = function(req, res){
+  res.render('pages/joinities/shoppings/edit/index', { title: 'Shopping Page Edit' });
 };
 
 /* MESSAGES */
@@ -95,11 +119,13 @@ exports.reservationsManage = function(req, res){
   res.render('pages/reservations/manage/index', { title: 'Reservations manage' });
 };
 
-/* PAYMENTA */
+/* PAYMENTS */
 
 exports.payments = function(req, res){
   res.render('pages/payments/index', { title: 'Shoppings' });
 };
+
+/* BILLS */
 
 exports.bills = function(req, res){
   res.render('pages/payments/bills/index', { title: 'Shoppings payment' });
@@ -117,10 +143,6 @@ exports.tasks = function(req, res){
 
 exports.user = function(req, res){
   res.render('pages/user/profile/index', { title: 'My profile' });
-};
-
-exports.userContacts = function(req, res){
-  res.render('pages/user/profile/contacts/index', { title: 'Contacts' });
 };
 
 exports.userEdit = function(req, res){
