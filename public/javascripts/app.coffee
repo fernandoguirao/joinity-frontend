@@ -2,6 +2,17 @@
 
 $j = jQuery
 
+#======================
+#! VARIABLES PÁGINAS
+#======================
+ishome = $j("#home")
+ismensajes = $j("#mensajes")
+ismisJoinitys = $j("#misJoinitys")
+isUnJoinity = $j("#unJoinity")
+isFamily = $j(".familyandfriends")
+isCompras = $j(".compras")
+isAficiones = $j(".aficiones")
+
 $j ->
   
   # Select: Heredar clases para pasar atributos visuales
