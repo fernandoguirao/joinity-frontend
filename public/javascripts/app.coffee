@@ -144,3 +144,20 @@ $j ->
   # Si infobar mover body
   if $j(".infoBar").length
     $j('body').addClass('downBody') 
+    
+  # Autoscroll home
+
+  $j(".aficat").click ->
+    $j("html,body").animate
+      scrollTop: $j(".faficiones").offset().top
+    , 800
+
+  $j(".compracat").click ->
+    $j("html,body").animate
+      scrollTop: $j(".fcompras").offset().top
+    , 800
+
+  $j(".famcat").click ->
+    $j("html,body").animate
+      scrollTop: $j(".fandfriends").offset().top
+    , 800

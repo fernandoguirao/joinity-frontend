@@ -153,8 +153,23 @@
       }
     });
     if ($j(".infoBar").length) {
-      return $j('body').addClass('downBody');
+      $j('body').addClass('downBody');
     }
+    $j(".aficat").click(function() {
+      return $j("html,body").animate({
+        scrollTop: $j(".faficiones").offset().top
+      }, 800);
+    });
+    $j(".compracat").click(function() {
+      return $j("html,body").animate({
+        scrollTop: $j(".fcompras").offset().top
+      }, 800);
+    });
+    return $j(".famcat").click(function() {
+      return $j("html,body").animate({
+        scrollTop: $j(".fandfriends").offset().top
+      }, 800);
+    });
   });
 
 }).call(this);

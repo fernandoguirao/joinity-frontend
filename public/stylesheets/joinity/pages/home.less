@@ -1,4 +1,7 @@
 .home {
+  .inactive {
+    cursor:pointer;
+  }
   .banner {
     background-color:@oscuro;
     margin-bottom: 25px;
@@ -34,6 +37,7 @@
     margin-top:-74px;
     position:relative;
     section {
+      margin-bottom:30px;
       header.lined {
         margin-top:0;
         a:hover {
@@ -75,6 +79,19 @@
           }
         }
       }
+      .btn.verde.giant {
+        margin-top:-19px;
+        margin-bottom:8px;
+        p {
+          margin-bottom:0;
+          margin-top:2px;
+        }
+        &:hover {
+          p {
+            color:@amarillo;
+          }
+        }
+      }
     }
   }
   .carousel {
@@ -103,6 +120,53 @@
       margin-top: -25px;
     }
   }
+/* Estilos específicos para centrar las opciones de cada tipo de joinity en el header */
+  header.lined {
+    text-align:center;
+    margin-bottom:54px;
+    padding-bottom:17px;
+  }
+  header.lined .btn.tiny {
+/*
+    top: 6px;
+    position: relative;
+    width:20px;
+    height:20px;
+*/
+  }
+  header.lined h3 {
+    /* font-size:17px; */
+  }
+  header.lined .float-right {
+    position: absolute;
+    top: inherit;
+    display: block;
+    float: none;
+    width: 100%;
+    margin-top: 33px;
+    margin-left:-20px;
+  }
+/* Fin de opciones específicas */
+/* Estilos específicos para decorar el contenedor */
+  section {
+    background-color:@grismuyclaro;
+    margin-bottom:59px!important;
+    .border-radius(10px);
+    header {
+      background-color:@claro;
+    }
+    .ver-mas {
+      position:relative;
+      top:24px;
+    }
+    .joinity-thumb {
+      margin: 0 8px 10px 8px;
+    }
+  }
+  .inactive {
+    margin-left:21px!important;
+  }
+/* Fin de opciones para decorar contenedor */
 }
 
 .carousel-fade .carousel-inner .item {
@@ -130,6 +194,13 @@
 }
 
 .topbar-layout {
+  .home-column {
+    padding-left:0;
+    padding-right:0;
+  }
+  header.lined .float-right {
+    margin-left:10px;
+  }
   .home {
     .banner {
       margin-top:70px;
