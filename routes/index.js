@@ -48,7 +48,7 @@ exports.joinitysCreate01 = function(req, res){
 };
 
 exports.joinitysCreate02 = function(req, res){
-  res.render('pages/joinitys/create/2/index', { title: 'Create joinity' });
+  res.render('pages/joinitys/hobbies/edit/index', { title: 'Create joinity' });
 };
 
 exports.joinitysHobbiesHobby = function(req, res){
