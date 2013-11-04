@@ -1,20 +1,80 @@
-.banner.cover.text-center(style="background-image:url('/images/joinity-temp/escocia.png')")
+#starred-joinities.carousel.slide(data-ride="carousel")
+  ol.carousel-indicators
+    li.active(data-target="#starred-joinities",data-slide-to="0")
+    li(data-target="#starred-joinities",data-slide-to="1")
+    li(data-target="#starred-joinities",data-slide-to="2")
+  
+  //- JOINITIES SELECCIONADOS PARA CAROUSEL
+  
+  .carousel-inner
     
-  .main-data
-    h1.claro Una escapada a escocia
-    ul
-      li.no-number
-        h6.claro En Valencia
-      li
-        h6.claro
-          b 270
-          | contactos
-      li
-        h6.claro
-          b 14
-          | joinities
-      li
-        h6.claro
-          b 16
-          | aficiones
-    a.btn.azul.normal.alargado.embossed(href="/joinities/hobbies/joinityName") Suena bien. Quiero verlo.
+    //- JOINITY #1
+    .item.active
+      .banner.cover.text-center(style="background-image:url('/images/joinity-temp/escocia.png')")
+        .main-data
+          h1.claro Una escapada a escocia
+          ul
+            li
+              h6.claro Dentro de
+                b.number-right 45
+                | Días
+            li
+              h6.claro En Escocia, Reino Unido
+            li
+              h6.claro Con
+                b.number-right 16
+                | personas más
+            li
+              h6.claro Por
+                b.number-right 25
+                | euros
+          a.btn.azul.normal.alargado.embossed(href="/joinities/hobbies/hobbyName") Suena bien. Quiero verlo.
+
+    //- JOINITY #2
+    .item
+      .banner.cover.text-center(style="background-image:url('/images/joinity-temp/escocia.png')")
+        .main-data
+          h1.claro Otra escapada a escocia
+          ul
+            li
+              h6.claro Dentro de
+                b.number-right 45
+                | Días
+            li
+              h6.claro En Escocia, Reino Unido
+            li
+              h6.claro Con
+                b.number-right 16
+                | personas más
+            li
+              h6.claro Por
+                b.number-right 25
+                | euros
+          a.btn.azul.normal.alargado.embossed(href="/joinities/hobbies/hobbyName") Suena bien. Quiero verlo.
+          
+    //- JOINITY #3
+    .item
+      .banner.cover.text-center(style="background-image:url('/images/joinity-temp/escocia.png')")
+        .main-data
+          h1.claro Escapada a escocia 3
+          ul
+            li
+              h6.claro Dentro de
+                b.number-right 45
+                | Días
+            li
+              h6.claro En Escocia, Reino Unido
+            li
+              h6.claro Con
+                b.number-right 16
+                | personas más
+            li
+              h6.claro Por
+                b.number-right 25
+                | euros
+          a.btn.azul.normal.alargado.embossed(href="/joinities/hobbies/hobbyName") Suena bien. Quiero verlo.
+          
+//-   a.left.carousel-control(data-slide="prev",href="#starred-joinities")
+//-     span.glyphicon.glyphicon-chevron-left
+//-   a.right.carousel-control(data-slide="next",href="#starred-joinities")
+//-     span.glyphicon.glyphicon-chevron-right
