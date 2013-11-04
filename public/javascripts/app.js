@@ -144,7 +144,7 @@
     };
     newPreloader = $j('.preloader');
     oldPreloader = $j('.ajax-loader #fadingBarsG');
-    return newPreloader.click(function() {
+    newPreloader.click(function() {
       if ($j(this).has('#fadingBarsG').length) {
         return hideLoader($j(this));
       } else {
@@ -152,6 +152,9 @@
         return oldPreloader.clone().appendTo(newPreloader);
       }
     });
+    if ($j(".infoBar").length) {
+      return $j('body').addClass('downBody');
+    }
   });
 
 }).call(this);
