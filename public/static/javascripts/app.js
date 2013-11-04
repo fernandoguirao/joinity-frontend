@@ -181,10 +181,18 @@
         scrollTop: $j(".fcompras").offset().top
       }, 800);
     });
-    return $j(".famcat").click(function() {
+    $j(".famcat").click(function() {
       return $j("html,body").animate({
         scrollTop: $j(".fandfriends").offset().top
       }, 800);
+    });
+    $j('.write .changeTo').click(function() {
+      $j('.photoUpload').removeClass('hide');
+      return $j('.write').addClass('hide');
+    });
+    return $j('.photoUpload .changeTo').click(function() {
+      $j('.photoUpload').addClass('hide');
+      return $j('.write').removeClass('hide');
     });
   });
 

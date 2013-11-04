@@ -174,3 +174,12 @@ $j ->
     $j("html,body").animate
       scrollTop: $j(".fandfriends").offset().top
     , 800
+  
+  # En joinities form intercambiar subida de archivos y escribir mensajes
+  
+  $j('.write .changeTo').click ->
+    $j('.photoUpload').removeClass('hide')
+    $j('.write').addClass 'hide'
+  $j('.photoUpload .changeTo').click ->
+    $j('.photoUpload').addClass('hide')
+    $j('.write').removeClass 'hide'

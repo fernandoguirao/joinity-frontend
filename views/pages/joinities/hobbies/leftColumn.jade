@@ -1,11 +1,28 @@
-form.giant
+//- Escribir mensaje
+form.giant.write
   .form-group.form-user
     .img.avatar.cover(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
     input.form-control.big.framed(placeholder="Cuéntale algo al grupo")
     .button-group
-      .btn.small.azul.text-transform Enviar
-      .btn.small.azul
+      input.btn.small.azul.text-transform(type="submit") Enviar
+      .btn.small.azul.changeTo
         i.icon-camera.icon-large
+//- Subir foto
+form.giant.photoUpload.hide
+  .fileupload.fileupload-new(data-provides="fileupload")
+    span.btn.grisclaro.normal.btn-file
+      span.fileupload-new
+        i.icon-upload.icon-large
+        | Selecciona una foto
+      span.fileupload-exists Cambia
+      input(type="file")
+    span.fileupload-preview.oscuro
+    a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+      i.icon-remove-sign
+    .button-group
+      input.btn.small.azul.text-transform(type="submit") Enviar
+      .btn.small.azul.changeTo
+        i.icon-pencil.icon-large
 
 .timeline
   .line

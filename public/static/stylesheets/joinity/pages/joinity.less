@@ -4,7 +4,11 @@
       margin-top:0;
       padding-top:25px;
       form.giant {
-        input {
+        &.photoUpload {
+          position:relative;
+          z-index:1;
+        }
+        input.form-control {
           background-color:@claro;
           .placeholder(@gris);
         }
