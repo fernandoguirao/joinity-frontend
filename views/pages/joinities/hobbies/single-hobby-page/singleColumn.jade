@@ -1,0 +1,109 @@
+.home-column
+  //- SECCIÓN
+  section.two-subcolumns
+    header.lined
+      ul
+        li
+          .btn.tiny.azul
+            i.icon-rss.icon-big
+          h3.font.oscuro Blogs Kitesurf
+        li
+          .btn.tiny.azul
+            i.icon-picture.icon-big
+          h3.font.oscuro Fotos Kitesurf
+    .contenido.centrador
+      ul
+        li
+          //- CADA BLOG
+          a.joinity-thumb.azul(href="http://google.com",target="_blank")
+            .front
+              p.gris.small.text-transform Blog de kytesurf
+            .back
+              .donut
+                .datos
+                  p.claro Visitar blog
+                  h6.claro www.url.com
+            .img.cover.display-block(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+        li.last
+          //- CADA FOTO
+          a.joinity-thumb.azul(href="#modal-img01",data-toggle="modal")
+            .back
+              .donut
+                .datos
+                  p.claro Ver imagen
+            .img.cover.display-block(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+            //- Modal de la imagen
+          .modal.fade#modal-img01(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+                .modal-body
+                  .img.giant.display-block.lonely(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+
+        .clear-both
+  //- SECCIÓN
+  section
+    header.lined
+      .btn.tiny.azul
+        i.icon-trophy.icon-big
+      h3.font.oscuro Kitesurf populares
+      .float-right
+        a.azul.preloader.last
+          h5.oscuro Cargar más
+    .contenido.centrador
+      //- CADA JOINITY
+      a.joinity-thumb.azul(href="/joinities/hobbies/joinityName")
+        .front
+          p.gris.small.text-transform Nos vamos de viaje al país vasco
+        .back
+          .fecha
+            p.claro 25
+            h5.claro jun
+          .donut
+            .rueda.img-circle
+              .donutchart(data-percent="46")
+              .numjoiner
+            .datos
+              p.claro 46/100
+              h6.claro joiners
+          .votacion
+            i.icon-star.active
+            i.icon-star.active
+            i.icon-star
+            i.icon-star
+            i.icon-star
+        .img.cover.display-block(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+  
+  //- SECCIÓN
+  section
+    header.lined
+      .btn.tiny.azul
+        i.icon-home.icon-big
+      h3.font.oscuro Kitesurf en mi zona
+      .float-right
+        a.azul.preloader.last
+          h5.oscuro Cargar más
+    .contenido.centrador
+      //- CADA JOINITY
+      a.joinity-thumb.azul(href="/joinities/hobbies/joinityName")
+        .front
+          p.gris.small.text-transform Nos vamos de viaje al país vasco
+        .back
+          .fecha
+            p.claro 25
+            h5.claro jun
+          .donut
+            .rueda.img-circle
+              .donutchart(data-percent="46")
+              .numjoiner
+            .datos
+              p.claro 46/100
+              h6.claro joiners
+          .votacion
+            i.icon-star.active
+            i.icon-star.active
+            i.icon-star
+            i.icon-star
+            i.icon-star
+        .img.cover.display-block(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
