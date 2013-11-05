@@ -1,0 +1,41 @@
+.modal.fade#modal-votaciones(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        form
+          .form-group.giant
+            label 1. Pregunta o título de la votación
+            input.form-control.big.framed.amarillo(placeholder="Ejemplo: '¿Cuál de estas fotos os gusta más?'")
+          .form-group.giant.opciones
+            label 2. Opciones
+            ul
+              li
+                input.form-control.big.framed.amarillo(placeholder="Escribe aquí una opción")
+                .fileupload.fileupload-new.inline(data-provides="fileupload")
+                  span.btn.verde.normal.embossed.btn-file
+                    span.fileupload-new
+                      i.icon-upload.icon-large
+                      | Añádele una foto
+                    span.fileupload-exists Cambia
+                    input(type="file")
+                  span.fileupload-preview.oscuro
+                  a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                    i.icon-remove-sign
+              li
+                input.form-control.big.framed.amarillo(placeholder="Escribe aquí otra opción")
+                .fileupload.fileupload-new.inline(data-provides="fileupload")
+                  span.btn.verde.normal.embossed.btn-file
+                    span.fileupload-new
+                      i.icon-upload.icon-large
+                      | Añádele una foto
+                    span.fileupload-exists Cambia
+                    input(type="file")
+                  span.fileupload-preview.oscuro
+                  a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                    i.icon-remove-sign
+                .btn.normal.amarillo.embossed
+                  i.icon-plus-sign.icon-large
+                  | Añade una opción más
+          .btn.giant.amarillo.embossed.btn-block(data-dismiss="modal",aria-hidden="true") Publica esta votación
