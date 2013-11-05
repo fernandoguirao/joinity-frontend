@@ -1,14 +1,34 @@
-form.giant
+//- Escribir mensaje
+form.giant.write
   .form-group.form-user
     .img.avatar.cover(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
     input.form-control.big.framed(placeholder="Cuéntale algo al grupo")
     .button-group
-      .btn.small.azul.text-transform Enviar
-      .btn.small.azul
+      input.btn.small.azul.text-transform(type="submit") Enviar
+      .btn.small.azul.changeTo
         i.icon-camera.icon-large
+//- Subir foto
+form.giant.photoUpload.hide
+  .fileupload.fileupload-new(data-provides="fileupload")
+    span.btn.grisclaro.normal.btn-file
+      span.fileupload-new
+        i.icon-upload.icon-large
+        | Selecciona una foto
+      span.fileupload-exists Cambia
+      input(type="file")
+    span.fileupload-preview.oscuro
+    a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+      i.icon-remove-sign
+    .button-group
+      input.btn.small.azul.text-transform(type="submit") Enviar
+      .btn.small.amarillo.changeTo
+        i.icon-remove-sign.icon-large
 
 .timeline
   .line
+
+  //- Mensaje
+  
   .item.message
     .item-data
       .btn.azul.big.btn-block
@@ -21,8 +41,11 @@ form.giant
           a Fernando Guirao
           | ha dicho
         p Acabo de reservar una mesa en la Parmigiana
-        .btn.grisclaro.normal.text-change Responder
-        
+        .btn.grisclaro.normal.text-change.answer Responder
+        include comments
+  
+  //- Foto
+  
   .item.picture
     .item-data
       .btn.verde.big.btn-block
@@ -35,8 +58,11 @@ form.giant
           a Fernando Guirao
           | ha dicho
         .img.display-block.big(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
-        .btn.grisclaro.normal.text-change Responder
-        
+        br
+        .btn.grisclaro.normal.text-change.answer Responder
+  
+  //- Vídeo
+  
   .item.movie
     .item-data
       .btn.rojo.big.btn-block
@@ -49,6 +75,36 @@ form.giant
           a Fernando Guirao
           | ha dicho
         .img.display-block.big(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
-        .btn.grisclaro.normal.text-change Responder
+        br
+        .btn.grisclaro.normal.text-change.answer Responder
+  
+  //- Encuesta
   
   .item.poll
+    .item-data
+      .btn.amarillo.big.btn-block
+        i.icon-bar-chart.icon-large
+      .btn.gris.tiny.btn-block 12 JUN
+    .item-content
+      .credits
+        .img.avatar.tiny(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+        h6.grisclaro
+          a Fernando Guirao
+          | ha hecho una pregunta
+        .btn.small.amarillo.text-transform.enunciado "¿Qué día quedamos?"
+        .laRespuesta
+          .imgRespuesta(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+          p.gris.normal Una respuesta
+          .resultado
+            .numVotos 0 
+              i.icon-star
+            .progress
+              .bar(style="width:0")
+        .laRespuesta
+          .imgRespuesta(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+          p.gris.normal Una respuesta
+          .resultado
+            .numVotos 1 
+              i.icon-star
+            .progress
+              .bar(style="width:100%")
