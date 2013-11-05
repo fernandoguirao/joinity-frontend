@@ -91,13 +91,20 @@ form.giant.photoUpload.hide
         h6.grisclaro
           a Fernando Guirao
           | ha hecho una pregunta
-        .btn.small.amarillo.text-transform "¿Qué día quedamos?"
+        .btn.small.amarillo.text-transform.enunciado "¿Qué día quedamos?"
         .laRespuesta
-          .elZoom
-            i.icon-zoom
           .imgRespuesta(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
-          p Una respuesta
-          .numVotos 0
-            i.icon-star
+          p.gris.normal Una respuesta
+          .resultado
+            .numVotos 0 
+              i.icon-star
             .progress
-              .bar
+              .bar(style="width:0")
+        .laRespuesta
+          .imgRespuesta(style="background-image:url('/static/images/joinity-temp/avatar.jpeg')")
+          p.gris.normal Una respuesta
+          .resultado
+            .numVotos 1 
+              i.icon-star
+            .progress
+              .bar(style="width:100%")

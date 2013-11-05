@@ -82,27 +82,68 @@
     }
   }
   .poll {
+    color:@grisclaro;
+    .imgRespuesta {
+      width:40px;
+      height:40px;
+      .border-radius(4px);
+      .cover();
+      float:left;
+      position:relative;
+    }
+    .progress {
+      background-color:@grisclaro;
+      .box-shadow(none);
+      height:15px;
+      width:241px;
+      top: 3px;
+      position: relative;
+      .bar {
+        background-color:@amarillo;
+        height:100%;
+      }
+    }
+    .resultado {
+      .numVotos,.progress {
+        /* display:inline; */
+      }
+      .numVotos {
+        width:40px;
+        float:left;
+      }
+    }
     .icono {
       background-color:@amarillo;
       i.iconos {
         line-height:1.6!important;
       }
     }
-    .contenido {
-      .etiqueta {
-        background-color:@amarillo;
-        color:@oscuro;
-        display: inline-block;
-        font-size: 11px;
-        line-height: 1.5;
-        margin-bottom: 15px;
-        margin-top: 11px;
-        max-width: 273px;
-        padding: 14px 20px;
-        text-transform: uppercase;
-      }
-      .imgRespuesta {
-        margin-right:14px!important;
+    .imgRespuesta {
+      margin-right:11px!important;
+    }
+    p {
+      height: 40px!important;
+    }
+    .enunciado {
+      margin-top:11px;
+    }
+    .laRespuesta {
+      cursor:pointer;
+    }
+    .laRespuesta:hover {
+      .imgRespuesta:before {
+        content:@star;
+        color:@amarillo;
+        font-family:fontAwesome;
+        width:100%;
+        position:absolute;
+        left:0;
+        top:0;
+        height:100%;
+        background-color:rgba(0,0,0,.5);
+        text-align:center;
+        padding-top:9px;
+        font-size:18px;
       }
     }
   }
