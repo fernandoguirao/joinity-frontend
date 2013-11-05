@@ -2,3 +2,49 @@
   .make-md-column(12);
   padding-top:100px;
 }
+
+.white-col .single-column {
+  background-color:white;
+  padding-top:29px;
+  header.lined {
+    .btn.tiny {
+      text-align:center;
+      i {
+        font-size:20px;
+        top:4px;
+        position:relative;
+        margin:0 0 0 -1px!important;
+      }
+    }
+  }
+  .two-subcolumns {
+    .contenido {
+      li {
+        .make-md-column(6);
+        .joinity-thumb {
+          width:175px;
+          height:157px;
+          .front {
+            padding:12px 0 0;
+          }
+          .back .donut {
+            clear: both;
+            text-align: center;
+            margin-top: 191px;
+          }
+        }
+        &.last {
+          .joinity-thumb {
+            height:122px;
+          }
+        }
+      }
+    }
+    header {
+      padding-bottom:46px;
+      li {
+        .make-md-column(6);
+      }
+    }
+  }
+}
