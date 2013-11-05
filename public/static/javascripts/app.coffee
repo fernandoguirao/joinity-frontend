@@ -183,3 +183,8 @@ $j ->
   $j('.photoUpload .changeTo').click ->
     $j('.photoUpload').addClass('hide')
     $j('.write').removeClass 'hide'
+  
+  # Botón responder muestra comentarios
+  $j('.answer').click ->
+    $j(this).next().removeClass 'hide'
+    $j(this).addClass 'hide'

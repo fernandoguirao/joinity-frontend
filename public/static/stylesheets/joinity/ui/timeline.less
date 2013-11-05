@@ -12,17 +12,26 @@
   }
   .item {
     padding-bottom:22px;
-    display:inline-block;
+    display: block;
+    clear: both!important;
     .item-data {
       .make-md-column(2.3);
       padding-left:0;
       .btn.azul,.btn.verde,.btn.amarillo,.btn.rojo {
-        padding-left:19px!important;
+        padding-left:18px!important;
+        max-width:60px;
+      }
+      .btn.tiny {
+        max-width: 60px;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        text-align: center;
       }
     }
     .item-content {
       .make-md-column(9.7);
       padding-right:0;
+      margin-bottom: 19px;
       .img.avatar.tiny {
         float:left;
         width: 20px;
@@ -71,5 +80,8 @@
         }
       }
     }
+  }
+  .answer {
+    
   }
 }

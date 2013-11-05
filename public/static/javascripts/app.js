@@ -190,9 +190,13 @@
       $j('.photoUpload').removeClass('hide');
       return $j('.write').addClass('hide');
     });
-    return $j('.photoUpload .changeTo').click(function() {
+    $j('.photoUpload .changeTo').click(function() {
       $j('.photoUpload').addClass('hide');
       return $j('.write').removeClass('hide');
+    });
+    return $j('.answer').click(function() {
+      $j(this).next().removeClass('hide');
+      return $j(this).addClass('hide');
     });
   });
 
