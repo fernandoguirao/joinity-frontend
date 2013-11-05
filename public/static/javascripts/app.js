@@ -99,7 +99,7 @@
       }
     }));
     results = $j('.results-content');
-    inputSearch = $j('#search .giant');
+    inputSearch = $j('.modal.fade .giant');
     inputSearch.focus(function() {
       return results.removeClass('oculto');
     });

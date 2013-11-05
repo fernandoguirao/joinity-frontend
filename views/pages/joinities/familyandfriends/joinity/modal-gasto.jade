@@ -1,0 +1,25 @@
+.modal.fade#modal-gasto(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        form
+          .form-group.giant
+            label.normal 1. Ponle un concepto o un título
+            input.form-control.big.framed.amarillo(placeholder="Consejo: un título breve y comprensible")
+          .form-group.giant.opciones
+            label.normal 2. Añade una descripción
+            input.form-control.big.framed.amarillo(placeholder="Cualquier dato adicional que se deba saber")
+          .form-group.giant.opciones
+            label 3. Precio total del gasto
+            span.help-block La cantidad total que se repartirá entre todos
+            input.form-control.big.framed.amarillo.form-number(placeholder="")
+            p.number-form €
+          .form-group.normal.opciones
+            label.normal 4. Miembros de este joinity a quienes se asigna este gasto
+            .avatar-check
+              input.check.rojo#uno(type="checkbox",value="yes",name="uno",data-label="Fernando Guirao")
+              .img.avatar.small(style="background-image:url('/images/joinity-temp/familyandfriends.png');")
+            
+          .btn.giant.amarillo.embossed.btn-block(data-dismiss="modal",aria-hidden="true") Asigna este gasto

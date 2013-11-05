@@ -1,0 +1,39 @@
+.modal.fade#modal-hotel(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        form.giant
+          input.form-control.giant.framed.amarillo(placeholder="Busca un hotel por su nombre o su ubicación")
+        .results-content.oculto
+          ul.nav.nav-tabs#search-result
+            li.active
+              a(href="#filtro-nombre" data-toggle="tab").btn.normal.transparente.text-transform Por nombre
+            li
+              a(href="#filtro-ubicacion" data-toggle="tab").btn.normal.transparente.text-transform Por categoría
+            li
+              a(href="#filtro-todos" data-toggle="tab").btn.normal.transparente.text-transform Ver todos
+  
+          .tab-content
+            .tab-pane.active#filtro-nombre
+              .results
+                a.result(href="")
+                  .img.avatar.normal(style="background-image:url('/static/images/joinity-temp/compras02.png');")
+                  p.amarillo
+                    b NH puerta de América
+                  p.sub.claro 
+                    i.icon-map-marker
+                    | Madrid, España
+                    .stars
+                      i.icon-star
+                      i.icon-star
+                      i.icon-star
+                  p.sub.claro
+                    i.icon-money
+                    | Desde 20 euros/noche
+
+            .tab-pane#filtro-ubicacion
+              p.claro Joinities
+            .tab-pane#filtro-todos
+              p.claro Places

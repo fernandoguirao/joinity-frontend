@@ -70,7 +70,7 @@ exports.joinitiesSingleHobbyPage = function(req, res){
 /* Un joinity > aficiones */
 
 exports.joinitiesHobbiesJoinity = function(req, res){
-  res.render('pages/joinities/hobbies/index', { title: 'Hobby Page' });
+  res.render('pages/joinities/hobbies/joinity/index', { title: 'Hobby Page' });
 };
 
 /* Edición de un joinity > aficiones */
@@ -82,7 +82,7 @@ exports.joinitiesHobbiesJoinityEdit = function(req, res){
 /* Un joinity > family */
 
 exports.joinitiesFamilyandfriendsJoinity = function(req, res){
-  res.render('pages/joinities/familyandfriends/index', { title: 'Hobby Page' });
+  res.render('pages/joinities/familyandfriends/joinity/index', { title: 'Hobby Page' });
 };
 
 /* Edición de un joinity > family */

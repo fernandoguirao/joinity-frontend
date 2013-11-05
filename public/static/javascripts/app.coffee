@@ -91,7 +91,7 @@ $j ->
   # Search-results fade on focus search input
     
   results = $j('.results-content')
-  inputSearch = $j('#search .giant')
+  inputSearch = $j('.modal.fade .giant')
   inputSearch.focus ->
     results.removeClass('oculto')
   $j(document).mouseup (e) ->
