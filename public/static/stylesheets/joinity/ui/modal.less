@@ -24,7 +24,7 @@
 }
 .modal-body {
   form {
-    label,span.help-block {
+    label {
       color:@claro!important;
     }
     label {
@@ -76,5 +76,47 @@
     display: inline-block;
     margin-top: 20px;
     margin-left: 14px;
+    &.float-right {
+      font-size: 30px;
+      margin-top: -2px;
+      color: @amarillo;
+      border-bottom: 1px dashed @amarillo;
+    }
+  }
+  .help-block {
+    margin-top:-4px;
+    margin-left:8px;
+    color:@verde-oscuro!important;
+    font-family:proxima;
+  }
+  .list {
+    li:hover {
+      background-color:rgba(255,255,255,.2);
+      cursor:pointer;
+      .assigned:before {
+        content:"Remove?"!important;
+        position: absolute;
+        width:100%;
+        background-color:rgba(0,0,0,.5);
+        color:@amarillo;
+        left:0;
+        top:0;
+        height:100%;
+        .border-radius(5px);
+        padding-top:12px;
+      }
+      .assign {
+        .opacity(1);
+      }
+    }
+    .assign {
+      .opacity(0);
+      .transition(opacity .2s);
+    }
+    p.claro {
+      span {
+        font-size:12px;
+      }
+    }
   }
 }

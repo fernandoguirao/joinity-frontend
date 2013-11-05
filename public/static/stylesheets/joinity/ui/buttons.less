@@ -91,6 +91,16 @@ Que rellene al parent -> btn-block
       border-top-color:@claro;
     }
   }
+  &.verdeclaro {
+    .button-variant(@verde-oscuro,#41e4c4,#41e4c4);
+    &.embossed {
+      .color-box-shadow(@verde-oscuro);
+    }
+    .caret {
+      border-top-color:@claro;
+    }
+  }
+
   &.amarillo {
     .button-variant(@oscuro,@amarillo,@amarillo);
     &.embossed {
@@ -213,6 +223,28 @@ Que rellene al parent -> btn-block
     &.tiny {
       text-transform:uppercase;
       font-size:9px;
+    }
+  }
+  &.assigned {
+    position:relative;
+    .icon-remove {
+      position: relative;
+      margin-left: 6px;
+      margin-right: -3px;
+    }
+    &:hover {
+      &:before {
+        content:"Remove?"!important;
+        position: absolute;
+        width:100%;
+        background-color:rgba(0,0,0,.5);
+        color:@amarillo;
+        left:0;
+        top:0;
+        height:100%;
+        .border-radius(5px);
+        padding-top:12px;
+      }
     }
   }
 }

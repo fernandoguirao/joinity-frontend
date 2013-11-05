@@ -12,14 +12,31 @@
             label.normal 2. Añade una descripción
             input.form-control.big.framed.amarillo(placeholder="Cualquier dato adicional que se deba saber")
           .form-group.giant.opciones
-            label 3. Precio total del gasto
+            label.normal 3. Precio total del gasto
             span.help-block La cantidad total que se repartirá entre todos
             input.form-control.big.framed.amarillo.form-number(placeholder="")
             p.number-form €
           .form-group.normal.opciones
-            label.normal 4. Miembros de este joinity a quienes se asigna este gasto
-            .avatar-check
-              input.check.rojo#uno(type="checkbox",value="yes",name="uno",data-label="Fernando Guirao")
-              .img.avatar.small(style="background-image:url('/images/joinity-temp/familyandfriends.png');")
-            
+            label.normal 4. Elige a quienes se asigna este gasto
+            span.help-block Tendrán que confirmar su conformidad
+            ul.list
+              li
+                .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+                p.claro
+                  | Borja de Gregorio
+                  span Valencia
+                .btn.small.verdeclaro.float-right.text-transform.assigned Asignado
+                  i.icon-remove
+              li
+                .img.small(style="background-image:url('/static/images/joinity-temp/usuario.png');")
+                p.claro
+                  | Borja de Gregorio
+                  span Valencia
+                .btn.small.amarillo.float-right.text-transform.assign Asignar
+          .form-group.normal.opciones.float-left
+            label.normal 5. Precio por persona
+            span.help-block Lo que tendrá que pagar cada joiner
+          p.number-form.float-right 255€
+          .clear-both
+
           .btn.giant.amarillo.embossed.btn-block(data-dismiss="modal",aria-hidden="true") Asigna este gasto
