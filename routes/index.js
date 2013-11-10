@@ -76,7 +76,7 @@ exports.joinitiesHobbiesJoinity = function(req, res){
 /* Edición de un joinity > aficiones */
 
 exports.joinitiesHobbiesJoinityEdit = function(req, res){
-  res.render('pages/joinities/hobbies/edit/index', { title: 'Hobby Page Edit' });
+  res.render('pages/joinities/hobbies/joinity/edit/index', { title: 'Hobby Page Edit' });
 };
 
 /* Un joinity > family */
@@ -88,19 +88,19 @@ exports.joinitiesFamilyandfriendsJoinity = function(req, res){
 /* Edición de un joinity > family */
 
 exports.joinitiesFamilyandfriendsJoinityEdit = function(req, res){
-  res.render('pages/joinities/familyandfriends/edit/index', { title: 'Hobby Page Edit' });
+  res.render('pages/joinities/familyandfriends/joinity/edit/index', { title: 'Hobby Page Edit' });
 };
 
 /* Un joinity > compras */
 
 exports.joinitiesShoppingsJoinity = function(req, res){
-  res.render('pages/joinities/shoppings/index', { title: 'Shopping Page' });
+  res.render('pages/joinities/shoppings/joinity/index', { title: 'Shopping Page' });
 };
 
 /* Edición de un joinity > compras */
 
 exports.joinitiesShoppingsJoinityEdit = function(req, res){
-  res.render('pages/joinities/shoppings/edit/index', { title: 'Shopping Page Edit' });
+  res.render('pages/joinities/shoppings/joinity/edit/index', { title: 'Shopping Page Edit' });
 };
 
 /* MESSAGES */
