@@ -1,5 +1,9 @@
 .banner.sliced
-  .slice.cover(style="background-image:url('/static/images/joinity-temp/background.jpg')")
+  .slice.show-images
+    .img.big.cover(style="background-image:url('/static/images/joinity-temp/background.jpg')")
+    .img.big.cover(style="background-image:url('/static/images/joinity-temp/background.jpg')")
+    .img.big.cover(style="background-image:url('/static/images/joinity-temp/background.jpg')")
+    .img.big.cover(style="background-image:url('/static/images/joinity-temp/background.jpg')")
     .bottom-data
       .visible-data
         ul
@@ -40,26 +44,29 @@
                 span 0
                 | joiners
               .bubble 1900€
+              .pico
             li.middle.actual
               .bubble
                 h2.font 1250
                   span €
                 .btn.amarillo.small.text-transform Cómpralo ahora
+              .pico.lefty
             li.not-reached
               h6.gris
                 span 155
                 | joiners
               .bubble 1050€
+              .pico
           .progress-line
             .progress(style="width:44%");
       .bottom-info
         .thumbs
           a(href="")
-            .img.thumb.tiny()
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
           a(href="")
-            .img.thumb.tiny()
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/compras02.png');")
           a(href="")
-            .img.thumb.tiny()
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/aficiones.png');")
           a(href="")
-            .img.thumb.tiny()
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
         .btn.grisclaro.tiny.text-transform Recomiéndalo
