@@ -80,6 +80,7 @@
         }
         .timeline {
           display:block;
+          margin-bottom:11px;
           
           li {
             display:inline-block;
@@ -87,22 +88,33 @@
             width:23%;
             top: -26px;
             position: relative;
-            &.actual {
+            &.middle {
               margin:0 3%;
+            }
+            &.actual {
               width:48%;
               top:0;
               .bubble {
                 padding-bottom:0;
+                padding-top:0;
                 background-color:@oscuro;
                 overflow:hidden;
+                h2 {
+                  color:@amarillo;
+                  margin-bottom:7px;
+                }
                 .btn {
                   display:block;
                   .border-radius(0);
                   left: -2px;
+                  top:2px;
                   position: relative;
                   width: 100%;
                 }
               }
+            }
+            &.not-reached {
+              color:@oscuro;
             }
             h6 {
               margin-bottom:4px;
@@ -115,6 +127,7 @@
               background-color:@grisclaro;
               .border-radius(3px);
               padding:9px 0;
+              color:@gris;
             }
           }
 
