@@ -191,11 +191,11 @@ $j ->
     
   # En tamaño tablet el menu hidden muestra la barra lateral izquierda
   $j('.menu-hidden .btn.showLeft').click ->
-    $j('.left-bar').css({'margin-left':'0'})
+    $j('.left-bar').removeClass('slideBar')
     $j(this).hide()
     $j('.menu-hidden .btn.hideLeft').css({'display':'inline-block'})
   $j('.menu-hidden .btn.hideLeft').click ->
-    $j('.left-bar').css({'margin-left':'-34%'})
+    $j('.left-bar').addClass('slideBar')
     $j(this).hide()
     $j('.menu-hidden .btn.showLeft').show()
 

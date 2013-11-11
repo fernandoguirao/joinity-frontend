@@ -1,12 +1,26 @@
 .left-bar {
-  .transition(margin-left,.2s);
+  .transition(margin-left,.2s,@cubic);
+  &.slideBar{
+    margin-left:0;
+  }
   @media (max-width: @screen-sm-max) {
-    margin-left:-34%;
     position:absolute!important;
+    z-index:16!important;
+    &.slideBar{
+      margin-left:-34%;
+    }
+  }
+  @media (max-width:767px){
+    &.slideBar {
+      margin-left:-59%;
+    }
   }
   &.fixed {
     position:fixed!important;
     z-index:-1;
+    @media (max-width: @screen-sm-max) {
+      z-index:15!important;
+    }
   }
   .brand {
     margin-top:5px;
@@ -40,15 +54,6 @@
       margin-left: 101px;
       top: -2px;
       position: relative;
-      @media (max-width: @screen-sm-max) {
-        width: 32px;
-        height: 29px;
-        padding-top: 6px;
-        padding-right: 7px;
-        margin-left: 81px;
-        top: 4px;
-        left: 14px;
-      }
     }
     dt {
       padding: 6px 8px 8px 20px;
@@ -65,16 +70,12 @@
       text-align: left;
       margin-left: 27px;
     }
+    @media (max-width: 991px) {
+      margin-left:0;
+      text-align:center;
+    }
     .centerer {
       min-width: 184px;
-      @media (max-width: @screen-sm-max) {
-        min-width:134px;
-      }
-      ul li:first-child {
-        @media (max-width: @screen-sm-max) {
-          display:none;
-        }
-      }
     }
     .img {
       float:left;
@@ -84,12 +85,11 @@
         width:82px;
         min-width:82px;
       }
-      @media (max-width: @screen-sm-max) {
-        width: 54px;
-        min-width: 54px;
-        height: 54px;
-        margin-top: 11px;
+      @media (max-width:991px) {
+        width:94px;
+        min-width:94px;
       }
+      
     }
     ul {
       left:14px;
@@ -97,6 +97,9 @@
       padding-top:2px;
       @media (max-width: @screen-sm-max) {
         left:7px;
+      }
+      @media (max-width:991px) {
+        left:12px;
       }
     }
   }

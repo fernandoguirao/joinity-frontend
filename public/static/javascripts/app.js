@@ -199,18 +199,14 @@
       return $j(this).addClass('hide');
     });
     $j('.menu-hidden .btn.showLeft').click(function() {
-      $j('.left-bar').css({
-        'margin-left': '0'
-      });
+      $j('.left-bar').removeClass('slideBar');
       $j(this).hide();
       return $j('.menu-hidden .btn.hideLeft').css({
         'display': 'inline-block'
       });
     });
     return $j('.menu-hidden .btn.hideLeft').click(function() {
-      $j('.left-bar').css({
-        'margin-left': '-34%'
-      });
+      $j('.left-bar').addClass('slideBar');
       $j(this).hide();
       return $j('.menu-hidden .btn.showLeft').show();
     });

@@ -99,6 +99,10 @@
     .carousel-indicators {
       left:90%;
       bottom:8%;
+      @media (max-width: @screen-xs-max) {
+        left: 50%;
+        top: 8%;
+      }
       li {
         margin:1px 10px;
         width:20px;
@@ -127,14 +131,7 @@
     margin-bottom:54px;
     padding-bottom:17px;
   }
-  header.lined .btn.tiny {
-/*
-    top: 6px;
-    position: relative;
-    width:20px;
-    height:20px;
-*/
-  }
+  
   header.lined h3 {
     /* font-size:17px; */
   }
@@ -227,3 +224,32 @@
     left:90%;
   }
 }
+
+/* ESTILOS ADAPTATIVOS */
+  
+.home {
+
+  /* Teléfono */
+  
+  @media (max-width:@screen-xs-max) {
+    header.lined .btn.tiny {
+      display:none;
+    }
+    header.lined h3 {
+      font-size:14px;
+    }
+    .btn.verde.giant.embossed.text-transform {
+      display:block!important;
+      width:100%;
+      font-size:13px!important;
+      font-family:proxima;
+      p {
+        font-size:10px;
+        font-family:proxima;
+      }
+    }
+  }
+
+}
+
+  /* Fin ESTILOS ADAPTATIVOS */
