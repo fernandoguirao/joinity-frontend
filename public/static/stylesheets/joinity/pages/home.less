@@ -192,6 +192,17 @@
 }
 
 .topbar-layout {
+  @media(max-width:@screen-sm-max) {
+    margin-top:-20px;
+  }
+  @media(max-width:@screen-xs-max) {
+    margin-top:0px;
+    .home .carousel {
+      width:100%;
+      margin-top: -20px;
+      display: inline-block;
+    }
+  }
   .home-column {
     padding-left:0;
     padding-right:0;
@@ -263,6 +274,7 @@
   nav.top-bar {
     float:left;
     width:100%;
+    margin-top:-21px;
   }
 }
   /* Fin ESTILOS ADAPTATIVOS */

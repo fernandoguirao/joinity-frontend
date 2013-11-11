@@ -1,6 +1,24 @@
 .right-column {
   padding:0!important;
   height:100%!important;
+  @media(max-width:@screen-sm-max) {
+    padding-bottom: 44px!important;
+  }
+  @media(max-width:@screen-xs-max){
+    h6.lined:before {
+      display:none;
+    }
+    h6.lined:after {
+      display:none;
+    }
+    h6.gris.lined {
+      color: @gris;
+      margin-left: 0;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 11px;
+    }
+  }
   header {
     margin-top:56px;
     margin-bottom:36px;

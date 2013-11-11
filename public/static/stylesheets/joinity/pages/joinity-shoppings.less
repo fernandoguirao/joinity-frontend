@@ -11,6 +11,9 @@
       left:0;
       margin-left:0;
       width:40%;
+      @media(max-width:@screen-xs-max){
+        display:none;
+      }
       background-color:@amarillo;
       .img.big.cover {
         width: 49%;
@@ -30,6 +33,10 @@
     .slice {
       margin-left:40%;
       width:60%;
+      @media(max-width:@screen-xs-max){
+        width:100%;
+        margin-left:0;
+      }
       .bottom-data {
         li a {
           margin-top:12px;

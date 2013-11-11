@@ -111,13 +111,18 @@
   }
   &.sliced {
     .slice {
+      .make-xs-column(6);
+      .make-sm-column(6);
       .make-md-column(6);
       background-color:@grisclaro;
       padding-left:0;
       padding-right:0;
+      z-index:1;
       .bottom-data {
         .visible-data {
           li {
+            .make-xs-column(12);
+            .make-sm-column(12);
             .make-md-column(12);
             padding-left:0;
             padding-right:0;
@@ -138,6 +143,8 @@
         .bottom-data {
           .visible-data {
             li {
+              .make-xs-column(6);
+              .make-sm-column(6);
               .make-md-column(6);
               text-align:center;
             }
@@ -190,6 +197,8 @@
       }
       ul {
         li {
+          .make-xs-column(2);
+          .make-sm-column(2);
           .make-md-column(2);
           cursor:pointer;
           &:hover {
