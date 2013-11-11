@@ -18,11 +18,24 @@ $j ->
     
     $j('.datepicker').datepicker()
     
+    # POPUPS
+    
+    popupfooter = $j('.popupfooter').html()
+
+    $j("#buyPopup").popover
+      trigger: "click"
+      html: true
+      placement: "bottom"
+      content: popupfooter
+    
+    $j("#buyPopup2").popover
+      trigger: "click"
+      html: true
+      placement: "right"
+      content: popupfooter
+      
     # FILE INPUT
     
     $j('input[type=file]').bootstrapFileInput();
     $j('.file-inputs').bootstrapFileInput();
     
-    # POPUPS
-    
-    $('.popup').popover()

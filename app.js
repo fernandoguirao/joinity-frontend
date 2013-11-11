@@ -113,6 +113,10 @@ app.get('/reservations/manage', routes.reservationsManage);
 
 app.get('/payments', routes.payments);
 
+/* MY PAYMENTS */
+
+app.get('/payments/my-payments', routes.mypayments);
+
 /* BILLS */
 
 app.get('/payments/bills', routes.bills);

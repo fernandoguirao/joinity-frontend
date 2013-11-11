@@ -125,6 +125,12 @@ exports.payments = function(req, res){
   res.render('pages/payments/index', { title: 'Shoppings' });
 };
 
+/* MY PAYMENTS */
+
+exports.mypayments = function(req, res){
+  res.render('pages/payments/my-payments/index', { title: 'Shoppings' });
+};
+
 /* BILLS */
 
 exports.bills = function(req, res){

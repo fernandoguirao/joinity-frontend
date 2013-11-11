@@ -7,13 +7,26 @@
   $j(function() {
     $j('.selectpicker').selectpicker();
     return $j().ready(function() {
+      var popupfooter;
       $j("input.check").prettyCheckable({
         color: "red"
       });
       $j('.datepicker').datepicker();
+      popupfooter = $j('.popupfooter').html();
+      $j("#buyPopup").popover({
+        trigger: "click",
+        html: true,
+        placement: "bottom",
+        content: popupfooter
+      });
+      $j("#buyPopup2").popover({
+        trigger: "click",
+        html: true,
+        placement: "right",
+        content: popupfooter
+      });
       $j('input[type=file]').bootstrapFileInput();
-      $j('.file-inputs').bootstrapFileInput();
-      return $('.popup').popover();
+      return $j('.file-inputs').bootstrapFileInput();
     });
   });
 

@@ -188,3 +188,4 @@ $j ->
   $j('.answer').click ->
     $j(this).next().removeClass 'hide'
     $j(this).addClass 'hide'
+  

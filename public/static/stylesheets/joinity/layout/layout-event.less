@@ -1,6 +1,21 @@
 .layout-event {
   header {
     padding-top:176px;
+    &.payment {
+      padding-top:24px;
+      margin-bottom:0;
+      h4 span {
+        color:@gris;
+        margin-right:7px;
+      }
+      h3 {
+        margin-top:12px;
+      }
+      p {
+        margin-bottom:10px;
+        margin-top:11px;
+      }
+    }
     &.no-image {
       padding-top:0;
     }
@@ -15,6 +30,14 @@
       left:0;
       top:0;
     }
+  }
+  .contrato {
+    margin-bottom:9px;
+    display:inline-block;
+  }
+  .nota {
+    text-align:right;
+    margin-top:13px;
   }
   h3.lined {
     border-bottom-style:dashed;
