@@ -23,17 +23,17 @@ html,body {
 }
 
 @media (max-width: @screen-sm-max) {
-  .logged {
-    .progress-top-bar {
-      height:46px;
-      .menu-hidden {
-        display:inherit;
-        .hideLeft {
-          display:none;
-        }
+
+  .progress-top-bar.logged {
+    height:46px;
+    .menu-hidden {
+      display:inherit;
+      .hideLeft {
+        display:none;
       }
     }
   }
+
   body {
     padding-top:23px;
     &.unlogged{
