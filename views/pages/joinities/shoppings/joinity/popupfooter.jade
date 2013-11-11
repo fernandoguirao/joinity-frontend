@@ -1,0 +1,9 @@
+.popupfooter
+  header Confirmación
+  p.small.font.oscuroclaro Has solicitado participar en este joinity y lorem ipsum dolor sit amet consequetur adipicit
+  a.btn.azul.embossed.small.btn-block.text-transform(href="/payments") Estoy de acuerdo
+  .btn.grisclaro.embossed.tiny.text-transform.closeit No estoy de acuerdo
+  script(type='text/javascript').
+    $('.closeit').click(function(){
+      $("#buyPopup").popover('toggle');
+    })
