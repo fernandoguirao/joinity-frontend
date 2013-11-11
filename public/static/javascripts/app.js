@@ -194,9 +194,25 @@
       $j('.photoUpload').addClass('hide');
       return $j('.write').removeClass('hide');
     });
-    return $j('.answer').click(function() {
+    $j('.answer').click(function() {
       $j(this).next().removeClass('hide');
       return $j(this).addClass('hide');
+    });
+    $j('.menu-hidden .btn.showLeft').click(function() {
+      $j('.left-bar').css({
+        'margin-left': '0'
+      });
+      $j(this).hide();
+      return $j('.menu-hidden .btn.hideLeft').css({
+        'display': 'inline-block'
+      });
+    });
+    return $j('.menu-hidden .btn.hideLeft').click(function() {
+      $j('.left-bar').css({
+        'margin-left': '-34%'
+      });
+      $j(this).hide();
+      return $j('.menu-hidden .btn.showLeft').show();
     });
   });
 

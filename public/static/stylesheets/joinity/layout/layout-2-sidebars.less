@@ -20,8 +20,17 @@ html,body {
   width:100%;
   z-index:3000;
   .transition(height,.3s);
+  .menu-hidden {
+    display:none;
+  }
   @media (max-width: @screen-sm-max) {
     height:46px;
+    .menu-hidden {
+      display:inherit;
+      .hideLeft {
+        display:none;
+      }
+    }
   }
 }
 
@@ -30,7 +39,7 @@ html,body {
   padding-top:44px;
   background-color:@azul;
   z-index:2;
-  .make-sm-column(2.4);
+  .make-sm-column(4);
   .make-md-column(2.4);
   height:100%;
   padding-left:0;
