@@ -205,11 +205,14 @@
         'display': 'inline-block'
       });
     });
-    return $j('.menu-hidden .btn.hideLeft').click(function() {
+    $j('.menu-hidden .btn.hideLeft').click(function() {
       $j('.left-bar').addClass('slideBar');
       $j(this).hide();
       return $j('.menu-hidden .btn.showLeft').show();
     });
+    if ($j('.progress-top-bar').hasClass('unlogged')) {
+      return $j('body').addClass('unlogged');
+    }
   });
 
 }).call(this);

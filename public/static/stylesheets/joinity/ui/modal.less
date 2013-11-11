@@ -22,6 +22,9 @@
     }
   }
 }
+.modal-content {
+  margin-top:0;
+}
 .modal-body {
   .lonely {
     margin-top:40px;
@@ -121,5 +124,18 @@
         font-size:12px;
       }
     }
+  }
+}
+
+@media (max-width:@screen-sm-max) {
+    
+  .modal-content {
+    margin-top:27px;
+  }
+  .modal {
+    z-index:3002;
+  }
+  .modal-backdrop {
+    z-index:3001;
   }
 }

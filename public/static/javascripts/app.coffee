@@ -199,4 +199,7 @@ $j ->
     $j(this).hide()
     $j('.menu-hidden .btn.showLeft').show()
 
+  # Borrar esto y sustituirlo por código backend
+  if $j('.progress-top-bar').hasClass('unlogged')
+    $j('body').addClass('unlogged')
 

@@ -227,11 +227,12 @@
 
 /* ESTILOS ADAPTATIVOS */
   
-.home {
 
-  /* Teléfono */
-  
-  @media (max-width:@screen-xs-max) {
+
+/* Teléfono */
+
+@media (max-width:@screen-xs-max) {
+  .home {
     header.lined .btn.tiny {
       display:none;
     }
@@ -249,7 +250,12 @@
       }
     }
   }
-
 }
 
+@media (max-width:@screen-sm-max) {
+  nav.top-bar {
+    float:left;
+    width:100%;
+  }
+}
   /* Fin ESTILOS ADAPTATIVOS */

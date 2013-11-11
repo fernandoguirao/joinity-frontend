@@ -18,7 +18,13 @@
         .border-radius(0);
         border:0;
         text-align:center;
-        &::-webkit-input-placeholder{
+        @media (max-width:@screen-sm-max) {
+          font-size:19px;
+        }
+        @media (max-width:@screen-xs-max) {
+          font-size:17px;
+        }
+        &::-webkit-input-placeholder {
           color:#a68a4d;
         }
         &::-moz-placeholder{
@@ -52,6 +58,21 @@
           padding-bottom:25px;
           top:10px;
           position:relative;
+          @media (max-width:@screen-sm-max) {
+            padding-top:27px;
+            padding-bottom:15px;
+            height:84px;
+            padding-left:9px;
+            padding-right:9px;
+          }
+          @media (max-width:@screen-xs-max) {
+            padding-top:18px;
+            padding-bottom:15px;
+            height:84px;
+            padding-left:21px;
+            padding-right:21px;
+            
+          }
         }
         .form-control.giant {
           &.second {
