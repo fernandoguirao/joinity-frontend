@@ -22,3 +22,7 @@ $j ->
     
     $j('input[type=file]').bootstrapFileInput();
     $j('.file-inputs').bootstrapFileInput();
+    
+    # POPUPS
+    
+    $('.popup').popover()

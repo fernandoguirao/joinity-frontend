@@ -12,7 +12,8 @@
       });
       $j('.datepicker').datepicker();
       $j('input[type=file]').bootstrapFileInput();
-      return $j('.file-inputs').bootstrapFileInput();
+      $j('.file-inputs').bootstrapFileInput();
+      return $('.popup').popover();
     });
   });
 
