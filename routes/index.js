@@ -52,7 +52,7 @@ exports.joinitiesCreate01 = function(req, res){
 /* Paso 2 */
 
 exports.joinitiesCreate02 = function(req, res){
-  res.render('pages/joinities/hobbies/edit/index', { title: 'Create joinity' });
+  res.render('pages/joinities/hobbies/joinity/edit/index', { title: 'Create joinity' });
 };
 
 /* Página de todas las aficiones */
