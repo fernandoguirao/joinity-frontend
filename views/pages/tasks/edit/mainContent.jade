@@ -1,0 +1,59 @@
+extends ../../../layouts/layout-1-column
+
+block singleColumn
+  .single-column.edit-page.step02
+    h1.font.verde.text-center Crea una tarea
+    h3.font.oscuro.text-center Título del joinity al que está asociado
+    form.giant.container-2-columns.layout-event
+      h3.font.verde.lined.display-block Datos de la tarea
+      ul
+        li
+          p.first-column Tarea
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *Algo breve y descriptivo
+        li
+          p.first-column Descripción
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Detalles generales del evento en un párrafo
+        li
+          p.first-column Fecha de realización
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+        li
+          p.first-column Fecha de inicio (si es distinta a la de finalización)
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+          p.first-column ¿Se repite?
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="Sí")
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+        li.hidden
+          p.first-column Periodicidad
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="Diaria")
+              input.check(type="radio", value="yes",name="answer",data-label="Semanal")
+              input.check(type="radio", value="yes",name="answer",data-label="Mensual")
+
+    .layout-event
+      h3.font.verde.lined.display-block Participantes
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-contactos",data-toggle="modal") Invita a otros joiners
+      ul.list
+        li
+          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          p.oscuro
+            b Borja de Gregorio
+            span Valencia
+          .float-right
+            .btn.tiny.azul.text-transform Ver perfil
+            .btn.tiny.rojo.text-transform Eliminar
+        li.fin
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios

@@ -19,8 +19,8 @@ exports.brands = function(req, res){
   res.render('pages/brands/index', { title: 'BrandName' });
 };
 
-exports.brandsEdit = function(req, res){
-  res.render('pages/brands/edit/index', { title: 'BrandName - Edit Brand' });
+exports.brandLocal = function(req, res){
+  res.render('pages/brands/single-local/index', { title: 'BrandName - Edit Brand' });
 };
 
 /* EVENTS */

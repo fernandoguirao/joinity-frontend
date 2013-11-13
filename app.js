@@ -41,7 +41,7 @@ app.get('/unlogged', routes.homeUnlogged);
 
 app.get('/brands/brandName', routes.brands);
 
-app.get('/brands/brandName/edit', routes.brandsEdit);
+app.get('/brands/brandName/singleLocal', routes.brandLocal);
 
 /* EVENTS */
 
