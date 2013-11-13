@@ -19,145 +19,123 @@ block singleColumn
               optgroup(label="Categorías")
                 option.unread Viajes
                 option.read Etc.
-          li
-            p.first-column Descripción
-            .second-column
-              textarea.form-control.normal
-              p.small.gris *Detalles generales del joinity en un párrafo
-          li
-            p.first-column
-            .second-column
-              .form-group.grisclaro.normal.muestra-siguiente
-                input.check(type="radio", value="yes",name="answer",data-label="¿Tiene fechas de inicio o fin?")
-          li.hidden
-            p.first-column Fecha de finalización
-            .second-column
-              input.form-control.normal.datepicker(type="text",value="")
-              p.small.gris *Selecciona una fecha
-          li
-            p.first-column
-            .second-column
-              .form-group.grisclaro.normal.muestra-siguiente
-                input.check(type="radio", value="yes",name="answer",data-label="¿Hay lí?")
-
-
         li
-          p.first-column Género
+          p.first-column Dónde tiene lugar
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *El nombre de la ciudad
+        li
+          p.first-column Descripción
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Detalles generales del joinity en un párrafo
+        li
+          p.first-column Foto principal
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column Foto de portada
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+          li
+            p.first-column
+            .second-column.more-margin.vertical
+              .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+      h3.font.verde.lined.display-block Información complementaria
+      ul
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Tiene fechas de inicio o fin?")
+        li.hidden
+          p.first-column Fecha de finalización
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+          p.first-column ¿Se repite?
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="Sí")
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+        li.hidden
+          p.first-column Periodicidad
           .second-column
             .form-group.grisclaro.normal
-              input.check(type="radio", value="yes",name="answer",data-label="Masculino")
-              input.check(type="radio", value="no",name="answer",data-label="Femenino")
-              input.check(type="radio", value="no",name="answer",data-label="Otro")
-          li
-            p.first-column Fecha de nacimiento
-            .second-column
-              input.form-control.normal.datepicker(type="text",value="")
-              p.small.gris *Haz click y selecciona el día que naciste
+              input.check(type="radio", value="yes",name="answer",data-label="Diaria")
+              input.check(type="radio", value="yes",name="answer",data-label="Semanal")
+              input.check(type="radio", value="yes",name="answer",data-label="Mensual")
         li
-          p.first-column Tu ciudad
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Requiere algún nivel de conocimiento de la actividad?")
+        li.hidden
+          p.first-column Periodicidad
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+              input.check(type="radio", value="yes",name="answer",data-label="Principiantes")
+              input.check(type="radio", value="yes",name="answer",data-label="Expertos")
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay limitación de joiners?")
+        li.hidden
+          p.first-column Máximo
+          .second-column
+            input.form-control.normal(placeholder="")
+          p.first-column Mínimo
           .second-column
             input.form-control.normal(placeholder="")
         li
           p.first-column
           .second-column
-            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
-
-      h3.font.verde.lined.display-block Fotos
-      ul
-        li
-          p.first-column Tu foto de perfil
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Tiene algún precio asociado?")
+        li.hidden
+          p.first-column Precio
           .second-column
-            .fileupload.fileupload-new(data-provides="fileupload")
-              span.btn.grisclaro.normal.btn-file
-                span.fileupload-new
-                  i.icon-upload.icon-large
-                  | Selecciona un archivo
-                span.fileupload-exists Cambia
-                input(type="file")
-              span.fileupload-preview.oscuro
-              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                i.icon-remove-sign
-              p.small.gris *Con una resolución mínima de 200x200
-        li
-          p.first-column Foto de portada
-          .second-column
-            .cambiaImagen
-              .img.big(style="background-image:url('/static/images/joinity-temp/beijing.png')")
-              .upload.existe
-                .fileupload.fileupload-new(data-provides="fileupload")
-                  span.btn.grisclaro.normal.btn-file
-                    span.fileupload-new
-                      i.icon-upload.icon-large
-                      | Selecciona un archivo
-                    span.fileupload-exists Cambia
-                    input(type="file")
-                  span.fileupload-preview.oscuro
-                  a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                    i.icon-remove-sign
-                  p.small.gris *Una foto de mayor tamaño que decorará tu perfil de usuario
-        li
-          p.first-column Fotos de tus intereses
-          .second-column
-            .fileupload.fileupload-new(data-provides="fileupload")
-              span.btn.grisclaro.normal.btn-file
-                span.fileupload-new
-                  i.icon-upload.icon-large
-                  | Selecciona un archivo
-                span.fileupload-exists Cambia
-                input(type="file")
-              span.fileupload-preview.oscuro
-              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                i.icon-remove-sign
+            input.form-control.normal(placeholder="")
+            p.small.gris *En euros
         li
           p.first-column
           .second-column
-            .fileupload.fileupload-new(data-provides="fileupload")
-              span.btn.grisclaro.normal.btn-file
-                span.fileupload-new
-                  i.icon-upload.icon-large
-                  | Selecciona un archivo
-                span.fileupload-exists Cambia
-                input(type="file")
-              span.fileupload-preview.oscuro
-              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                i.icon-remove-sign
-        li
-          p.first-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay algún requisito adicional?")
+        li.hidden
+          p.first-column Requisitos
           .second-column
-            .fileupload.fileupload-new(data-provides="fileupload")
-              span.btn.grisclaro.normal.btn-file
-                span.fileupload-new
-                  i.icon-upload.icon-large
-                  | Selecciona un archivo
-                span.fileupload-exists Cambia
-                input(type="file")
-              span.fileupload-preview.oscuro
-              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                i.icon-remove-sign
-        li
-          p.first-column
-          .second-column
-            .fileupload.fileupload-new(data-provides="fileupload")
-              span.btn.grisclaro.normal.btn-file
-                span.fileupload-new
-                  i.icon-upload.icon-large
-                  | Selecciona un archivo
-                span.fileupload-exists Cambia
-                input(type="file")
-              span.fileupload-preview.oscuro
-              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
-                i.icon-remove-sign
+            textarea.form-control.normal
+            p.small.gris *Ejemplo: llevar ropa deportiva
         li
           p.first-column
           .second-column.more-margin.vertical
             .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
-            
-
-
 
     .layout-event
-      h3.font.verde.lined.display-block Tus contactos
-      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-contactos",data-toggle="modal") Busca nuevos contactos
+      h3.font.verde.lined.display-block Participantes
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-joiners",data-toggle="modal") Invita a otros joiners
       ul.list
         li
           .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
@@ -166,24 +144,6 @@ block singleColumn
             span Valencia
           .float-right
             .btn.tiny.azul.text-transform Ver perfil
-            .btn.tiny.rojo.text-transform Eliminar
-        li.fin
-        li
-          p.first-column
-          .second-column.more-margin.vertical
-            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
-            
-    .layout-event
-      h3.font.verde.lined.display-block Tus aficiones
-      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-aficiones",data-toggle="modal") Busca nuevas aficiones
-      ul.list
-        li
-          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
-          p.oscuro
-            b Kitesurf
-            span Deportes
-          .float-right
-            .btn.tiny.azul.text-transform Ver afición
             .btn.tiny.rojo.text-transform Eliminar
         li.fin
         li

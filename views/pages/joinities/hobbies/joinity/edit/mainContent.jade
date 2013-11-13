@@ -2,48 +2,42 @@ extends ../../../../../layouts/layout-1-column
 
 block singleColumn
   .single-column.edit-page.step02
-    h1.font.verde.text-center Define los detalles de tu joinity
-    h3.font.oscuro.text-center Completa todos los campos
+    h3.font.oscuro.text-center Completa la información de este joinity
+    h1.font.verde.text-center Aficiones
     form.giant.container-2-columns.layout-event
       h3.font.verde.lined.display-block Datos generales
       ul
         li
-          p.first-column Input text de una línea
+          p.first-column Nombre del joinity
           .second-column
             input.form-control.normal(placeholder="")
-            p.small.gris *Elige un nombre breve y descriptivo de la actividad que llevaréis a cabo.
-
+            p.small.gris *Algo breve y descriptivo
         li
-          p.first-column Textarea de más de una línea
-          .second-column
-            textarea.form-control.normal
-            p.small.gris *Cualquier dato importante para los participantes
-        li
-          p.first-column Calendario o date-picker
-          .second-column
-            input.form-control.normal.datepicker(type="text",value="")
-            p.small.gris *Selecciona una fecha
-        li
-          p.first-column Elige con un dropdown
+          p.first-column Categoría principal
           .second-column
             select.selectpicker.btn.grisclaro.normal.text-left
-              optgroup(label="picnic")
-                option.unread Esto es una opción
-                option.read Esto es una opción
+              optgroup(label="Categorías")
+                option.unread Viajes
+                option.read Etc.
         li
-          p.first-column Checkbox buttons
+          p.first-column Categoría secundaria
           .second-column
-            .form-group.grisclaro.normal.task
-              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="Un checkbox normal")
-              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="Otro checkbox normal")
+            select.selectpicker.btn.grisclaro.normal.text-left
+              optgroup(label="Categorías")
+                option.unread Viajes
+                option.read Etc.
         li
-          p.first-column Radio buttons
+          p.first-column Dónde tiene lugar
           .second-column
-            .form-group.grisclaro.normal
-              input.check(type="radio", value="yes",name="answer",data-label="Este es el label")
-              input.check(type="radio", value="no",name="answer",data-label="Otra opción")
+            input.form-control.normal(placeholder="")
+            p.small.gris *El nombre de la ciudad
         li
-          p.first-column Sube un archivo
+          p.first-column Descripción
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Detalles generales del joinity en un párrafo
+        li
+          p.first-column Foto principal
           .second-column
             .fileupload.fileupload-new(data-provides="fileupload")
               span.btn.grisclaro.normal.btn-file
@@ -55,3 +49,111 @@ block singleColumn
               span.fileupload-preview.oscuro
               a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
                 i.icon-remove-sign
+        li
+          p.first-column Foto de portada
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+          li
+            p.first-column
+            .second-column.more-margin.vertical
+              .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+      h3.font.verde.lined.display-block Información complementaria
+      ul
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Tiene fechas de inicio o fin?")
+        li.hidden
+          p.first-column Fecha de finalización
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+          p.first-column ¿Se repite?
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="Sí")
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+        li.hidden
+          p.first-column Periodicidad
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="Diaria")
+              input.check(type="radio", value="yes",name="answer",data-label="Semanal")
+              input.check(type="radio", value="yes",name="answer",data-label="Mensual")
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Requiere algún nivel de conocimiento de la actividad?")
+        li.hidden
+          p.first-column Periodicidad
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+              input.check(type="radio", value="yes",name="answer",data-label="Principiantes")
+              input.check(type="radio", value="yes",name="answer",data-label="Expertos")
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay limitación de joiners?")
+        li.hidden
+          p.first-column Máximo
+          .second-column
+            input.form-control.normal(placeholder="")
+          p.first-column Mínimo
+          .second-column
+            input.form-control.normal(placeholder="")
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Tiene algún precio asociado?")
+        li.hidden
+          p.first-column Precio
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *En euros
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay algún requisito adicional?")
+        li.hidden
+          p.first-column Requisitos
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Ejemplo: llevar ropa deportiva
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+    .layout-event
+      h3.font.verde.lined.display-block Participantes
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-joiners",data-toggle="modal") Invita a otros joiners
+      ul.list
+        li
+          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          p.oscuro
+            b Borja de Gregorio
+            span Valencia
+          .float-right
+            .btn.tiny.azul.text-transform Ver perfil
+            .btn.tiny.rojo.text-transform Eliminar
+        li.fin
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
