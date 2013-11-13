@@ -1,1 +1,121 @@
-p page
+extends ../../../layouts/layout-1-column
+
+block singleColumn
+  .single-column.edit-page.step02
+    h1.font.verde.text-center Edición de evento
+    h3.font.oscuro.text-center Título del joinity al que está asociado
+    form.giant.container-2-columns.layout-event
+      h3.font.verde.lined.display-block Datos generales
+      ul
+        li
+          p.first-column Nombre del evento
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *Algo breve y descriptivo
+        li
+          p.first-column Dónde tiene lugar
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *El nombre de la ciudad
+        li
+          p.first-column Descripción
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Detalles generales del evento en un párrafo
+        li
+          p.first-column Foto principal
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay limitación de joiners?")
+        li.hidden
+          p.first-column Máximo
+          .second-column
+            input.form-control.normal(placeholder="")
+          p.first-column Mínimo
+          .second-column
+            input.form-control.normal(placeholder="")
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Tiene algún precio asociado?")
+        li.hidden
+          p.first-column Precio
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *En euros
+        li
+          p.first-column
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="¿Hay algún requisito adicional?")
+        li.hidden
+          p.first-column Requisitos
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Ejemplo: llevar ropa deportiva
+
+          li
+            p.first-column
+            .second-column.more-margin.vertical
+              .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+      h3.font.verde.lined.display-block Fechas
+      ul
+        li
+          p.first-column Fecha de finalización
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+        li
+          p.first-column Fecha de inicio (si es distinta a la de finalización)
+          .second-column
+            input.form-control.normal.datepicker(type="text",value="")
+            p.small.gris *Selecciona una fecha
+          p.first-column ¿Se repite?
+          .second-column
+            .form-group.grisclaro.normal.muestra-siguiente
+              input.check(type="radio", value="yes",name="answer",data-label="Sí")
+              input.check(type="radio", value="yes",name="answer",data-label="No")
+        li.hidden
+          p.first-column Periodicidad
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="Diaria")
+              input.check(type="radio", value="yes",name="answer",data-label="Semanal")
+              input.check(type="radio", value="yes",name="answer",data-label="Mensual")
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+    .layout-event
+      h3.font.verde.lined.display-block Participantes
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-joiners",data-toggle="modal") Invita a otros joiners
+      ul.list
+        li
+          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          p.oscuro
+            b Borja de Gregorio
+            span Valencia
+          .float-right
+            .btn.tiny.azul.text-transform Ver perfil
+            .btn.tiny.rojo.text-transform Eliminar
+        li.fin
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
