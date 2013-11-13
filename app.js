@@ -43,6 +43,8 @@ app.get('/brands/brandName', routes.brands);
 
 app.get('/brands/brandName/singleLocal', routes.brandLocal);
 
+app.get('/brands/brandName/singleLocal/edit', routes.brandLocalEdit);
+
 /* EVENTS */
 
 app.get('/events/eventName', routes.events);

@@ -23,6 +23,10 @@ exports.brandLocal = function(req, res){
   res.render('pages/brands/single-local/index', { title: 'BrandName - Edit Brand' });
 };
 
+exports.brandLocalEdit = function(req, res){
+  res.render('pages/brands/single-local/edit/index', { title: 'BrandName - Edit Brand' });
+};
+
 /* EVENTS */
 
 exports.events = function(req, res){

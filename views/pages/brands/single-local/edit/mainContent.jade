@@ -1,41 +1,84 @@
-extends ../../../../../layouts/layout-1-column
+extends ../../../../layouts/layout-1-column
 
 block singleColumn
   .single-column.edit-page.step02
-    h3.font.oscuro.text-center Completa la información de este joinity
-    h1.font.verde.text-center Compras
+    h3.font.oscuro.text-center Completa la información de este local
+    h1.font.verde.text-center Reservas
     form.giant.container-2-columns.layout-event
       h3.font.verde.lined.display-block Datos generales
       ul
         li
-          p.first-column Nombre del joinity
+          p.first-column Nombre del local
           .second-column
             input.form-control.normal(placeholder="")
-            p.small.gris *Algo breve y descriptivo
         li
           p.first-column Categoría principal
           .second-column
             select.selectpicker.btn.grisclaro.normal.text-left
               optgroup(label="Categorías")
-                option.unread Viajes
-                option.read Etc.
+                option.unread Restaurante
+                option.read Hotel
         li
-          p.first-column Categoría secundaria
-          .second-column
-            select.selectpicker.btn.grisclaro.normal.text-left
-              optgroup(label="Categorías")
-                option.unread Viajes
-                option.read Etc.
-        li
-          p.first-column Dónde tiene lugar
+          p.first-column Dónde tiene lugar (ciudad)
           .second-column
             input.form-control.normal(placeholder="")
             p.small.gris *El nombre de la ciudad
+        li
+          p.first-column Dirección
+          .second-column
+            input.form-control.normal(placeholder="")
         li
           p.first-column Descripción
           .second-column
             textarea.form-control.normal
             p.small.gris *Detalles generales del joinity en un párrafo
+        li
+          p.first-column Menú
+          .second-column
+            textarea.form-control.normal
+            p.small.gris *Detalles generales del joinity en un párrafo
+        li
+          p.first-column Precio orientativo/persona
+          .second-column
+            input.form-control.normal(placeholder="")
+
+      h3.font.verde.lined.display-block Horario
+      ul
+        li
+          p.first-column Selecciona las horas útiles
+          .second-column
+            .form-group.grisclaro.normal.task.horas
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="12:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="12:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="13:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="13:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="14:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="14:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="15:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="15:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="16:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="16:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="17:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="17:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="18:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="18:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="19:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="19:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="20:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="20:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="21:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="21:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="22:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="22:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="23:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="23:30")
+              input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="24:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="24:30")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="01:00")
+              input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="01:30")
+
+      h3.font.verde.lined.display-block Fotos
+      ul
         li
           p.first-column Foto principal
           .second-column
@@ -121,79 +164,3 @@ block singleColumn
             p.first-column
             .second-column.more-margin.vertical
               .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
-
-      h3.font.verde.lined.display-block Precio
-      ul
-        li
-          p.first-column Primer escalón: joiners necesarios
-          .second-column
-            input.form-control.normal(placeholder="")
-        li
-          p.first-column Primer escalón: precio en euros
-          .second-column
-            input.form-control.normal(placeholder="")
-        li
-          p.first-column Segundo escalón: joiners necesarios
-          .second-column
-            input.form-control.normal(placeholder="")
-        li
-          p.first-column Segundo escalón: precio en euros
-          .second-column
-            input.form-control.normal(placeholder="")
-        li
-          p.first-column Tercer escalón: joiners necesarios
-          .second-column
-            input.form-control.normal(placeholder="")
-        li
-          p.first-column Tercer escalón: precio en euros
-          .second-column
-            input.form-control.normal(placeholder="")
-
-
-      h3.font.verde.lined.display-block Información complementaria
-      ul
-        li
-          p.first-column Descripción
-          .second-column
-            textarea.form-control.normal
-        li
-          p.first-column Características generales
-          .second-column
-            textarea.form-control.normal
-        li
-          p.first-column Envío y condiciones
-          .second-column
-            textarea.form-control.normal
-
-    .layout-event
-      h3.font.verde.lined.display-block Participantes
-      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-joiners",data-toggle="modal") Invita a otros joiners
-      ul.list
-        li
-          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
-          p.oscuro
-            b Borja de Gregorio
-            span Valencia
-          .float-right
-            .btn.tiny.azul.text-transform Ver perfil
-        li.fin
-        li
-          p.first-column
-          .second-column.more-margin.vertical
-            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
-
-    .layout-event
-      h3.font.verde.lined.display-block Han comprado ya
-      ul.list
-        li
-          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
-          p.oscuro
-            b Borja de Gregorio
-            span Valencia
-          .float-right
-            .btn.tiny.azul.text-transform Ver perfil
-        li.fin
-        li
-          p.first-column
-          .second-column.more-margin.vertical
-            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
