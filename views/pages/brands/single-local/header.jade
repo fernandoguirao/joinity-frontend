@@ -1,0 +1,49 @@
+.banner.sliced
+  .slice.cover(style="background-image:url('http://maps.googleapis.com/maps/api/staticmap?center={{lugar.lugar}}&zoom=13&size=600x500&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&sensor=false')")
+    .bottom-data
+      .visible-data
+        ul
+          li
+            a.btn.amarillo.tiny.text-transform(href="/joinities/shoppings/joinityName/edit") Administra este joinity
+  .slice
+    .informacion
+      .top-info
+        h6.oscuro Código de restaurante 1567346
+        .votacion.no-votado.float-right
+          i.icon-star.active
+          i.icon-star.active
+          i.icon-star
+          i.icon-star
+          i.icon-star
+        h3.oscuro NH hoteles Puerta de América
+      .box-info.reservaBox
+        .data-shopping
+          h6.gris
+            i.icon-money.icon-normal
+            | Precio medio cubierto entre
+            span 25-35€
+          h6.gris
+            i.icon-user.icon-normal
+            | Han reservado
+            span 55
+            | joiners
+          h6.gris
+            i.icon-user.icon-normal
+            | C/ Atocha, 55, 13.
+          h6.gris
+            i.icon-user.icon-normal
+            | 96 362 89 15
+        .sandclock.float-right
+          a.btn.amarillo.big.text-transform.embossed(href="#modal-reserva",data-toggle="modal") Reserva mesa aquí
+          
+      .bottom-info
+        .thumbs
+          a(href="")
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          a(href="")
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/compras02.png');")
+          a(href="")
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/aficiones.png');")
+          a(href="")
+            .img.thumb.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+        .btn.grisclaro.tiny.text-transform Recomiéndalo

@@ -1,0 +1,44 @@
+.modal.fade#modal-reserva(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        form
+          .form-group.giant
+            label.normal 1. Elige un día
+            input.form-control.big.framed.amarillo.datepicker(type="text",value="")
+          .form-group.giant.opciones
+            label.normal 2. Elige una hora
+            select.selectpicker.btn.amarillo.big.framed.text-left
+              optgroup(label="Horario")
+                option.unread 13
+                option.read 13:30
+                option.unread 14
+                option.read 14:30
+          .form-group.giant.opciones
+            label.normal 3. Asígnalo a uno de tus joinities
+            select.selectpicker.btn.amarillo.big.framed.text-left
+              optgroup(label="Horario")
+                option.unread Cumple de la abuela
+                option.read Viaje a Madrid
+          .form-group.normal.opciones
+            label.normal 4. Elige quienes irán contigo
+            span.help-block Tendrán que confirmar su conformidad
+            ul.list
+              li
+                .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+                p.claro
+                  | Borja de Gregorio
+                  span Valencia
+                .btn.small.verdeclaro.float-right.text-transform.assigned Asignado
+                  i.icon-remove
+              li
+                .img.small(style="background-image:url('/static/images/joinity-temp/usuario.png');")
+                p.claro
+                  | Borja de Gregorio
+                  span Valencia
+                .btn.small.amarillo.float-right.text-transform.assign Asignar
+          .clear-both
+
+          .btn.giant.amarillo.embossed.btn-block(data-dismiss="modal",aria-hidden="true") Crea esta reserva
