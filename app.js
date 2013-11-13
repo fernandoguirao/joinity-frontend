@@ -125,6 +125,8 @@ app.get('/payments/bills', routes.bills);
 
 app.get('/tasks', routes.tasks);
 
+app.get('/tasks/add', routes.addTask);
+
 /* USERS */
 
 /* Mi perfil */

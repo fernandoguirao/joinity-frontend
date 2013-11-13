@@ -143,6 +143,10 @@ exports.tasks = function(req, res){
   res.render('pages/tasks/index', { title: 'Tasks' });
 };
 
+exports.addTask = function(req, res){
+  res.render('pages/tasks/edit/index', { title: 'Tasks' });
+};
+
 /* USERS */
 
 /* Mi perfil */
