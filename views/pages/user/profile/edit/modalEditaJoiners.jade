@@ -1,0 +1,45 @@
+.modal.fade#modal-edita-joiners(tabindex="-1",role="dialog",aria-labelledby="modalLabel",aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        i.icon-remove.close(data-dismiss="modal",aria-hidden="true")
+      .modal-body
+        form.giant
+          input.form-control.giant.framed.amarillo(placeholder="Busca usuarios por nombre o ubicación")
+        .results-content.oculto
+          ul.nav.nav-tabs#search-result
+            li.active
+              a(href="#filtro-nombre" data-toggle="tab").btn.normal.transparente.text-transform Por nombre o mail
+            li
+              a(href="#filtro-ubicacion" data-toggle="tab").btn.normal.transparente.text-transform Por ubicación
+            li
+              a(href="#filtro-todos" data-toggle="tab").btn.normal.transparente.text-transform Ver todos
+  
+          .tab-content
+            .tab-pane.active#filtro-nombre
+              .results
+                a.result(href="")
+                  .img.avatar.normal(style="background-image:url('/static/images/joinity-temp/compras02.png');")
+                  p.amarillo
+                    b Fernando Guirao
+                  p.sub.claro 
+                    i.icon-map-marker
+                    | Madrid, España
+                  p.sub.claro
+                    | fernando@bueninvento.es
+                  .btn.small.claro.position-right.text-transform Invitado
+                a.result(href="")
+                  .img.avatar.normal(style="background-image:url('/static/images/joinity-temp/compras02.png');")
+                  p.amarillo
+                    b Fernando Guirao
+                  p.sub.claro 
+                    i.icon-map-marker
+                    | Madrid, España
+                  p.sub.claro
+                    | fernando@bueninvento.es
+                  .btn.small.amarillo.position-right.text-transform Invitar
+
+            .tab-pane#filtro-ubicacion
+              p.claro Joinities
+            .tab-pane#filtro-todos
+              p.claro Places
