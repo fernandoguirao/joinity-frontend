@@ -371,6 +371,37 @@ PLACEHOLDER
   }
 }
 
+/* INPUT: SUBE O CAMBIA IMAGEN O YA EXISTE */
+
+.cambiaImagen {
+  .img {
+    width:217px!important;
+    position:relative;
+    cursor:pointer;
+    &:after {
+      content:@remove-sign;
+      font-family:fontawesome;
+      font-size: 30px;
+      position: absolute;
+      right: -12px;
+      margin-top: -18px;
+      color:@rojo;
+    }
+    &:hover {
+      &:after {
+        color:lighten(@rojo,10%);
+      }
+    }
+  }
+  .existe {
+    display:none;
+  }
+}
+
+/* AÑADE UNA IMAGEN MÁS */
+
+
+
 /* INPUT TYPE FILE */
 
 /*
@@ -423,3 +454,5 @@ input[type="file"] > input[type="button"] {
   .propiedades-input();
 }
 */
+
+

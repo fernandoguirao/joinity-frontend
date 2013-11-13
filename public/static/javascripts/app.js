@@ -211,8 +211,12 @@
       return $j('.menu-hidden .btn.showLeft').show();
     });
     if ($j('.progress-top-bar').hasClass('unlogged')) {
-      return $j('body').addClass('unlogged');
+      $j('body').addClass('unlogged');
     }
+    return $j('.cambiaImagen .img').click(function() {
+      $j('.upload').removeClass('existe');
+      return $j(this).addClass('existe');
+    });
   });
 
 }).call(this);

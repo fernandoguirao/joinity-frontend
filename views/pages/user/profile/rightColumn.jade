@@ -1,6 +1,8 @@
 .inside
   
   // BOTONES
+  a.btn.tiny.amarillo.embossed.text-transform(href="/user/edit") Edita tu perfil
+
   .btn.btn-block.gris.tiny.text-transform.btn-icon
     i.icon-male
     | Datos personales
@@ -11,3 +13,9 @@
     i.icon-heart
     | Aficiones
   .btn.tiny.azul.embossed.text-transform Envíale un mensaje
+  .his-pictures
+    a.img.avatar.tiny(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');" href="#modal-imagenes",data-toggle="modal")
+    a.img.avatar.tiny(style="background-image:url('/static/images/joinity-temp/compras02.png');" href="#modal-imagenes",data-toggle="modal")
+    a.img.avatar.tiny(style="background-image:url('/static/images/joinity-temp/aficiones.png');" href="#modal-imagenes",data-toggle="modal")
+    a.img.avatar.tiny(style="background-image:url('/static/images/joinity-temp/compras01.jpg');", href="#modal-imagenes",data-toggle="modal")
+  include modalImagenes

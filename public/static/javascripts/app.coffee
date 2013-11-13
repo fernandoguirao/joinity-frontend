@@ -203,3 +203,7 @@ $j ->
   if $j('.progress-top-bar').hasClass('unlogged')
     $j('body').addClass('unlogged')
 
+  # Para subir imágenes, cuando hay una imagen
+  $j('.cambiaImagen .img').click ->
+    $j('.upload').removeClass('existe')
+    $j(this).addClass('existe') 
