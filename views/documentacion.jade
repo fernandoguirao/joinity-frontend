@@ -362,4 +362,74 @@ table.table.table-striped.oscuro
       td
       td TOTAL
       td 18,03 €
-          
+         
+//EJEMPLO DE PÁGINA DE EDICIÓN 
+
+      form.giant.container-2-columns.layout-event
+        h3.font.verde.lined.display-block Datos generales
+        ul
+          li
+            p.first-column Input text de una línea
+            .second-column
+              input.form-control.normal(placeholder="")
+              p.small.gris *Elige un nombre breve y descriptivo de la actividad que llevaréis a cabo.
+  
+          li
+            p.first-column Textarea de más de una línea
+            .second-column
+              textarea.form-control.normal
+              p.small.gris *Cualquier dato importante para los participantes
+          li
+            p.first-column Calendario o date-picker
+            .second-column
+              input.form-control.normal.datepicker(type="text",value="")
+              p.small.gris *Selecciona una fecha
+          li
+            p.first-column Elige con un dropdown
+            .second-column
+              select.selectpicker.btn.grisclaro.normal.text-left
+                optgroup(label="picnic")
+                  option.unread Esto es una opción
+                  option.read Esto es una opción
+          li
+            p.first-column Checkbox buttons
+            .second-column
+              .form-group.grisclaro.normal.task
+                input.check.grisclaro#uno(type="checkbox", value="yes",name="uno",data-label="Un checkbox normal")
+                input.check.grisclaro#dos(type="checkbox", value="yes",name="uno",data-label="Otro checkbox normal")
+          li
+            p.first-column Radio buttons
+            .second-column
+              .form-group.grisclaro.normal
+                input.check(type="radio", value="yes",name="answer",data-label="Este es el label")
+                input.check(type="radio", value="no",name="answer",data-label="Otra opción")
+          li
+            p.first-column Sube un archivo
+            .second-column
+              .fileupload.fileupload-new(data-provides="fileupload")
+                span.btn.grisclaro.normal.btn-file
+                  span.fileupload-new
+                    i.icon-upload.icon-large
+                    | Selecciona un archivo
+                  span.fileupload-exists Cambia
+                  input(type="file")
+                span.fileupload-preview.oscuro
+                a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                  i.icon-remove-sign
+        li
+          p.first-column Una foto que puedes cambiar
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+          li
+            p.first-column
+            .second-column
+              .btn.big.amarillo.text-transform.embossed.btn-block Guarda los cambios

@@ -207,3 +207,8 @@ $j ->
   $j('.cambiaImagen .img').click ->
     $j('.upload').removeClass('existe')
     $j(this).addClass('existe') 
+
+    # En formularios mostrar el campo siguiente si hacemos click en un radio
+  $j('.muestra-siguiente').click ->
+    $j(this).parent().parent().addClass('hidden')
+    $j(this).parent().parent().next().removeClass('hidden')

@@ -213,9 +213,13 @@
     if ($j('.progress-top-bar').hasClass('unlogged')) {
       $j('body').addClass('unlogged');
     }
-    return $j('.cambiaImagen .img').click(function() {
+    $j('.cambiaImagen .img').click(function() {
       $j('.upload').removeClass('existe');
       return $j(this).addClass('existe');
+    });
+    return $j('.muestra-siguiente').click(function() {
+      $j(this).parent().parent().addClass('hidden');
+      return $j(this).parent().parent().next().removeClass('hidden');
     });
   });
 

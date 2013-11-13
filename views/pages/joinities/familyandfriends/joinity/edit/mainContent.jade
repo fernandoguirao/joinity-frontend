@@ -1,1 +1,192 @@
-p page
+extends ../../../../../layouts/layout-1-column
+
+block singleColumn
+  .single-column.edit-page.step02
+    h3.font.oscuro.text-center Completa la información de este joinity
+    h1.font.verde.text-center Family & friends
+    form.giant.container-2-columns.layout-event
+      h3.font.verde.lined.display-block Datos generales
+      ul
+        li
+          p.first-column Nombre del joinity
+          .second-column
+            input.form-control.normal(placeholder="")
+            p.small.gris *Algo breve y descriptivo
+        li
+          p.first-column Categoría principal
+          .second-column
+            select.selectpicker.btn.grisclaro.normal.text-left
+              optgroup(label="Categorías")
+                option.unread Viajes
+                option.read Etc.
+          li
+            p.first-column Descripción
+            .second-column
+              textarea.form-control.normal
+              p.small.gris *Detalles generales del joinity en un párrafo
+          li
+            p.first-column
+            .second-column
+              .form-group.grisclaro.normal.muestra-siguiente
+                input.check(type="radio", value="yes",name="answer",data-label="¿Tiene fechas de inicio o fin?")
+          li.hidden
+            p.first-column Fecha de finalización
+            .second-column
+              input.form-control.normal.datepicker(type="text",value="")
+              p.small.gris *Selecciona una fecha
+          li
+            p.first-column
+            .second-column
+              .form-group.grisclaro.normal.muestra-siguiente
+                input.check(type="radio", value="yes",name="answer",data-label="¿Hay lí?")
+
+
+        li
+          p.first-column Género
+          .second-column
+            .form-group.grisclaro.normal
+              input.check(type="radio", value="yes",name="answer",data-label="Masculino")
+              input.check(type="radio", value="no",name="answer",data-label="Femenino")
+              input.check(type="radio", value="no",name="answer",data-label="Otro")
+          li
+            p.first-column Fecha de nacimiento
+            .second-column
+              input.form-control.normal.datepicker(type="text",value="")
+              p.small.gris *Haz click y selecciona el día que naciste
+        li
+          p.first-column Tu ciudad
+          .second-column
+            input.form-control.normal(placeholder="")
+        li
+          p.first-column
+          .second-column
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+
+      h3.font.verde.lined.display-block Fotos
+      ul
+        li
+          p.first-column Tu foto de perfil
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+              p.small.gris *Con una resolución mínima de 200x200
+        li
+          p.first-column Foto de portada
+          .second-column
+            .cambiaImagen
+              .img.big(style="background-image:url('/static/images/joinity-temp/beijing.png')")
+              .upload.existe
+                .fileupload.fileupload-new(data-provides="fileupload")
+                  span.btn.grisclaro.normal.btn-file
+                    span.fileupload-new
+                      i.icon-upload.icon-large
+                      | Selecciona un archivo
+                    span.fileupload-exists Cambia
+                    input(type="file")
+                  span.fileupload-preview.oscuro
+                  a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                    i.icon-remove-sign
+                  p.small.gris *Una foto de mayor tamaño que decorará tu perfil de usuario
+        li
+          p.first-column Fotos de tus intereses
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column
+          .second-column
+            .fileupload.fileupload-new(data-provides="fileupload")
+              span.btn.grisclaro.normal.btn-file
+                span.fileupload-new
+                  i.icon-upload.icon-large
+                  | Selecciona un archivo
+                span.fileupload-exists Cambia
+                input(type="file")
+              span.fileupload-preview.oscuro
+              a.close.fileupload-exists(href="#",data-dismiss="fileupload",style="float:none;")
+                i.icon-remove-sign
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+            
+
+
+
+    .layout-event
+      h3.font.verde.lined.display-block Tus contactos
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-contactos",data-toggle="modal") Busca nuevos contactos
+      ul.list
+        li
+          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          p.oscuro
+            b Borja de Gregorio
+            span Valencia
+          .float-right
+            .btn.tiny.azul.text-transform Ver perfil
+            .btn.tiny.rojo.text-transform Eliminar
+        li.fin
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
+            
+    .layout-event
+      h3.font.verde.lined.display-block Tus aficiones
+      a.btn.small.verde.text-transform.busca-contactos(href="#modal-edita-aficiones",data-toggle="modal") Busca nuevas aficiones
+      ul.list
+        li
+          .img.small(style="background-image:url('/static/images/joinity-temp/familyandfriends.png');")
+          p.oscuro
+            b Kitesurf
+            span Deportes
+          .float-right
+            .btn.tiny.azul.text-transform Ver afición
+            .btn.tiny.rojo.text-transform Eliminar
+        li.fin
+        li
+          p.first-column
+          .second-column.more-margin.vertical
+            .btn.normal.amarillo.text-transform.embossed.btn-block Guarda los cambios
