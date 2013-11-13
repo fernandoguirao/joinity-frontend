@@ -1,9 +1,10 @@
 .popupfooter
   header Confirmación
   p.small.font.oscuroclaro Has solicitado participar en este joinity y lorem ipsum dolor sit amet consequetur adipicit
-  a.btn.azul.embossed.small.btn-block.text-transform(href="/payments") Estoy de acuerdo
-  .btn.grisclaro.tiny.text-transform.closeit No estoy de acuerdo
+  a.btn.azul.embossed.small.btn-block.text-transform(href="#modal-opciones-comprar",data-toggle="modal") Continuar
+  .btn.grisclaro.tiny.text-transform.closeit Cancelar
   script(type='text/javascript').
     $('.closeit').click(function(){
       $("#buyPopup").popover('toggle');
     })
+

@@ -221,6 +221,34 @@ PLACEHOLDER
 
 /* .make-checkbox(@size,@color,@color-checked,@color-disabled,@color-label,@after-top,@after-left) */
 
+.check-block {
+  h2 {
+    margin-bottom:20px;
+    text-align:center;
+    font-family:proxima;
+    font-weight:500;
+  }
+  .btn {
+    margin-top:20px;
+  }
+  .prettycheckbox, .prettyradio {
+    width:100%;
+    padding: 12px 19px 8px;
+    .border-radius(5px);
+    &:hover {
+      background-color: rgba(0,0,0,.2);
+      label {
+        color:@amarillo!important;
+      }
+    }
+  }
+  &.form-group.normal.claro label {
+    margin-left: 19px;
+    margin-top: -1px;
+    font-family:proxima;
+    font-weight:100;
+  }
+}
 .form-group {
   clear:both;
   label {
@@ -260,6 +288,10 @@ PLACEHOLDER
     &.grisclaro {
       .make-checkbox(18px,@grisclaro,@oscuro,@gris,@gris,0.8%,0.95%);
       .make-radio(18px,@grisclaro,@oscuro,@gris,@gris,0.8%,0.95%);
+    }
+    &.claro {
+      .make-checkbox(18px,@claro,@verde,@claro,@claro,0.8%,0.95%);
+      .make-radio(18px,@claro,@verde,@claro,@claro,0.8%,0.95%);
     }
   }
   
