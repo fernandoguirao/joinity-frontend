@@ -5,28 +5,38 @@
   $j = jQuery;
 
   $j(function() {
-    $j('.selectpicker').selectpicker();
+    if ($j('.selectpicker').length > 0) {
+      $j('.selectpicker').selectpicker();
+    }
     return $j().ready(function() {
       var popupfooter;
-      $j("input.check").prettyCheckable({
-        color: "red"
-      });
-      $j('.datepicker').datepicker();
-      popupfooter = $j('.popupfooter').html();
-      $j("#buyPopup").popover({
-        trigger: "click",
-        html: true,
-        placement: "bottom",
-        content: popupfooter
-      });
-      $j("#buyPopup2").popover({
-        trigger: "click",
-        html: true,
-        placement: "right",
-        content: popupfooter
-      });
-      $j('input[type=file]').bootstrapFileInput();
-      return $j('.file-inputs').bootstrapFileInput();
+      if ($j('input.check').length > 0) {
+        $j("input.check").prettyCheckable({
+          color: "red"
+        });
+      }
+      if ($j('.datepicker').length > 0) {
+        $j('.datepicker').datepicker();
+      }
+      if ($j('.popupfooter').length > 0) {
+        popupfooter = $j('.popupfooter').html();
+        $j("#buyPopup").popover({
+          trigger: "click",
+          html: true,
+          placement: "bottom",
+          content: popupfooter
+        });
+        $j("#buyPopup2").popover({
+          trigger: "click",
+          html: true,
+          placement: "right",
+          content: popupfooter
+        });
+      }
+      if ($j('file-inputs').length > 0) {
+        $j('input[type=file]').bootstrapFileInput();
+        return $j('.file-inputs').bootstrapFileInput();
+      }
     });
   });
 

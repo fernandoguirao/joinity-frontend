@@ -5,37 +5,37 @@ $j = jQuery
 $j ->
 
   # SELECT
-
-  $j('.selectpicker').selectpicker()
+  if $j('.selectpicker').length > 0
+    $j('.selectpicker').selectpicker()
 
   $j().ready ->
  
     # CHECKBOXES
-    
-    $j("input.check").prettyCheckable color: "red"
+    if $j('input.check').length > 0
+      $j("input.check").prettyCheckable color: "red"
 
     # DATEPICKER
-    
-    $j('.datepicker').datepicker()
+    if $j('.datepicker').length > 0
+      $j('.datepicker').datepicker()
     
     # POPUPS
-    
-    popupfooter = $j('.popupfooter').html()
-
-    $j("#buyPopup").popover
-      trigger: "click"
-      html: true
-      placement: "bottom"
-      content: popupfooter
-    
-    $j("#buyPopup2").popover
-      trigger: "click"
-      html: true
-      placement: "right"
-      content: popupfooter
+    if $j('.popupfooter').length > 0
+      popupfooter = $j('.popupfooter').html()
+  
+      $j("#buyPopup").popover
+        trigger: "click"
+        html: true
+        placement: "bottom"
+        content: popupfooter
+      
+      $j("#buyPopup2").popover
+        trigger: "click"
+        html: true
+        placement: "right"
+        content: popupfooter
       
     # FILE INPUT
-    
-    $j('input[type=file]').bootstrapFileInput();
-    $j('.file-inputs').bootstrapFileInput();
+    if $j('file-inputs').length > 0
+      $j('input[type=file]').bootstrapFileInput();
+      $j('.file-inputs').bootstrapFileInput();
     
