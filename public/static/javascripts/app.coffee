@@ -5,7 +5,6 @@
 $j = jQuery
 
 isVotacion = $j '.votacion'
-isSelect = $j '.bootstrap-select'
 isBannerAnimated = $j '.more-info'
 isDonuts = $j '.donutchart'
 isPasos = $j '.pasos'
@@ -18,6 +17,7 @@ isResponderComentario = $j '.answer'
 isUnlogged = $j '.unlogged'
 isSubeImagen = $j '.isSubeImagen'
 isMuestraFormSiguiente = $j '.muestra-siguiente'
+isComprasReservas = $j '.navRight'
 
 # ------------------
 #     FUNCIONES
@@ -26,13 +26,12 @@ isMuestraFormSiguiente = $j '.muestra-siguiente'
 $j ->
   
   # Select: Heredar clases para pasar atributos visuales
-  if isSelect.length > 0
-    if selectpickercalled
-      selectp = $j '.bootstrap-select'
-      selectp.each ->
-        selectC = $j(this).children('.dropdown-toggle')
-        selectC.attr('class',$j(this).attr('class')).removeClass('btn-group bootstrap-select')
-        $j(this).removeClass('btn')
+  if selectpickercalled
+    selectp = $j '.bootstrap-select'
+    selectp.each ->
+      selectC = $j(this).children('.dropdown-toggle')
+      selectC.attr('class',$j(this).attr('class')).removeClass('btn-group bootstrap-select')
+      $j(this).removeClass('btn')
       
   # Puntuar: iluminar estrellas
   if isVotacion.length > 0
@@ -171,8 +170,8 @@ $j ->
   # Autoscroll home
   if isHome.length > 0
     offsetAfi = $j(".faficiones").offset().top
-    offsetFam = $j(".fcompras").offset().top
-    offsetCom = $j(".fandfriends").offset().top
+    offsetFam = $j(".fandfriends").offset().top
+    offsetCom = $j(".fcompras").offset().top
     $j(".aficat").click ->
       $j("html,body").animate
         scrollTop: offsetAfi - 90
@@ -229,3 +228,17 @@ $j ->
     $j('.muestra-siguiente').click ->
       $j(this).parent().parent().addClass('hidden')
       $j(this).parent().parent().next().removeClass('hidden')
+      
+  if isComprasReservas.length > 0
+    $j('.navRight a').click ->
+      if $j(this).hasClass('c0')
+        offTop = $j(".navLeft .c0").offset().top
+      if $j(this).hasClass('c1')
+        offTop = $j(".navLeft .c1").offset().top
+      if $j(this).hasClass('c2')
+        offTop = $j(".navLeft .c2").offset().top
+      if $j(this).hasClass('c3')
+        offTop = $j(".navLeft .c3").offset().top
+      $j("html,body").animate
+        scrollTop: offTop - 30
+      , 800
